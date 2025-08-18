@@ -1,0 +1,41 @@
+.filter-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #17669b, #0189d3);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(23, 102, 155, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(23, 102, 155, 0.4);
+}
+
+.filter-toggle-btn i {
+    font-size: 16px;
+}
+
+.filter-toggle-btn.active {
+    background: linear-gradient(135deg, #6c757d, #495057);
+}
+
+@media (max-width: 768px) {
+    .filter-toggle-btn {
+        top: 10px;
+        right: 10px;
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+}
