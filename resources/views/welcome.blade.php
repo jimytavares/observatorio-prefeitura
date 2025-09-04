@@ -201,7 +201,7 @@
 
                         <div class="col-6" style="background-color: ; margin-top:4px;">
                             <div class="col-buttons-transp">
-                                <a href="#" style="text-decoration:none;">
+                                <a href="{{ route('lgbt') }}" style="text-decoration:none;">
                                     <div class="row btn-all-transp">
                                         <div class="btn-left-transp">
                                             <i class="fas fa-hand-holding-heart fa-icon"></i>
@@ -219,7 +219,7 @@
                     <div class="row">
                         <div class="col-6" style="background-color: ; margin-top:4px;">
                             <div class="col-buttons-transp">
-                                <a href="#" style="text-decoration:none;">
+                                 <a href="{{ route('juventude_page') }}" style="text-decoration:none;">                                
                                     <div class="row btn-all-transp">
                                         <div class="btn-left-transp">
                                             <i class="fas fa-user-graduate fa-icon"></i>
@@ -234,7 +234,7 @@
 
                         <div class="col-6" style="background-color: ; margin-top:4px;">
                             <div class="col-buttons-transp">
-                                <a href="#" style="text-decoration:none;">
+                                <a href="{{ route('igualdade_racial') }}" style="text-decoration:none;">
                                     <div class="row btn-all-transp">
                                         <div class="btn-left-transp">
                                             <i class="fas fa-user-friends fa-icon"></i>
@@ -252,7 +252,7 @@
                     <div class="row">
                         <div class="col-6" style="background-color: ; margin-top:4px;">
                             <div class="col-buttons-transp">
-                                <a href="#" style="text-decoration:none;">
+                                <a href="{{ route('pessoas_com_deficiencia') }}" style="text-decoration:none;">
                                     <div class="row btn-all-transp">
                                         <div class="btn-left-transp">
                                             <i class="fas fa-wheelchair fa-icon"></i>
@@ -267,7 +267,7 @@
 
                         <div class="col-6" style="background-color: ; margin-top:4px;">
                             <div class="col-buttons-transp">
-                                <a href="#" style="text-decoration:none;">
+                                <a href="{{ route('violacao_de_direitos') }}" style="text-decoration:none;">
                                     <div class="row btn-all-transp">
                                         <div class="btn-left-transp">
                                             <i class="fas fa-exclamation fa-icon"></i>
@@ -285,7 +285,7 @@
                     <div class="row">
                         <div class="col-6" style="background-color: ; margin-top:4px;">
                             <div class="col-buttons-transp">
-                                <a href="#" style="text-decoration:none;">
+                                <a href="{{ route('pessoa_idosa') }}" style="text-decoration:none;">
                                     <div class="row btn-all-transp">
                                         <div class="btn-left-transp">
                                             <i class="fas fa-user-friends fa-icon"></i>
@@ -300,7 +300,7 @@
 
                         <div class="col-6" style="background-color: ; margin-top:4px;">
                             <div class="col-buttons-transp">
-                                <a href="#" style="text-decoration:none;">
+                                <a href="{{ route('transtorno_do_aspecto_autista') }}" style="text-decoration:none;">
                                     <div class="row btn-all-transp">
                                         <div class="btn-left-transp">
                                             <i class="fas fa-user-friends fa-icon"></i>
