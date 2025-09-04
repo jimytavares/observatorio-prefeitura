@@ -24,16 +24,24 @@ class ProfilleController extends Controller
 
     /*
     |--------------------------------------------------------------------------
-    | Crianças e Adolescentes [Categoria]
+    | Crianças [Categoria]
     |--------------------------------------------------------------------------
     */
 
     public function criancas_e_adolescentes(){
 
-        $title = 'Crianças e Adolescentes';
-        $description = 'Dados sobre Crianças e Adolescentes';
+        $title = 'Crianças';
+        $description = 'Dados sobre Crianças';
 
         return view('pages.categoria-criancas-e-adolescentes.criancas-e-adolescentes', compact(["title", "description"]));
+    }
+
+    public function dados_criancas(){
+
+        $title = 'Dados sobre Crianças';
+        $description = 'Informações detalhadas sobre crianças';
+
+        return view('pages.categoria-criancas-e-adolescentes.dados-criancas', compact(["title", "description"]));
     }
 
     public function painel_dados_criancas_adolescentes(){
@@ -46,7 +54,7 @@ class ProfilleController extends Controller
 
     public function painel_dados_jovens_indicadores(){
 
-        $title = 'Crianças e Adolescentes';
+        $title = 'Crianças';
         $description = 'Painel Indicadores Sociais';
 
         return view('pages.categoria-criancas-e-adolescentes.painel-dados-jovens-indicadores', compact(["title", "description"]));
@@ -54,7 +62,7 @@ class ProfilleController extends Controller
 
     public function painel_dados_jovens(){
 
-        $title = 'Crianças e Adolescentes';
+        $title = 'Crianças';
         $description = 'Painel de Mercado de Trabalho Juvenil';
 
         return view('pages.categoria-criancas-e-adolescentes.painel-dados-jovens', compact(["title", "description"]));

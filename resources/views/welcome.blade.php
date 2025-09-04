@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Rio Grande do Norte')
+@section('title', 'Observatório')
 
 @section('content')
 
@@ -43,12 +43,12 @@
         100% { opacity:1; }
     }
      
-    .box-group-transp{ margin-top:-140px; }
+    .box-group-transp{ width:90%; margin:0 auto; }
     .col-buttons-transp{ width:286px; margin-left: 70px; margin-top:20px; }
     .btn-all-transp{ width:385px; height:70px; margin:0 auto; }
-    .btn-left-transp{ background-color:#17669b; width:23%; text-align:center; border-top-left-radius: 5px; border-bottom-left-radius: 5px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
-    .btn-right-transp{ background-color:rgba(1, 116, 178, 0.2); width:74%; border-top-right-radius: 5px; border-bottom-right-radius: 5px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
-    .btn-right-transp p{ color:white; font-size:19px; opacity: 1.0 !important; margin-left:12px; margin-top:26px; font-weight: 500; }
+    .btn-left-transp{ z-index:1000; border-radius:60px; background-color:#fddf10; width:16%; height:60px; text-align:center; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+    .btn-right-transp{ margin-left:-30px; background-color:rgba(0, 0, 0, 0.2); width:67%; height:62px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; backdrop-filter: blur(30px); }
+    .btn-right-transp p{ color:white; font-size:19px; opacity: 1.0 !important; margin-left:29px; margin-top:19px; font-weight: 500; }
     .btn-right-transp-big{ font-size:15px !important; }
     .btn-right-transp-lg{ background-color:#0189d3; width:80%; border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
     .btn-right-transp-lg p{ color:white; font-size:18px; margin-left:12px; margin-top:10px; }
@@ -57,7 +57,8 @@
     .btn-all-transp:hover{ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); }
     .icon-btn-transp{ font-size:30px; padding-top:23px; color:white; }
     .index-img-icon{ width:35px; padding-top:20px; }
-    .fa-icon{ font-size:35px; padding-top:20px; color:white; }
+    .btn-left-transp i { color: #4c6b4e; font-size:30px; }
+    .fa-icon{ font-size:35px; padding-top:15px; color:#; }
     
     .hover-menu{ height:105px; }
     .hover-menu:hover{ background-color:#f2f2f2; }
@@ -90,7 +91,7 @@
     }
     
     .info-card {
-        background-color:rgba(255, 255, 255, 0.78);
+        background-color:white;
         border-radius: 20px;
         padding: 2.5rem 2rem;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -98,7 +99,8 @@
         border: 1px solid rgba(23, 102, 155, 0.1);
         position: relative;
         overflow: hidden;
-        width:70%;
+        width:83%;
+        height:350px;
         margin:0 auto;
     }
     
@@ -174,231 +176,147 @@
 
     {{-- .background + item --}}
     <section id="hero-animation">
-        <div id="landingHero" class="section-py landing-hero2 position-relative" style="background-image: url('{{ asset('images/5.png') }}'); background-repeat: no-repeat; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius:0px; background-size: cover; background-position: center; background-repeat: no-repeat; width:100%; height:750px;">
+        <div id="landingHero" class="section-py landing-hero2 position-relative" style="background: linear-gradient(rgba(0, 80, 170, 0.85), rgba(0, 80, 170, 0.85)), url('/images/5.png') center/cover no-repeat; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius:0px; background-size: cover; background-position: center; background-repeat: no-repeat; width:100%; height:750px;">
+            <div class="row box-group-transp">
 
-            <div class="row box-group-transp" style="background-color:; ">
                 <!-- left -->
-            <div class="col-7" style="background-color: ;">
-                <!-- 1 -->
-                <div class="row">
-                    <div class="col-6" style="background-color: ;">
-                        <div class="col-buttons-transp">
-                            <a href="{{ route('categoria-pessoas-situacao-rua') }}" style="text-decoration:none;">
-                                <div class="row btn-all-transp">
-                                    <div class="btn-left-transp">
-                                        <i class="fas fa-home fa-icon" style="margin-top:15px;"></i>
+                <div class="col-6" style="background-color:;">
+
+                    <!-- 1 -->
+                    <div class="row">
+                        <div class="col-6" style="background-color: ; margin-top:4px;">
+                            <div class="col-buttons-transp">
+                                <a href="{{ route('criancas_e_adolescentes') }}" style="text-decoration:none;">
+                                    <div class="row btn-all-transp">
+                                        <div class="btn-left-transp">
+                                            <i class="fas fa-child fa-icon"></i>
+                                        </div>
+                                        <div class="btn-right-transp">
+                                            <p>Criança</p>
+                                        </div>
                                     </div>
-                                    <div class="btn-right-transp">
-                                        <p>Pessoas em Situação de Rua</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-6" style="background-color: ; margin-top:4px;">
+                            <div class="col-buttons-transp">
+                                <a href="#" style="text-decoration:none;">
+                                    <div class="row btn-all-transp">
+                                        <div class="btn-left-transp">
+                                            <i class="fas fa-hand-holding-heart fa-icon"></i>
+                                        </div>
+                                        <div class="btn-right-transp">
+                                            <p>LGBT</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6" style="background-color: ; margin-top:4px;">
-                    <div class="col-buttons-transp">
-                        <a href="#" style="text-decoration:none;">
-                            <div class="row btn-all-transp">
-                                <div class="btn-left-transp">
-                                    <i class="fas fa-user-friends fa-icon"></i>
-                                </div>
-                                <div class="btn-right-transp">
-                                    <p>Pessoas Idosas</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
                     
-                </div>
-                
-                <!-- 2 -->
-                <div class="row">
-                <div class="col-6 mt-4" style="background-color: ;">
-                    <div class="col-buttons-transp">
-                        <a href="#" style="text-decoration:none;">
-                            <div class="row btn-all-transp">
-                                <div class="btn-left-transp">
-                                    <i class="fas fa-shield-alt fa-icon" style="margin-top:15px;"></i>
-                                </div>
-                                <div class="btn-right-transp">
-                                    <p>Defensores de Direitos Humanos</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-6" style="background-color: ; margin-top:px;">
-                    <div class="col-buttons-transp">
-                        <a href="#" style="text-decoration:none;">
-                            <div class="row btn-all-transp">
-                                <div class="btn-left-transp">
-                                    <i class="fas fa-rainbow fa-icon"></i>
-                                </div>
-                                <div class="btn-right-transp">
-                                    <p>Pessoas LGBTQIA+</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                </div>
-                
-                <!-- 3 -->
-                <div class="row">
-                    <div class="col-6 mt-4" style="background-color: ;">
-                    <div class="col-buttons-transp">
-                        <a href="#" style="text-decoration:none;">
-                            <div class="row btn-all-transp">
-                                <div class="btn-left-transp">
-                                    <i class="fas fa-lock fa-icon" style="margin-top:15px;"></i>
-                                </div>
-                                <div class="btn-right-transp">
-                                    <p>Pessoas Privadas de Liberdade</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-6" style="background-color: ; margin-top:-20px;">
-                    <div class="col-buttons-transp">
-                        <a href="#" style="text-decoration:none;">
-                            <div class="row btn-all-transp">
-                                <div class="btn-left-transp">
-                                    <i class="fas fa-school fa-icon"></i>
-                                </div>
-                                <div class="btn-right-transp">
-                                    <p>Violências nas Escolas</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                </div>  
-                
-                <!-- 4 -->
-                <div class="row">
-                <div class="col-6 mt-4" style="background-color: ;">
-                    <div class="col-buttons-transp">
-                        <a href="#" style="text-decoration:none;">
-                            <div class="row btn-all-transp">
-                                <div class="btn-left-transp">
-                                    <i class="fas fa-certificate fa-icon" style="margin-top:14px;"></i>
-                                </div>
-                                <div class="btn-right-transp">
-                                    <p>Registro Civil de Nascimento</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-6" style="background-color: ; margin-top:-40px;">
-                    <div class="col-buttons-transp">
-                        <a href="#" style="text-decoration:none;">
-                            <div class="row btn-all-transp">
-                                <div class="btn-left-transp">
-                                    <i class="fas fa-building fa-icon"></i>
-                                </div>
-                                <div class="btn-right-transp">
-                                    <p>Capacidade Institucional</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                </div>
-
-                <!-- 5 -->
-                <div class="row">
-                    <div class="col-6 mt-4" style="background-color: ;">
-                    <div class="col-buttons-transp">
-                        <a href="#" style="text-decoration:none;">
-                            <div class="row btn-all-transp">
-                                <div class="btn-left-transp">
-                                    <i class="fas fa-user-shield fa-icon" style="margin-top:17px;"></i>
-                                </div>
-                                <div class="btn-right-transp">
-                                    <p>Direitos Humanos e Segurança Pública</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-               
-                
-                <div class="col-6" style="background-color: ; margin-top:-60px;">
-                    <div class="col-buttons-transp">
-                        <a href="{{ route('criancas_e_adolescentes') }}" style="text-decoration:none;">
-                            <div class="row btn-all-transp">
-                                <div class="btn-left-transp">
-                                    <i class="fas fa-child fa-icon"></i>
-                                </div>
-                                <div class="btn-right-transp">
-                                    <p>Crianças e Adolescentes</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                </div>
-
-                <!-- 6 -->
-                <div class="row">
-                 <div class="col-6 mt-4" style="background-color: ;">
-                    <div class="col-buttons-transp">
-                        <a href="#" style="text-decoration:none;">
-                            <div class="row btn-all-transp">
-                                <div class="btn-left-transp">
-                                    <i class="fas fa-ban fa-icon" style="margin-top:15px;"></i>
-                                </div>
-                                <div class="btn-right-transp">
-                                    <p>Enfrentamento ao Discurso de Ódio</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-6" style="background-color: ; margin-top:-80px;">
-                        <div class="col-buttons-transp">
-                            <a href="#" style="text-decoration:none;">
-                                <div class="row btn-all-transp">
-                                    <div class="btn-left-transp">
-                                        <i class="fas fa-wheelchair fa-icon"></i>
+                    <!-- 2 -->
+                    <div class="row">
+                        <div class="col-6" style="background-color: ; margin-top:4px;">
+                            <div class="col-buttons-transp">
+                                <a href="#" style="text-decoration:none;">
+                                    <div class="row btn-all-transp">
+                                        <div class="btn-left-transp">
+                                            <i class="fas fa-user-graduate fa-icon"></i>
+                                        </div>
+                                        <div class="btn-right-transp">
+                                            <p>Juventude</p>
+                                        </div>
                                     </div>
-                                    <div class="btn-right-transp">
-                                        <p>Pessoas com Deficiência</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-6" style="background-color: ; margin-top:4px;">
+                            <div class="col-buttons-transp">
+                                <a href="#" style="text-decoration:none;">
+                                    <div class="row btn-all-transp">
+                                        <div class="btn-left-transp">
+                                            <i class="fas fa-user-friends fa-icon"></i>
+                                        </div>
+                                        <div class="btn-right-transp">
+                                            <p>Igualdade Racial</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div class="row">
+                        <div class="col-6" style="background-color: ; margin-top:4px;">
+                            <div class="col-buttons-transp">
+                                <a href="#" style="text-decoration:none;">
+                                    <div class="row btn-all-transp">
+                                        <div class="btn-left-transp">
+                                            <i class="fas fa-wheelchair fa-icon"></i>
+                                        </div>
+                                        <div class="btn-right-transp">
+                                            <p>PCD</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-6" style="background-color: ; margin-top:4px;">
+                            <div class="col-buttons-transp">
+                                <a href="#" style="text-decoration:none;">
+                                    <div class="row btn-all-transp">
+                                        <div class="btn-left-transp">
+                                            <i class="fas fa-exclamation fa-icon"></i>
+                                        </div>
+                                        <div class="btn-right-transp">
+                                            <p>Violação de Direitos</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="row">
+                        <div class="col-6" style="background-color: ; margin-top:4px;">
+                            <div class="col-buttons-transp">
+                                <a href="#" style="text-decoration:none;">
+                                    <div class="row btn-all-transp">
+                                        <div class="btn-left-transp">
+                                            <i class="fas fa-user-friends fa-icon"></i>
+                                        </div>
+                                        <div class="btn-right-transp">
+                                            <p>Pessoas Idosa</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-6" style="background-color: ; margin-top:4px;">
+                            <div class="col-buttons-transp">
+                                <a href="#" style="text-decoration:none;">
+                                    <div class="row btn-all-transp">
+                                        <div class="btn-left-transp">
+                                            <i class="fas fa-user-friends fa-icon"></i>
+                                        </div>
+                                        <div class="btn-right-transp">
+                                            <p>TEA</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- 7 -->
-                <div class="row">
-                <div class="col-6"></div>
-                <div class="col-6" style="background-color: ; margin-top:-100px;">
-                    <div class="col-buttons-transp">
-                        <a href="#" style="text-decoration:none;">
-                            <div class="row btn-all-transp">
-                                <div class="btn-left-transp">
-                                    <i class="fas fa-book-open fa-icon"></i>
-                                </div>
-                                <div class="btn-right-transp">
-                                    <p>Memória e Verdade</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                </div>
-            </div>
 
                 <!-- right -->
-                <div class="col-5" style="background-color:;">
+                <div class="col-6" style="background-color:;">
                     
                     <div class="container">
 
@@ -409,9 +327,10 @@
                                 </div>
                                 <h4 class="card-title">Observatório de Direitos Humanos</h4>
                                 <p class="card-description">
-                                    O Observatório é um instrumento de monitoramento, análise e divulgação de informações sobre a situação dos direitos humanos em Natal. Acompanhamos indicadores, produzimos relatórios e promovemos ações para a garantia dos direitos fundamentais de todos os cidadãos.
+                                    O Observatório é um instrumento de monitoramento, análise e divulgação 
+                                    de informações sobre a situação dos direitos humanos em Natal.
                                 </p>
-                                <a href="#" class="card-btn">
+                                <a href="#" class="card-btn" style="margin-top:-20px;">
                                     <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
                                     Saiba Mais
                                 </a>
@@ -423,7 +342,6 @@
                 </div>
 
             </div>
-
         </div>
     </section>
      

@@ -292,7 +292,7 @@
                     <h3 class="card-title">Quem são e quantas são?</h3>
                     <p class="card-description">Informações sobre o perfil, características e estimativas de crianças e adolescentes.</p>
                     <div class="text-center">
-                        <a href="#" class="card-link">Ver Dados</a>
+                        <a href="{{ route('dados-criancas') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>

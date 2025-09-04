@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<section class="hero-section" style="background-image: url('{{ asset('images/categoria-pessoas-situacao-rua.png') }}'); background-repeat: no-repeat; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius:0px; background-size: cover; background-position: center; background-repeat: no-repeat; width:100%; height:;">
+<section class="hero-section" style="background-image: url('{{ asset('images/crianca-ia.png') }}'); background-repeat: no-repeat; border-radius:0px; background-size: cover; background-position: center; background-repeat: no-repeat; width:100%; height:;">
     <div class="hero-content">
         <div class="container">
             <h1 class="hero-title">{{$title}}</h1>
