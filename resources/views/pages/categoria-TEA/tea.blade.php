@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Pessoas em Situação de Rua')
+@section('title', 'TEA - Transtorno do Espectro Autista')
 
 @section('content')
 
@@ -275,7 +275,14 @@
 }
 </style>
 
-@include('globals.title-page')
+@include('globals.title-page', [
+    'title' => 'Categoria TEA',
+    'description' => 'Informações sobre a categoria TEA',
+    'image' => asset('images/autistas-ia.png')  
+])
+
+
+
 
 <!-- Cards Section -->
 <section class="cards-container" style="margin-top: -20px;">
@@ -290,7 +297,7 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Crianças.</p>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de TEA.</p>
                     <div class="text-center">
                         <a href="{{ route('dados-criancas') }}" class="card-link">Ver Dados</a>
                     </div>
@@ -303,7 +310,7 @@
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Crianças.</p>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de TEA.</p>
                     <div class="text-center">
                         <a href="#" class="card-link">Ver Indicadores</a>
                     </div>
@@ -316,7 +323,7 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Crianças.</p>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de TEA.</p>
                     <div class="text-center">
                         <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>
                     </div>

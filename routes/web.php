@@ -38,3 +38,58 @@ Route::get('/categoria/criancas-e-adolescentes/dados-criancas/', [ProfilleContro
 Route::get('/categoria/criancas-e-adolescentes/painel-dados-criancas-adolescentes/', [ProfilleController::class, 'painel_dados_criancas_adolescentes'])->name('painel-dados-criancas-adolescentes');
 Route::get('/categoria/jovens-15-29-anos/painel-dados-jovens-indicadores/', [ProfilleController::class, 'painel_dados_jovens_indicadores'])->name('painel-dados-jovens-indicadores');
 Route::get('/categoria/dados-jovens/painel-dados-jovens/', [ProfilleController::class, 'painel_dados_jovens'])->name('painel-dados-jovens');
+/*
+|--------------------------------------------------------------------------
+| Juventude [Categoria]
+|--------------------------------------------------------------------------
+*/
+Route::get('/categoria/juventude/', [ProfilleController::class, 'juventude_page'])->name('juventude_page');
+
+
+/*
+|--------------------------------------------------------------------------
+| PCD [Categoria]
+|--------------------------------------------------------------------------
+*/
+Route::get('/categoria/PCD/', [ProfilleController::class, 'pessoas_com_deficiencia'])->name('pessoas_com_deficiencia');
+
+
+/*
+|--------------------------------------------------------------------------
+| Pessoa Idosa [Categoria]
+|--------------------------------------------------------------------------
+*/
+Route::get('/categoria/pessoa-idosa/', [ProfilleController::class, 'pessoa_idosa'])->name('pessoa_idosa');
+
+
+
+/*
+|--------------------------------------------------------------------------
+| LGBT [Categoria]
+|--------------------------------------------------------------------------
+*/
+Route::get('/categoria/LGBT/', [ProfilleController::class, 'lgbt'])->name('lgbt');
+
+
+/*
+|--------------------------------------------------------------------------
+| Igualdade Racial [Categoria]
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/categoria/igualdade-racial/', [ProfilleController::class, 'igualdade_racial'])->name('igualdade_racial');
+
+/*
+|--------------------------------------------------------------------------
+| Violação de Direitos [Categoria]
+|--------------------------------------------------------------------------
+*/
+Route::get('/categoria/violacao-de-direitos/', [ProfilleController::class, 'violacao_de_direitos'])->name('violacao_de_direitos');
+
+
+/*
+|--------------------------------------------------------------------------
+| TEA [Categoria]
+|--------------------------------------------------------------------------
+*/
+Route::get('/categoria/TEA/', [ProfilleController::class, 'transtorno_do_aspecto_autista'])->name('transtorno_do_aspecto_autista');
