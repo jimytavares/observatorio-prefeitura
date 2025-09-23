@@ -289,8 +289,8 @@
                     <div class="card-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="card-title">Quem são e quantas são?</h3>
-                    <p class="card-description">Informações sobre o perfil, características e estimativas de crianças e adolescentes.</p>
+                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Crianças.</p>
                     <div class="text-center">
                         <a href="{{ route('dados-criancas') }}" class="card-link">Ver Dados</a>
                     </div>
@@ -302,8 +302,8 @@
                     <div class="card-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="card-title">Violência e Violações</h3>
-                    <p class="card-description">Dados sobre violência, violações de direitos e situações de risco envolvendo crianças e adolescentes.</p>
+                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Crianças.</p>
                     <div class="text-center">
                         <a href="#" class="card-link">Ver Indicadores</a>
                     </div>
@@ -313,54 +313,16 @@
             <div class="col-lg-4 col-md-6">
                 <div class="data-card">
                     <div class="card-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3 class="card-title">Prevenção e Atendimento a Situações de Violência</h3>
-                    <p class="card-description">Informações sobre políticas, serviços e ações de prevenção e atendimento a situações de violência.</p>
-                    <div class="text-center">
-                        <a href="#" class="card-link">Ver Serviços</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="data-card">
-                    <div class="card-icon">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <h3 class="card-title">Conselhos Tutelares</h3>
-                    <p class="card-description">Dados e informações sobre atuação, estrutura e cobertura dos Conselhos Tutelares.</p>
-                    <div class="text-center">
-                        <a href="#" class="card-link">Ver Conselhos</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="data-card">
-                    <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="card-title">Painel de Dados</h3>
-                    <p class="card-description">Painel interativo com dados estatísticos e indicadores sobre crianças e adolescentes.</p>
+                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Crianças.</p>
                     <div class="text-center">
                         <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>
                     </div>
                 </div>
             </div>
-            <!-- Card 6 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="data-card">
-                    <div class="card-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="card-title">Índice de Capacidade Institucional Crianças e Adolescentes</h3>
-                    <p class="card-description">Avaliação da capacidade institucional para atendimento e proteção de crianças e adolescentes.</p>
-                    <div class="text-center">
-                        <a href="#" class="card-link">Ver Índice</a>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </div>
 </section>
