@@ -278,7 +278,7 @@
 @include('globals.title-page', [
     'title' => 'Categoria Violação dos direitos',
     'description' => 'Informações sobre a categoria Violação dos direitos',
-    'image' => asset('images/violacao-dos-direitos.png')  
+    'image' => asset('images/direitos.1.ia.png')  
 ])
 
 <!-- Cards Section -->

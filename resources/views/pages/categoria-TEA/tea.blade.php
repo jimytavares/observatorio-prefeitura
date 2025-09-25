@@ -278,7 +278,7 @@
 @include('globals.title-page', [
     'title' => 'Categoria TEA',
     'description' => 'Informações sobre a categoria TEA',
-    'image' => asset('images/autistas-ia.png')  
+    'image' => asset('images/autistas.ia.png')  
 ])
 
 

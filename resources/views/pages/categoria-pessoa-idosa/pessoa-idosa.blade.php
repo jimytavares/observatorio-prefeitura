@@ -278,7 +278,7 @@
 @include('globals.title-page', [
     'title' => 'Categoria Pessoa Idosa',
     'description' => 'Informações sobre a categoria Pessoa Idosa',
-    'image' => asset('images/pessoa-idosas.jpeg')  
+    'image' => asset('images/idosos.ia.png')  
 ])
 
 <!-- Cards Section -->

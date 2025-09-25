@@ -278,7 +278,7 @@
 @include('globals.title-page', [
     'title' => 'Categoria igualdede Racial',
     'description' => 'Informações sobre a categoria igualdede Racial',
-    'image' => asset('images/etinias.jpeg')  
+    'image' => asset('images/etinias.ia.png')  
 ])
 
 <!-- Cards Section -->

@@ -278,7 +278,7 @@
 @include('globals.title-page', [
     'title' => 'Categoria LGBT',
     'description' => 'Informações sobre a categoria LGBT',
-    'image' => asset('images/lgbt1.jpeg')  
+    'image' => asset('images/lgbt.ia.png')  
 ])
 
 <!-- Cards Section -->

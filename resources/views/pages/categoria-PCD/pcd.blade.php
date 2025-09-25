@@ -278,7 +278,7 @@
 @include('globals.title-page', [
     'title' => 'Categoria PCD',
     'description' => 'Informações sobre a categoria PCD',
-    'image' => asset('images/pessoas-deficiencias.jpeg')  
+    'image' => asset('images/pcd.ia.png')  
 ])
 
 <!-- Cards Section -->

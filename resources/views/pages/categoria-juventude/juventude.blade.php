@@ -278,7 +278,7 @@
 @include('globals.title-page', [
     'title' => 'Categoria Juventude',
     'description' => 'Informações sobre a categoria Juventude',
-    'image' => asset('images/jovens.jpeg')  
+    'image' => asset('images/juventude.ia.png')  
 ])
 
 <!-- Cards Section -->
