@@ -30,19 +30,33 @@ class ProfilleController extends Controller
 
     public function criancas_e_adolescentes(){
 
-        $title = 'Crianças';
-        $description = 'Dados sobre Crianças';
+        $title = 'Crianças e Adolescentes';
+        $description = 'Dados sobre Crianças e Adolescentes';
 
         return view('pages.categoria-criancas-e-adolescentes.criancas-e-adolescentes', compact(["title", "description"]));
     }
 
-    public function dados_criancas(){
+    public function populacao(){
 
-        $title = 'Dados sobre Crianças';
-        $description = 'Informações detalhadas sobre crianças';
+        $title = 'População';
+        $description = 'Crianças e Adolescentes';
 
-        return view('pages.categoria-criancas-e-adolescentes.dados-criancas', compact(["title", "description"]));
+        return view('pages.categoria-criancas-e-adolescentes.populacao', compact(["title", "description"]));
     }
+
+    public function violacoes_de_direitos(){
+        $title = 'Violação de Direitos';
+        $description = 'Crianças e Adolescentes';
+
+        return view('pages.categoria-criancas-e-adolescentes.violacoes-de-direitos', compact(["title", "description"]));
+    }
+
+    public function garantia_de_direitos(){
+        $title = 'Garantia de Direitos';
+        $description = 'Crianças e Adolescentes';
+
+        return view('pages.categoria-criancas-e-adolescentes.garantia-de-direitos', compact(["title", "description"]));
+    }   
 
     public function painel_dados_criancas_adolescentes(){
 
@@ -93,6 +107,14 @@ class ProfilleController extends Controller
 
         return view('pages.categoria-pcd.pcd', compact(['title', 'description']));
     }
+
+    public function pcd_dados(){
+        $title = 'Dados sobre Pessoas com Deficiência (PCD)';
+        $description = 'Informações detalhadas sobre Pessoas com Deficiência';
+
+        return view('pages.categoria-pcd.pcd-dados', compact(['title', 'description']));
+    }
+
      /*
     |--------------------------------------------------------------------------
     | Pessoa Idosa [Categoria]
@@ -104,6 +126,14 @@ class ProfilleController extends Controller
         $description = 'Dados sobre Pessoas Idosas';
 
         return view('pages.categoria-pessoa-idosa.pessoa-idosa', compact(['title', 'description']));
+    }
+
+    public function pessoas_idosas_dados()
+    {
+        $title = 'Dados sobre Pessoas Idosas';
+        $description = 'Informações detalhadas sobre pessoas idosas';
+
+        return view('pages.categoria-pessoa-idosa.pessoas-idosas-dados', compact(['title', 'description']));
     }
 
      /*

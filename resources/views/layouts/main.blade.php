@@ -21,11 +21,12 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/fonts/tabler-icons.css') }}">
       
     <!-- Font Awesome 5.15.3 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-********" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha384-********" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" media="all" >
-    <link rel="stylesheet" href="{{ asset('css/responsividade.css') }}" >
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" media="all" >
+    <link rel="stylesheet" href="{{ asset('assets/css/globals.css') }}" type="text/css" media="all" >
+    <link rel="stylesheet" href="{{ asset('assets/css/responsividade.css') }}" >
       
     <!-- Core CSS -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/css/rtl/core.css') }}" >
@@ -59,6 +60,9 @@
           z-index: 11;
           animation: action 1s infinite alternate;
         }
+        html, body {
+  overflow-x: hidden;
+}
       </style>
       
     <script>

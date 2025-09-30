@@ -276,9 +276,9 @@
 </style>
 
 @include('globals.title-page', [
-    'title' => 'Categoria LGBT',
-    'description' => 'Informações sobre a categoria LGBT',
-    'image' => asset('images/lgbt1.jpeg')  
+    'title' => 'Categoria PCD',
+    'description' => 'Informações sobre a categoria PCD',
+    'image' => asset('images/pessoas-deficiencias.jpeg')  
 ])
 
 <!-- Cards Section -->
@@ -293,10 +293,10 @@
                     <div class="card-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de LGBT.</p>
+                    <h3 class="card-title">Sub-Categoria 01</h3>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de pessoas com deficiência.</p>
                     <div class="text-center">
-                        <a href="{{ route('dados-criancas') }}" class="card-link">Ver Dados</a>
+                        <a href="{{ route('pcd-dados') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -306,8 +306,8 @@
                     <div class="card-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de LGBT.</p>
+                    <h3 class="card-title">Sub-Categoria 02</h3>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de pessoas com deficiência.</p>
                     <div class="text-center">
                         <a href="#" class="card-link">Ver Indicadores</a>
                     </div>
@@ -319,8 +319,8 @@
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de LGBT.</p>
+                    <h3 class="card-title">Sub-Categoria 03</h3>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de pessoas com deficiência.</p>
                     <div class="text-center">
                         <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>
                     </div>

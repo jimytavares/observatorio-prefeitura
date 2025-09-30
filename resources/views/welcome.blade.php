@@ -54,7 +54,6 @@
     .btn-right-transp-lg p{ color:white; font-size:18px; margin-left:12px; margin-top:10px; }
     .btn-right-transp:hover{ background-color:rgba(255, 255, 255, 0.3); transform: translateY(-2px); transition: all 0.3s ease; }
     .btn-all-transp{ width:385px; height:70px; margin:0 auto; transition: all 0.3s ease; }
-    .btn-all-transp:hover{ box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); }
     .icon-btn-transp{ font-size:30px; padding-top:23px; color:white; }
     .index-img-icon{ width:35px; padding-top:20px; }
     .btn-left-transp i { color: #4c6b4e; font-size:30px; }
@@ -176,7 +175,7 @@
 
     {{-- .background + item --}}
     <section id="hero-animation">
-        <div id="landingHero" class="section-py landing-hero2 position-relative" style="background: linear-gradient(rgba(0, 80, 170, 0.85), rgba(0, 80, 170, 0.85)), url('/images/5.png') center/cover no-repeat; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius:0px; background-size: cover; background-position: center; background-repeat: no-repeat; width:100%; height:750px;">
+        <div id="landingHero" class="section-py landing-hero2 position-relative" style="background: url('/images/background-index.png') center/cover no-repeat; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius:0px; background-size: cover; background-position: center; background-repeat: no-repeat; width:100%; height:750px;">
             <div class="row box-group-transp">
 
                 <!-- left -->
@@ -270,7 +269,7 @@
                                 <a href="{{ route('violacao_de_direitos') }}" style="text-decoration:none;">
                                     <div class="row btn-all-transp">
                                         <div class="btn-left-transp">
-                                            <i class="fas fa-exclamation fa-icon"></i>
+                                            <i class="fa-solid fa-triangle-exclamation fa-icon"></i>
                                         </div>
                                         <div class="btn-right-transp">
                                             <p>Violação de Direitos</p>
@@ -288,7 +287,7 @@
                                 <a href="{{ route('pessoa_idosa') }}" style="text-decoration:none;">
                                     <div class="row btn-all-transp">
                                         <div class="btn-left-transp">
-                                            <i class="fas fa-user-friends fa-icon"></i>
+                                            <i class="fa-solid fa-person-cane fa-icon"></i>
                                         </div>
                                         <div class="btn-right-transp">
                                             <p>Pessoas Idosa</p>
@@ -303,7 +302,7 @@
                                 <a href="{{ route('transtorno_do_aspecto_autista') }}" style="text-decoration:none;">
                                     <div class="row btn-all-transp">
                                         <div class="btn-left-transp">
-                                            <i class="fas fa-user-friends fa-icon"></i>
+                                            <i class="fa-solid fa-puzzle-piece fa-icon"></i>
                                         </div>
                                         <div class="btn-right-transp">
                                             <p>TEA</p>
