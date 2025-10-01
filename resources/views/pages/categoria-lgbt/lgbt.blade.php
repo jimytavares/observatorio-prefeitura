@@ -196,89 +196,89 @@
             height: 70px;
             font-size: 2rem;
         }
-        
-    .card-title {
-        font-size: 1.2rem;
+            
+        .card-title {
+            font-size: 1.2rem;
+        }
     }
-}
 
-/* Filtro de Escala de Cinza */
-.grayscale-filter {
-    filter: grayscale(100%);
-    background-color: #000000 !important;
-    transition: all 0.5s ease;
-}
+    /* Filtro de Escala de Cinza */
+    .grayscale-filter {
+        filter: grayscale(100%);
+        background-color: #000000 !important;
+        transition: all 0.5s ease;
+    }
 
-.grayscale-filter .hero-section,
-.grayscale-filter .cards-container,
-.grayscale-filter .statistics-section {
-    background-color: #000000 !important;
-}
+    .grayscale-filter .hero-section,
+    .grayscale-filter .cards-container,
+    .grayscale-filter .statistics-section {
+        background-color: #000000 !important;
+    }
 
-.grayscale-filter .data-card {
-    background-color: #1a1a1a !important;
-    color: #ffffff !important;
-}
+    .grayscale-filter .data-card {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+    }
 
-.grayscale-filter .card-title {
-    color: #ffffff !important;
-}
+    .grayscale-filter .card-title {
+        color: #ffffff !important;
+    }
 
-.grayscale-filter .card-description {
-    color: #cccccc !important;
-}
+    .grayscale-filter .card-description {
+        color: #cccccc !important;
+    }
 
-.grayscale-filter .section-title {
-    color: #ffffff !important;
-}
+    .grayscale-filter .section-title {
+        color: #ffffff !important;
+    }
 
-.filter-toggle-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: linear-gradient(135deg, #17669b, #0189d3);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 25px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(23, 102, 155, 0.3);
-    transition: all 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.filter-toggle-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(23, 102, 155, 0.4);
-}
-
-.filter-toggle-btn i {
-    font-size: 16px;
-}
-
-.filter-toggle-btn.active {
-    background: linear-gradient(135deg, #6c757d, #495057);
-}
-
-@media (max-width: 768px) {
     .filter-toggle-btn {
-        top: 10px;
-        right: 10px;
-        padding: 10px 16px;
-        font-size: 12px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #17669b, #0189d3);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(23, 102, 155, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
-}
+
+    .filter-toggle-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(23, 102, 155, 0.4);
+    }
+
+    .filter-toggle-btn i {
+        font-size: 16px;
+    }
+
+    .filter-toggle-btn.active {
+        background: linear-gradient(135deg, #6c757d, #495057);
+    }
+
+    @media (max-width: 768px) {
+        .filter-toggle-btn {
+            top: 10px;
+            right: 10px;
+            padding: 10px 16px;
+            font-size: 12px;
+        }
+    }
 </style>
 
 @include('globals.title-page', [
-    'title' => 'Categoria PCD',
-    'description' => 'Informações sobre a categoria PCD',
-    'image' => asset('images/pcd.ia.png')  
+    'title' => 'Categoria LGBT',
+    'description' => 'Informações sobre a categoria LGBT',
+    'image' => asset('images/lgbt.ia.png')  
 ])
 
 <!-- Cards Section -->
@@ -293,8 +293,8 @@
                     <div class="card-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de pessoas com deficiência.</p>
+                    <h3 class="card-title">Sub-Categoria 01</h3>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de LGBT.</p>
                     <div class="text-center">
                         <a href="{{ route('dados-criancas') }}" class="card-link">Ver Dados</a>
                     </div>
@@ -306,8 +306,8 @@
                     <div class="card-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de pessoas com deficiência.</p>
+                    <h3 class="card-title">Sub-Categoria 02</h3>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de LGBT.</p>
                     <div class="text-center">
                         <a href="#" class="card-link">Ver Indicadores</a>
                     </div>
@@ -319,8 +319,8 @@
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de pessoas com deficiência.</p>
+                    <h3 class="card-title">Sub-Categoria 03</h3>
+                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de LGBT.</p>
                     <div class="text-center">
                         <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>
                     </div>

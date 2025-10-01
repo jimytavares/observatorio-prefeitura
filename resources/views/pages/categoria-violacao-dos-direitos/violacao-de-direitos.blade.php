@@ -293,7 +293,7 @@
                     <div class="card-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
+                    <h3 class="card-title">Sub-Categoria 01</h3>
                     <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Violação dos direitos.</p>
                     <div class="text-center">
                         <a href="{{ route('dados-criancas') }}" class="card-link">Ver Dados</a>
@@ -306,7 +306,7 @@
                     <div class="card-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
+                    <h3 class="card-title">Sub-Categoria 02</h3>
                     <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Violação dos direitos.</p>
                     <div class="text-center">
                         <a href="#" class="card-link">Ver Indicadores</a>
@@ -319,7 +319,7 @@
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
+                    <h3 class="card-title">Sub-Categoria 03</h3>
                     <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Violação dos direitos.</p>
                     <div class="text-center">
                         <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>

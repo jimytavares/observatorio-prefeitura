@@ -1,11 +1,4 @@
-@extends('layouts.main')
-
-@section('title', 'Pessoas em Situação de Rua')
-
-@section('content')
-
-<style>
-    .cards-container {
+   .cards-container {
         padding: 80px 0;
         background: #f8f9fa;
     }
@@ -188,9 +181,9 @@
             font-size: 2rem;
         }
         
-    .card-title {
-        font-size: 1.2rem;
-    }
+        .card-title {
+            font-size: 1.2rem;
+        }
     }
 
     /* Filtro de Escala de Cinza */
@@ -264,95 +257,3 @@
             font-size: 12px;
         }
     }
-</style>
-
-@include('globals.title-page', [
-    'title' => 'Categoria Igualdade Racial',
-    'description' => 'Informações sobre a categoria Igualdade Racial',
-    'image' => asset('images/etinias.jpeg')  
-])
-
-<!-- Cards Section -->
-<section class="cards-container" style="margin-top: -20px;">
-    <div class="container">
-        <h2 class="section-title">Dados e Informações</h2>
-        
-        <div class="row">
-            <!-- Card 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="data-card">
-                    <div class="card-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="card-title">Sub-Categoria 01</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Igualdade Racial.</p>
-                    <div class="text-center">
-                        <a href="{{ route('dados-criancas') }}" class="card-link">Ver Dados</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="data-card">
-                    <div class="card-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="card-title">Sub-Categoria 02</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Igualdade Racial.</p>
-                    <div class="text-center">
-                        <a href="#" class="card-link">Ver Indicadores</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="data-card">
-                    <div class="card-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3 class="card-title">Sub-Categoria 03</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Igualdade Racial.</p>
-                    <div class="text-center">
-                        <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>
-                    </div>
-                </div>
-            </div>
-           
-        </div>
-    </div>
-</section>
-
-<script>
-function toggleGrayscale() {
-    const body = document.body;
-    const button = document.getElementById('grayscaleToggle');
-    const filterText = document.getElementById('filterText');
-    
-    if (body.classList.contains('grayscale-filter')) {
-        // Remover filtro de escala de cinza
-        body.classList.remove('grayscale-filter');
-        button.classList.remove('active');
-        filterText.textContent = 'Escala de Cinza';
-    } else {
-        // Aplicar filtro de escala de cinza
-        body.classList.add('grayscale-filter');
-        button.classList.add('active');
-        filterText.textContent = 'Colorido';
-    }
-}
-
-// Adicionar efeito visual ao botão
-document.addEventListener('DOMContentLoaded', function() {
-    const button = document.getElementById('grayscaleToggle');
-    
-    button.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-3px) scale(1.05)';
-    });
-    
-    button.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(-2px) scale(1)';
-    });
-});
-</script>
-
-@endsection

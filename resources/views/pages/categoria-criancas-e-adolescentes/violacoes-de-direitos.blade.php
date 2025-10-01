@@ -5,14 +5,6 @@
 @section('content')
 
 <style>
-    .color-title{ color:#17669b; }
-    .color-text{ color:#4d4d4d; }
-    .txt-justify{ text-align: justify; }
-    .bg-title{ background-color:#17669b; }
-    .bg-title2{ background-color:#0189d3; border:none; }
-    .bold{ font-weight: bold; }
-    .txt-center{ text-align:center; }
-    .center{ text-align:center; }
     
     .hero-section {
         background: linear-gradient(135deg, rgba(23, 102, 155, 0.9), rgba(1, 137, 211, 0.9)), 
@@ -233,7 +225,7 @@
         color: #6c757d;
         line-height: 1.6;
         margin-bottom: 0;
-        font-size:18px;
+        font-size:21px;
         color:black;
     }
 
@@ -842,56 +834,26 @@
     }
 </style>
 
-
 <!-- background title -->
 @include('globals.title-page')
 
 <!-- Breadcrumb -->
-<div class="container">
-    <div class="row">
-        <div class="col-10">
-            <nav class="breadcrumb-nav">
-                <div class="container">
-                    <ol class="breadcrumb breadcrumb-custom">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Crianças</a></li>
-                        <li class="breadcrumb-item active">Dados sobre Crianças</li>
-                    </ol>
-                </div>
-            </nav>
-        </div>
-        <div class="col-2" style="text-align: right;">
-            <button class="mt-4 btn btn-danger btn-sm" id="fontIncrease" onclick="increaseFontSize()">
-                +Fonte
-            </button>
-            <button class="mt-4 btn btn-danger btn-sm" id="fontDecrease" onclick="decreaseFontSize()">
-                -Fonte
-            </button>
-        </div>
-    </div>
-</div>
+@include('globals.breadcrumb')
 
 <!-- Estatística Destacada -->
-<section class="content-section" style="margin-top:-90px;">
-    <div class="container-fluid">
+<section class="content-section" style="margin-top: -60px;">
+    <div class="container">
         
         <div class="row">
             <div class="col-md-6">
                 <div class="image-showcase">
-                    <img src="{{ asset('images/crianca-ia-full.png') }}" alt="População em situação de rua" class="img-fluid">
+                    <img src="{{ asset('images/ia-img-subcategorias/criancas-adolescentes-violacoes.jpeg') }}" alt="População em situação de rua" class="img-fluid">
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="info-card">
-                    <h4><i class="fas fa-info-circle"></i> Sobre os Dados</h4>
-                    <p>
-                        Os dados apresentados são baseados no Cadastro Único para Programas Sociais do Governo Federal, que registra informações de famílias de baixa renda no Brasil. É importante ressaltar que estes números podem representar uma subestimação da realidade, devido às dificuldades inerentes ao mapeamento desta população.
-                        <br/><br/>
-                        A população em situação de rua no Brasil é diversa e enfrenta desafios significativos para garantir seus direitos básicos. 
-                        <br/><br/>
-                        De acordo com o  Decreto nº 7.053 de 2009 , essa população inclui pessoas em extrema pobreza, com vínculos familiares rompidos ou fragilizados, que utilizam espaços públicos, áreas degradadas ou abrigos temporários como moradia e sustento.   
-                    </p>
-                    </p>
+            <div class="col-md-6 mt-4">
+                <div class="info-card text-justify" style="height: 382px;">
+                    <h4><i class="fas fa-info-circle"></i> Informação</h4>
+                    <p>Entende-se por violação de direitos de crianças e adolescentes, qualquer ação ou omissão que atente contra os direitos fundamentais assegurados a este grupo etário, impedindo seu pleno desenvolvimento e bem-estar. Isso inclui, mas não se limita a negligência, abandono, diferentes formas de abuso (físico, psicológico, sexual), exploração e discriminação, comprometendo a dignidade e a integridade dessas pessoas.</p>
                 </div>
             </div>
         </div>
@@ -903,88 +865,7 @@
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
         
-        <!-- ## Seção 1: População faixa etaria IBGE -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-users text-primary"></i>
-                            Informação detalhada sobre o grafico de população por Faixa Etária (IBGE)
-                        </h3>
-                        <p style="width:90%; margin-left:20px;">Os dados do IBGE apresentados no gráfico acima mostram a distribuição da população de crianças e adolescentes em três faixas etárias: 0 a 6 anos, 7 a 11 anos e 12 a 17 anos. Observa-se que a faixa de 0 a 6 anos possui uma população total de <strong>60.919</strong> crianças, sendo <strong>29.766</strong> do sexo feminino e <strong>31.153</strong> do sexo masculino. Na faixa de 7 a 11 anos, são <strong>47.106</strong> crianças, com <strong>22.946</strong> meninas e <strong>24.160</strong> meninos. Já entre 12 e 17 anos, a população é de <strong>57.057</strong> adolescentes, sendo <strong>28.155</strong> do sexo feminino e <strong>28.902</strong> do sexo masculino.</p>
-                        <div class="">
-                            <span class="badge badge-info">Dados oficiais: 281.472</span>
-                            <span class="badge badge-warning">Estimativa real: +400.000</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="chart-container">
-                        <h4 class="chart-title">População por Faixa Etária (IBGE)</h4>
-                        <div id="apexchart-populacao-faixa-etaria"></div>
-                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'População',
-                                        data: [60919, 47106, 57057]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [29766, 22946, 28155]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [31153, 24160, 28902]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0-6 anos', '7-11 anos', '12-17 anos'],
-                                    title: { text: 'Faixa Etária' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Quantidade' }
-                                },
-                                colors: ['#17669b', '#e83e8c', '#ffc107'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '55%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: false
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val.toLocaleString('pt-BR');
-                                        }
-                                    }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-populacao-faixa-etaria"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ## Seção 2: violencia domestica -->
+        <!-- ## Chart01: violencia domestica -->
         <div class="content-block">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6 order-lg-2">
@@ -1093,7 +974,7 @@
             </div>
         </div>
 
-        <!-- ## Seção 3: Análise dos Dados de Violência Sexual -->
+        <!-- ## Char02: Análise dos Dados de Violência Sexual -->
         <div class="content-block">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6 order-lg-2">
@@ -1186,40 +1067,13 @@
             </div>
         </div>
 
-        <!-- Seção 3:  -->
+        <!-- ## Chart03: Assédio / Importunação Sexual -->
         <div class="content-block">
             <div class="row align-items-center mb-5">
-                <div class="col-lg-6">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-chart-line text-success"></i>
-                            Analise dos dados
-                        </h3>
-                        <p>Os dados resume o assédio e importunação sexual de crianças/adolescentes do sexo feminino e masculino:</p>
-                        <div class="timeline-stats">
-                            <div class="stat-item">
-                                <span class="year">0 - 6 ANOS</span>
-                                <span class="number">10 / 0</span>
-                                <span class="label">Feminino/Masculino</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="year">7 - 11 ANOS</span>
-                                <span class="number">10 / 1</span>
-                                <span class="label">Feminino/Masculino</span>
-                            </div>
-                            <div class="stat-item highlight">
-                                <span class="year">12 - 17 ANOS</span>
-                                <span class="number">19 / 2</span>
-                                <span class="label">Feminino/Masculino</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-lg-6">
                     <div class="chart-container">
                         <h4 class="chart-title">Assédio / Importunação Sexual - Crianças/Adolescentes</h4>
                         <div id="apexchart-assedio-sexual"></div>
-                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
                         <script>
                         document.addEventListener('DOMContentLoaded', function () {
                             var options = {
@@ -1251,16 +1105,16 @@
                                 ],
                                 xaxis: {
                                     categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa/Grupo' }
+                                    title: { text: 'Faixa Etária' }
                                 },
                                 yaxis: {
-                                    title: { text: 'Casos' }
+                                    title: { text: 'Número de Casos' }
                                 },
-                                colors: ['#0040ff', '#ff0000', '#ff9900', '#e83e8c', '#ffc107'],
+                                colors: ['#6c757d', '#8b4513', '#ffc107', '#e83e8c', '#007bff'],
                                 plotOptions: {
                                     bar: {
                                         horizontal: false,
-                                        columnWidth: '55%',
+                                        columnWidth: '65%',
                                         endingShape: 'rounded'
                                     }
                                 },
@@ -1277,14 +1131,116 @@
                                             return val + ' casos';
                                         }
                                     }
-                                },
-                                title: {
-                                    text: 'Casos de Assédio/Importunação Sexual por Cor/Raça e Sexo',
-                                    align: 'center',
-                                    style: { fontSize: '16px' }
                                 }
                             };
                             var chart = new ApexCharts(document.querySelector("#apexchart-assedio-sexual"), options);
+                            chart.render();
+                        });
+                        </script>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-text">
+                        <h3 class="content-title">
+                            <i class="fas fa-exclamation-triangle text-warning"></i>
+                            Assédio / Importunação Sexual - Crianças/Adolescentes
+                        </h3>
+                        <p style="width:90%; margin-left:20px;">Os dados apresentados no gráfico mostram casos de assédio e importunação sexual contra crianças e adolescentes. O total de <strong>42</strong> casos registrados evidencia uma realidade preocupante que requer atenção especial das políticas públicas de proteção.</p>
+                        <p style="width:90%; margin-left:20px;">A análise por gênero revela uma predominância alarmante de vítimas do sexo feminino (<strong>39 casos</strong> - 92,9%) contra apenas <strong>3 casos</strong> masculinos (7,1%). Por raça/cor, observamos <strong>22</strong> casos entre pessoas brancas, <strong>18</strong> entre pretas/pardas e <strong>5</strong> em outras categorias. A faixa de 12-17 anos concentra o maior número de casos (23), seguida por 0-6 anos (11) e 7-11 anos (11).</p>
+                        <div class="">
+                            <span class="badge badge-info">Total: 42 casos</span>
+                            <span class="badge badge-warning">Feminino: 92,9%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ## Chart04: Discriminação -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="content-text">
+                        <h3 class="content-title">
+                            <i class="fas fa-balance-scale text-danger"></i>
+                            Discriminação - Crianças/Adolescentes
+                        </h3>
+                        <p style="width:90%; margin-left:20px;">Os dados sobre discriminação (etarismo, capacitismo, racial, homofobia, etc.) contra crianças e adolescentes mostram um total de <strong>7</strong> casos registrados. Embora seja um número relativamente baixo, cada caso representa uma violação grave dos direitos fundamentais.</p>
+                        <p style="width:90%; margin-left:20px;">A distribuição por faixa etária mostra <strong>1 caso</strong> na faixa de 7-11 anos e <strong>4 casos</strong> na faixa de 12-17 anos. Por gênero, há <strong>1 caso</strong> feminino e <strong>2 casos</strong> masculinos registrados. É importante destacar que muitos casos de discriminação podem não ser reportados, sugerindo uma possível subnotificação.</p>
+                        <div class="">
+                            <span class="badge badge-info">Total: 7 casos</span>
+                            <span class="badge badge-warning">Subnotificação: Possível</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="chart-container">
+                        <h4 class="chart-title">Discriminação - Crianças/Adolescentes</h4>
+                        <div id="apexchart-discriminacao"></div>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var options = {
+                                chart: {
+                                    type: 'bar',
+                                    height: 320
+                                },
+                                series: [
+                                    {
+                                        name: 'Branco',
+                                        data: [0, 1, 0]
+                                    },
+                                    {
+                                        name: 'Preto/Pardo',
+                                        data: [0, 2, 2]
+                                    },
+                                    {
+                                        name: 'Outra',
+                                        data: [0, 0, 2]
+                                    },
+                                    {
+                                        name: 'Feminino',
+                                        data: [0, 1, 0]
+                                    },
+                                    {
+                                        name: 'Masculino',
+                                        data: [0, 2, 0]
+                                    }
+                                ],
+                                xaxis: {
+                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
+                                    title: { text: 'Faixa Etária' }
+                                },
+                                yaxis: {
+                                    title: { text: 'Número de Casos' },
+                                    max: 5
+                                },
+                                colors: ['#6c757d', '#8b4513', '#ffc107', '#e83e8c', '#007bff'],
+                                plotOptions: {
+                                    bar: {
+                                        horizontal: false,
+                                        columnWidth: '65%',
+                                        endingShape: 'rounded'
+                                    }
+                                },
+                                dataLabels: {
+                                    enabled: true,
+                                    formatter: function (val) {
+                                        return val;
+                                    }
+                                },
+                                legend: {
+                                    position: 'top',
+                                    horizontalAlign: 'center'
+                                },
+                                tooltip: {
+                                    y: {
+                                        formatter: function (val) {
+                                            return val + ' casos';
+                                        }
+                                    }
+                                }
+                            };
+                            var chart = new ApexCharts(document.querySelector("#apexchart-discriminacao"), options);
                             chart.render();
                         });
                         </script>
@@ -1355,5 +1311,3 @@
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
 
 @endsection
-
-
