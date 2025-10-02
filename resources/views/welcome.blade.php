@@ -43,10 +43,12 @@
         100% { opacity:1; }
     }
      
-    .box-group-transp{ width:90%; margin:0 auto; }
-    .col-buttons-transp{ width:286px; margin-left: 70px; margin-top:20px; }
+    .box-index{ margin-top:50px; }
+    .col-buttons-transp{ width:286px; margin-top:15px; }
+    .left-card{ margin-left:50px; }
+    .right-card{ margin-left:30px; }
     .btn-all-transp{ width:385px; height:70px; margin:0 auto; }
-    .btn-left-transp{ z-index:1000; border-radius:60px; background-color:#fddf10; width:16%; height:60px; text-align:center; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+    .btn-left-transp{ z-index:1000; border-radius:60px; background-color:#fdd632; width:16%; height:60px; text-align:center; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
     .btn-right-transp{ margin-left:-30px; background-color:rgba(0, 0, 0, 0.2); width:67%; height:62px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; backdrop-filter: blur(30px); }
     .btn-right-transp p{ color:white; font-size:19px; opacity: 1.0 !important; margin-left:29px; margin-top:19px; font-weight: 500; }
     .btn-right-transp-big{ font-size:15px !important; }
@@ -55,7 +57,7 @@
     .btn-right-transp:hover{ background-color:rgba(255, 255, 255, 0.3); transform: translateY(-2px); transition: all 0.3s ease; }
     .btn-all-transp{ width:385px; height:70px; margin:0 auto; transition: all 0.3s ease; }
     .icon-btn-transp{ font-size:30px; padding-top:23px; color:white; }
-    .index-img-icon{ width:35px; padding-top:20px; }
+    .index-img-icon{ width:60px; margin-left:-13px; }
     .btn-left-transp i { color: #4c6b4e; font-size:30px; }
     .fa-icon{ font-size:35px; padding-top:15px; color:#; }
     
@@ -100,7 +102,7 @@
         overflow: hidden;
         width:83%;
         height:350px;
-        margin:0 auto;
+        margin-left:10px;
     }
     
     .info-card:hover {
@@ -171,175 +173,174 @@
         transform: translateY(-2px);
         box-shadow: 0 8px 20px rgba(23, 102, 155, 0.4);
     }
+
+    .left-index{ background-color: ; }
+    .right-index{ background-color: ; }
 </style>
 
     {{-- .background + item --}}
     <section id="hero-animation">
-        <div id="landingHero" class="section-py landing-hero2 position-relative" style="background: url('/images/background-index.png') center/cover no-repeat; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius:0px; background-size: cover; background-position: center; background-repeat: no-repeat; width:100%; height:750px;">
-            <div class="row box-group-transp">
+        <div id="landingHero" class="section-py landing-hero2 position-relative" style="background: url('/images/background-original.jpg') center top no-repeat; background-position: center 17%; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; border-radius:0px; background-size: cover; background-repeat: no-repeat; width:100%; height:750px;">
+            <div class="container box-index">
+                <div class="row box-group-transp">
 
-                <!-- left -->
-                <div class="col-6" style="background-color:;">
+                    <!-- left -->
+                    <div class="col-6 left-index mt-3">
 
-                    <!-- 1 -->
-                    <div class="row">
-                        <div class="col-6" style="background-color: ; margin-top:4px;">
-                            <div class="col-buttons-transp">
-                                <a href="{{ route('criancas_e_adolescentes') }}" style="text-decoration:none;">
-                                    <div class="row btn-all-transp">
-                                        <div class="btn-left-transp">
-                                            <i class="fas fa-child fa-icon"></i>
+                        <!-- crianças/lgbt -->
+                        <div class="row">
+                            <div class="col-6" style="background-color: ; ">
+                                <div class="col-buttons-transp left-card">
+                                    <a href="{{ route('criancas_e_adolescentes') }}" style="text-decoration:none;">
+                                        <div class="row btn-all-transp">
+                                            <div class="btn-left-transp">
+                                                <img src="{{ URL::asset('images/icone-index/crianca.png') }}" class="index-img-icon" alt="Icone Criança">
+                                            </div>
+                                            <div class="btn-right-transp">
+                                                <p>Criança</p>
+                                            </div>
                                         </div>
-                                        <div class="btn-right-transp">
-                                            <p>Criança</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-6" style="background-color: ; margin-top:4px;">
-                            <div class="col-buttons-transp">
-                                <a href="{{ route('lgbt') }}" style="text-decoration:none;">
-                                    <div class="row btn-all-transp">
-                                        <div class="btn-left-transp">
-                                            <i class="fas fa-hand-holding-heart fa-icon"></i>
-                                        </div>
-                                        <div class="btn-right-transp">
-                                            <p>LGBT</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 2 -->
-                    <div class="row">
-                        <div class="col-6" style="background-color: ; margin-top:4px;">
-                            <div class="col-buttons-transp">
-                                 <a href="{{ route('juventude_page') }}" style="text-decoration:none;">                                
-                                    <div class="row btn-all-transp">
-                                        <div class="btn-left-transp">
-                                            <i class="fas fa-user-graduate fa-icon"></i>
-                                        </div>
-                                        <div class="btn-right-transp">
-                                            <p>Juventude</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-6" style="background-color: ; margin-top:4px;">
-                            <div class="col-buttons-transp">
-                                <a href="{{ route('igualdade_racial') }}" style="text-decoration:none;">
-                                    <div class="row btn-all-transp">
-                                        <div class="btn-left-transp">
-                                            <i class="fas fa-user-friends fa-icon"></i>
-                                        </div>
-                                        <div class="btn-right-transp">
-                                            <p>Igualdade Racial</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 3 -->
-                    <div class="row">
-                        <div class="col-6" style="background-color: ; margin-top:4px;">
-                            <div class="col-buttons-transp">
-                                <a href="{{ route('pessoas_com_deficiencia') }}" style="text-decoration:none;">
-                                    <div class="row btn-all-transp">
-                                        <div class="btn-left-transp">
-                                            <i class="fas fa-wheelchair fa-icon"></i>
-                                        </div>
-                                        <div class="btn-right-transp">
-                                            <p>PCD</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-6" style="background-color: ; margin-top:4px;">
-                            <div class="col-buttons-transp">
-                                <a href="{{ route('violacao_de_direitos') }}" style="text-decoration:none;">
-                                    <div class="row btn-all-transp">
-                                        <div class="btn-left-transp">
-                                            <i class="fa-solid fa-triangle-exclamation fa-icon"></i>
-                                        </div>
-                                        <div class="btn-right-transp">
-                                            <p>Violação de Direitos</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 4 -->
-                    <div class="row">
-                        <div class="col-6" style="background-color: ; margin-top:4px;">
-                            <div class="col-buttons-transp">
-                                <a href="{{ route('pessoa_idosa') }}" style="text-decoration:none;">
-                                    <div class="row btn-all-transp">
-                                        <div class="btn-left-transp">
-                                            <i class="fa-solid fa-person-cane fa-icon"></i>
-                                        </div>
-                                        <div class="btn-right-transp">
-                                            <p>Pessoas Idosa</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-6" style="background-color: ; margin-top:4px;">
-                            <div class="col-buttons-transp">
-                                <a href="{{ route('transtorno_do_aspecto_autista') }}" style="text-decoration:none;">
-                                    <div class="row btn-all-transp">
-                                        <div class="btn-left-transp">
-                                            <i class="fa-solid fa-puzzle-piece fa-icon"></i>
-                                        </div>
-                                        <div class="btn-right-transp">
-                                            <p>TEA</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- right -->
-                <div class="col-6" style="background-color:;">
-                    
-                    <div class="container">
-
-                        <div class="col-12 mt-4">
-                            <div class="info-card">
-                                <div class="card-icon">
-                                    <i class="fas fa-eye" style="color:white;"></i>
+                                    </a>
                                 </div>
-                                <h4 class="card-title">Observatório de Direitos Humanos</h4>
-                                <p class="card-description">
-                                    O Observatório é um instrumento de monitoramento, análise e divulgação 
-                                    de informações sobre a situação dos direitos humanos em Natal.
-                                </p>
-                                <a href="#" class="card-btn" style="margin-top:-20px;">
-                                    <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
-                                    Saiba Mais
-                                </a>
                             </div>
+
+                            <div class="col-6" style="background-color: ; ">
+                                <div class="col-buttons-transp right-card">
+                                    <a href="{{ route('lgbt') }}" style="text-decoration:none;">
+                                        <div class="row btn-all-transp">
+                                            <div class="btn-left-transp">
+                                                <img src="{{ URL::asset('images/icone-index/lgbt.png') }}" class="index-img-icon" alt="Icone Criança">
+                                            </div>
+                                            <div class="btn-right-transp">
+                                                <p>LGBT</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- juventudo/igualdadeRacial -->
+                        <div class="row">
+                            <div class="col-6" style="background-color: ; ">
+                                <div class="col-buttons-transp left-card">
+                                    <a href="{{ route('juventude_page') }}" style="text-decoration:none;">                                
+                                        <div class="row btn-all-transp">
+                                            <div class="btn-left-transp">
+                                                <img src="{{ URL::asset('images/icone-index/juventude.png') }}" class="index-img-icon" alt="Icone Juventude">
+                                            </div>
+                                            <div class="btn-right-transp">
+                                                <p>Juventude</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-6" style="background-color: ; ">
+                                <div class="col-buttons-transp right-card">
+                                    <a href="{{ route('igualdade_racial') }}" style="text-decoration:none;">
+                                        <div class="row btn-all-transp">
+                                            <div class="btn-left-transp">
+                                                <img src="{{ URL::asset('images/icone-index/igualdade.png') }}" class="index-img-icon" alt="Icone Igualdade Racial">
+                                            </div>
+                                            <div class="btn-right-transp">
+                                                <p>Igualdade Racial</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- pcd/violaçãoDireitos -->
+                        <div class="row">
+                            <div class="col-6" style="background-color: ; ">
+                                <div class="col-buttons-transp left-card">
+                                    <a href="{{ route('pessoas_com_deficiencia') }}" style="text-decoration:none;">
+                                        <div class="row btn-all-transp">
+                                            <div class="btn-left-transp">
+                                                <img src="{{ URL::asset('images/icone-index/pcd.png') }}" class="index-img-icon" alt="Icone PCD">
+                                            </div>
+                                            <div class="btn-right-transp">
+                                                <p>PCD</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-6" style="background-color: ; ">
+                                <div class="col-buttons-transp right-card">
+                                    <a href="{{ route('violacao_de_direitos') }}" style="text-decoration:none;">
+                                        <div class="row btn-all-transp">
+                                            <div class="btn-left-transp">
+                                                <img src="{{ URL::asset('images/icone-index/violacao.png') }}" class="index-img-icon" alt="Icone Violação de Direitos">
+                                            </div>
+                                            <div class="btn-right-transp">
+                                                <p>Violação de Direitos</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- pessoasIdodas/TEA -->
+                        <div class="row">
+                            <div class="col-6" style="background-color: ; ">
+                                <div class="col-buttons-transp left-card">
+                                    <a href="{{ route('pessoa_idosa') }}" style="text-decoration:none;">
+                                        <div class="row btn-all-transp">
+                                            <div class="btn-left-transp">
+                                                <img src="{{ URL::asset('images/icone-index/idosos.png') }}" class="index-img-icon" alt="Icone Pessoas Idosas">
+                                            </div>
+                                            <div class="btn-right-transp">
+                                                <p>Pessoas Idosa</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-6" style="background-color: ; ">
+                                <div class="col-buttons-transp right-card">
+                                    <a href="{{ route('transtorno_do_aspecto_autista') }}" style="text-decoration:none;">
+                                        <div class="row btn-all-transp">
+                                            <div class="btn-left-transp">
+                                                <img src="{{ URL::asset('images/icone-index/tea.png') }}" class="index-img-icon" alt="Icone TEA">
+                                            </div>
+                                            <div class="btn-right-transp">
+                                                <p>TEA</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- right -->
+                    <div class="col-6 right-index">
+
+                        <div class="info-card mt-3">
+                            <div class="card-icon">
+                                <i class="fas fa-eye" style="color:white;"></i>
+                            </div>
+                            <h4 class="card-title">Observatório de Direitos Humanos</h4>
+                            <p class="card-description">
+                                O Observatório é um instrumento de monitoramento, análise e divulgação 
+                                de informações sobre a situação dos direitos humanos em Natal.
+                            </p>
+                            <a href="#" class="card-btn" style="margin-top:-20px;">
+                                <i class="fas fa-info-circle" style="margin-right: 8px;"></i>
+                                Saiba Mais
+                            </a>
                         </div>
 
                     </div>
 
                 </div>
-
             </div>
         </div>
     </section>
