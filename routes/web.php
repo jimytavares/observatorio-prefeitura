@@ -48,13 +48,25 @@ Route::get('/categoria/dados-jovens/painel-dados-jovens/', [ProfilleController::
 Route::get('/categoria/juventude/', [ProfilleController::class, 'juventude_page'])->name('juventude_page');
 
 
+Route::get('/categoria/juventude/populacao/', [ProfilleController::class, 'populacao_juventude'])->name('populacao_juventude');
+
+Route::get('/categoria/juventude/violacoes/', [ProfilleController::class, 'violacao_direitos_juventude'])->name('violacao-de-direito-juventude');
+
+Route::get('/categoria/juventude/garantia/', [ProfilleController::class, 'garantia_direito_juventude'])->name('garantia-de-direito-juventude');
+
 /*
 |--------------------------------------------------------------------------
 | PCD [Categoria]
 |--------------------------------------------------------------------------
 */
 Route::get('/categoria/PCD/', [ProfilleController::class, 'pessoas_com_deficiencia'])->name('pessoas_com_deficiencia');
-Route::get('/categoria/PCD/dados/', [ProfilleController::class, 'pcd_dados'])->name('pcd-dados');
+
+Route::get('/categoria/PCD/populacao/', [ProfilleController::class, 'populacao_pcd'])->name('populacao_pcd');
+
+Route::get('/categoria/PCD/violacoes/', [ProfilleController::class, 'violacao_direitos_pcd'])->name('violacao-de-direito-pcd');
+
+Route::get('/categoria/PCD/garantia/', [ProfilleController::class, 'garantia_direito_pcd'])->name('garantia-de-direito-pcd');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +75,15 @@ Route::get('/categoria/PCD/dados/', [ProfilleController::class, 'pcd_dados'])->n
 */
 
 Route::get('/categoria/pessoa-idosa/', [ProfilleController::class, 'pessoa_idosa'])->name('pessoa_idosa');
+
 Route::get('/categoria/pessoa-idosa/pessoas-idosas-dados/', [ProfilleController::class, 'pessoas_idosas_dados'])->name('pessoas-idosas-dados');
+
+Route::get('/categoria/pessoa-idosa/populacao/', [ProfilleController::class, 'populacao_idosa'])->name('populacao_idosa');
+
+Route::get('/categoria/pessoa-idosa/violacoes/', [ProfilleController::class, 'violacao_direitos_idosos'])->name('violacao-de-direito-idoso');
+
+Route::get('/categoria/pessoa-idosa/garantia/', [ProfilleController::class, 'garantia_direito_idosos'])->name('garantia-de-direito-idoso');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -71,6 +91,13 @@ Route::get('/categoria/pessoa-idosa/pessoas-idosas-dados/', [ProfilleController:
 |--------------------------------------------------------------------------
 */
 Route::get('/categoria/LGBT/', [ProfilleController::class, 'lgbt'])->name('lgbt');
+
+
+Route::get('/categoria/LGBT/populacao/', [ProfilleController::class, 'populacao_lgbt'])->name('populacao_lgbt');
+
+Route::get('/categoria/LGBT/violacoes/', [ProfilleController::class, 'violacao_direitos_lgbt'])->name('violacao-de-direito-lgbt');
+
+Route::get('/categoria/LGBT/garantia/', [ProfilleController::class, 'garantia_direito_lgbt'])->name('garantia-de-direito-lgbt');
 
 /*
 |--------------------------------------------------------------------------
@@ -80,6 +107,14 @@ Route::get('/categoria/LGBT/', [ProfilleController::class, 'lgbt'])->name('lgbt'
 
 Route::get('/categoria/igualdade-racial/', [ProfilleController::class, 'igualdade_racial'])->name('igualdade_racial');
 
+
+Route::get('/categoria/igualdade-racial/populacao/', [ProfilleController::class, 'populacao_igualdade_racial'])->name('populacao_igualdade_racial');
+
+Route::get('/categoria/igualdade-racial/violacoes/', [ProfilleController::class, 'violacao_direitos_igualdade_racial'])->name('violacao-de-direito-igualdade-racial');
+
+Route::get('/categoria/igualdade-racial/garantia/', [ProfilleController::class, 'garantia_direito_igualdade_racial'])->name('garantia-de-direito-igualdade-racial');
+
+
 /*
 |--------------------------------------------------------------------------
 | Violação de Direitos [Categoria]
@@ -88,9 +123,23 @@ Route::get('/categoria/igualdade-racial/', [ProfilleController::class, 'igualdad
 Route::get('/categoria/violacao-de-direitos/', [ProfilleController::class, 'violacao_de_direitos'])->name('violacao_de_direitos');
 
 
+Route::get('/categoria/violacao-de-direitos/populacao/', [ProfilleController::class, 'populacao_violacao_de_direitos'])->name('populacao_violacao_de_direitos');
+
+Route::get('/categoria/violacao-de-direitos/violacoes/', [ProfilleController::class, 'violacao_direitos_violacao_de_direitos'])->name('violacao-de-direito-violacao-de-direitos');
+
+Route::get('/categoria/violacao-de-direitos/garantia/', [ProfilleController::class, 'garantia_direito_violacao_de_direitos'])->name('garantia-de-direito-violacao-de-direitos');
+
+
 /*
 |--------------------------------------------------------------------------
 | TEA [Categoria]
 |--------------------------------------------------------------------------
 */
 Route::get('/categoria/TEA/', [ProfilleController::class, 'transtorno_do_aspecto_autista'])->name('transtorno_do_aspecto_autista');
+
+
+Route::get('/categoria/TEA/populacao/', [ProfilleController::class, 'populacao_tea'])->name('populacao_tea');
+
+Route::get('/categoria/TEA/violacoes/', [ProfilleController::class, 'violacao_direitos_tea'])->name('violacao-de-direito-tea');
+
+Route::get('/categoria/TEA/garantia/', [ProfilleController::class, 'garantia_direito_tea'])->name('garantia-de-direito-tea');

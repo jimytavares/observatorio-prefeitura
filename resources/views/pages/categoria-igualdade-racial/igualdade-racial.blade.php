@@ -267,8 +267,6 @@
 </style>
 
 @include('globals.title-page', [
-    'title' => 'Categoria Igualdade Racial',
-    'description' => 'Informações sobre a categoria Igualdade Racial',
     'image' => asset('images/etinias.jpeg')  
 ])
 
@@ -287,7 +285,7 @@
                     <h3 class="card-title">Sub-Categoria 01</h3>
                     <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Igualdade Racial.</p>
                     <div class="text-center">
-                        <a href="{{ route('dados-criancas') }}" class="card-link">Ver Dados</a>
+                        <a href="{{ route('igualdade_racial') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -300,7 +298,7 @@
                     <h3 class="card-title">Sub-Categoria 02</h3>
                     <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Igualdade Racial.</p>
                     <div class="text-center">
-                        <a href="#" class="card-link">Ver Indicadores</a>
+                        <a href="#" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -313,7 +311,7 @@
                     <h3 class="card-title">Sub-Categoria 03</h3>
                     <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Igualdade Racial.</p>
                     <div class="text-center">
-                        <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>
+                        <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>

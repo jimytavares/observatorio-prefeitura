@@ -276,8 +276,6 @@
 </style>
 
 @include('globals.title-page', [
-    'title' => 'Categoria LGBT',
-    'description' => 'Informações sobre a categoria LGBT',
     'image' => asset('images/lgbt.ia.png')  
 ])
 
@@ -293,10 +291,10 @@
                     <div class="card-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 01</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de LGBT.</p>
+                    <h3 class="card-title">População</h3>
+                    <p class="card-description">Pessoas LGBTQIA+ são aquelas que se identificam como lésbicas, gays, bissexuais, transexuais, travestis, queer, intersexo, assexuais, ou com...</p>
                     <div class="text-center">
-                        <a href="{{ route('dados-criancas') }}" class="card-link">Ver Dados</a>
+                        <a href="{{ route('populacao_lgbt') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -306,10 +304,10 @@
                     <div class="card-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 02</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de LGBT.</p>
+                    <h3 class="card-title">Violação de Direitos</h3>
+                    <p class="card-description">Violação de direitos das pessoas LGBTQIAPN+ refere-se a qualquer ação ou omissão que atente contra os direitos humanos assegurados a este grupo...</p>
                     <div class="text-center">
-                        <a href="#" class="card-link">Ver Indicadores</a>
+                         <a href="{{ route('violacao-de-direito-lgbt') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -319,10 +317,10 @@
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 03</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de LGBT.</p>
+                    <h3 class="card-title">Garantia de Direitos</h3>
+                    <p class="card-description">A garantia de direitos para pessoas LGBTQIAPN+ envolve medidas que promovam a inclusão social, o respeito à diversidade, a proteção contra a violência...</p>
                     <div class="text-center">
-                        <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>
+                        <a href="{{ route('garantia-de-direito-lgbt') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>

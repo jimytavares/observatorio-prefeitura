@@ -95,6 +95,31 @@ class ProfilleController extends Controller
         return view('pages.categoria-juventude.juventude', compact(['title', 'description']));
     }
 
+    public function populacao_juventude()
+    {
+        $title = 'População';
+        $description = 'Juventude';
+        // $imagem = asset('images/juventude-populacao.jpeg'); 
+        return view('pages.categoria-juventude.populacao', compact(["title", "description"]));
+    }
+
+    public function violacao_direitos_juventude()
+    {
+        $title = 'Violação de Direitos';
+        $description = 'Juventude';
+        // $imagem = asset('images/juventude-violacoes.jpeg'); 
+        return view('pages.categoria-juventude.violacoes-de-direitos', compact(["title", "description"]));
+    }
+
+    public function garantia_direito_juventude()
+    {
+        $title = 'Garantia de Direitos';
+        $description = 'Juventude';
+        // $imagem = asset('images/juventude-garantia.jpeg'); 
+        return view('pages.categoria-juventude.garantia-de-direitos', compact(["title", "description"]));
+    }
+
+
      /*
     |--------------------------------------------------------------------------
     | PCD [Categoria]
@@ -115,6 +140,30 @@ class ProfilleController extends Controller
         return view('pages.categoria-pcd.pcd-dados', compact(['title', 'description']));
     }
 
+    public function populacao_pcd()
+    {
+        $title = 'População';
+        $description = 'Pessoas com Deficiência (PCD)';
+        // $imagem = asset('images/pcd-populacao.jpeg'); 
+        return view('pages.categoria-pcd.populacao', compact(["title", "description"]));
+    }
+
+    public function violacao_direitos_pcd()
+    {
+        $title = 'Violação de Direitos';
+        $description = 'Pessoas com Deficiência (PCD)';
+        // $imagem = asset('images/pcd-violacoes.jpeg'); 
+        return view('pages.categoria-pcd.violacoes-de-direitos', compact(["title", "description"]));
+    }
+
+    public function garantia_direito_pcd()
+    {
+        $title = 'Garantia de Direitos';
+        $description = 'Pessoas com Deficiência (PCD)';
+        // $imagem = asset('images/pcd-garantia.jpeg'); 
+        return view('pages.categoria-pcd.garantia-de-direitos', compact(["title", "description"]));
+    }
+
      /*
     |--------------------------------------------------------------------------
     | Pessoa Idosa [Categoria]
@@ -132,8 +181,29 @@ class ProfilleController extends Controller
     {
         $title = 'Dados sobre Pessoas Idosas';
         $description = 'Informações detalhadas sobre pessoas idosas';
-
+         
         return view('pages.categoria-pessoa-idosa.pessoas-idosas-dados', compact(['title', 'description']));
+    }
+
+    public function populacao_idosa(){
+
+        $title = 'População';
+        $description = 'Pessoa Idosa';
+        // $imagem = asset('images/pessoa-idosas.jpeg'); 
+        return view('pages.categoria-pessoa-idosa.populacao', compact(["title", "description"]));
+    }
+    public function violacao_direitos_idosos(){
+        $title = 'Violação de Direitos';
+        $description = 'Pessoa Idosa';
+        // $imagem = asset('images/pessoa-idosas.jpeg'); 
+        return view('pages.categoria-pessoa-idosa.violacoes-de-direitos', compact(["title", "description"]));
+
+    }
+    public function garantia_direito_idosos(){
+        $title = 'Garantia de Direitos';
+        $description = 'Pessoa Idosa';
+        // $imagem = asset('images/pessoa-idosas.jpeg'); 
+        return view('pages.categoria-pessoa-idosa.garantia-de-direitos', compact(["title", "description"]));
     }
 
      /*
@@ -148,6 +218,31 @@ class ProfilleController extends Controller
 
         return view('pages.categoria-lgbt.lgbt', compact(['title', 'description']));
     }
+
+    public function populacao_lgbt()
+    {
+        $title = 'População';
+        $description = 'LGBT';
+        // $imagem = asset('images/lgbt-populacao.jpeg'); 
+        return view('pages.categoria-lgbt.populacao', compact(["title", "description"]));
+    }
+
+    public function violacao_direitos_lgbt()
+    {
+        $title = 'Violação de Direitos';
+        $description = 'LGBT';
+        // $imagem = asset('images/lgbt-violacoes.jpeg'); 
+        return view('pages.categoria-lgbt.violacoes-de-direitos', compact(["title", "description"]));
+    }
+
+    public function garantia_direito_lgbt()
+    {
+        $title = 'Garantia de Direitos';
+        $description = 'LGBT';
+        // $imagem = asset('images/lgbt-garantia.jpeg'); 
+        return view('pages.categoria-lgbt.garantia-de-direitos', compact(["title", "description"]));
+    }
+
      /*
     |--------------------------------------------------------------------------
     | Igualdade racial [Categoria]
@@ -160,6 +255,31 @@ class ProfilleController extends Controller
 
         return view('pages.categoria-igualdade-racial.igualdade-racial', compact(['title', 'description']));
     }
+
+    public function populacao_igualdade_racial()
+    {
+        $title = 'População';
+        $description = 'Igualdade Racial';
+        // $imagem = asset('images/igualdade-racial-populacao.jpeg'); 
+        return view('pages.categoria-igualdade-racial.populacao', compact(["title", "description"]));
+    }
+
+    public function violacao_direitos_igualdade_racial()
+    {
+        $title = 'Violação de Direitos';
+        $description = 'Igualdade Racial';
+        // $imagem = asset('images/igualdade-racial-violacoes.jpeg'); 
+        return view('pages.categoria-igualdade-racial.violacoes-de-direitos', compact(["title", "description"]));
+    }
+
+    public function garantia_direito_igualdade_racial()
+    {
+        $title = 'Garantia de Direitos';
+        $description = 'Igualdade Racial';
+        // $imagem = asset('images/igualdade-racial-garantia.jpeg'); 
+        return view('pages.categoria-igualdade-racial.garantia-de-direitos', compact(["title", "description"]));
+    }
+
      /*
     |--------------------------------------------------------------------------
     | Violação de Direitos [Categoria]
@@ -172,6 +292,31 @@ class ProfilleController extends Controller
 
         return view('pages.categoria-violacao-dos-direitos.violacao-de-direitos', compact(['title', 'description']));
     }
+
+    public function populacao_violacao_de_direitos()
+    {
+        $title = 'População';
+        $description = 'Violação de Direitos';
+        // $imagem = asset('images/violacao-de-direitos-populacao.jpeg'); 
+        return view('pages.categoria-violacao-dos-direitos.populacao', compact(["title", "description"]));
+    }
+
+    public function violacao_direitos_violacao_de_direitos()
+    {
+        $title = 'Violação de Direitos';
+        $description = 'Violação de Direitos';
+        // $imagem = asset('images/violacao-de-direitos-violacoes.jpeg'); 
+        return view('pages.categoria-violacao-dos-direitos.violacoes-de-direitos', compact(["title", "description"]));
+    }
+
+    public function garantia_direito_violacao_de_direitos()
+    {
+        $title = 'Garantia de Direitos';
+        $description = 'Violação de Direitos';
+        // $imagem = asset('images/violacao-de-direitos-garantia.jpeg'); 
+        return view('pages.categoria-violacao-dos-direitos.garantia-de-direitos', compact(["title", "description"]));
+    }
+
      /*
     |--------------------------------------------------------------------------
     | TEA [Categoria]
@@ -183,6 +328,29 @@ class ProfilleController extends Controller
         $description = 'Dados sobre Transtorno do Espectro Autista (TEA)';
 
         return view('pages.categoria-tea.tea', compact(['title', 'description']));
+    }
+    public function populacao_tea()
+    {
+        $title = 'População';
+        $description = 'TEA';
+        // $imagem = asset('images/tea-populacao.jpeg'); 
+        return view('pages.categoria-tea.populacao', compact(["title", "description"]));
+    }
+
+    public function violacao_direitos_tea()
+    {
+        $title = 'Violação de Direitos';
+        $description = 'TEA';
+        // $imagem = asset('images/tea-violacoes.jpeg'); 
+        return view('pages.categoria-tea.violacoes-de-direitos', compact(["title", "description"]));
+    }
+
+    public function garantia_direito_tea()
+    {
+        $title = 'Garantia de Direitos';
+        $description = 'TEA';
+        // $imagem = asset('images/tea-garantia.jpeg'); 
+        return view('pages.categoria-tea.garantia-de-direitos', compact(["title", "description"]));
     }
 
 }

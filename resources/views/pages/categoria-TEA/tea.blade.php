@@ -276,8 +276,6 @@
 </style>
 
 @include('globals.title-page', [
-    'title' => 'Categoria TEA',
-    'description' => 'Informações sobre a categoria TEA',
     'image' => asset('images/autistas.ia.png')  
 ])
 
@@ -296,10 +294,10 @@
                     <div class="card-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de TEA.</p>
+                    <h3 class="card-title">População</h3>
+                    <p class="card-description">No Brasil, pessoas com Transtorno do Espectro Autista (TEA) são reconhecidas pela Lei nº 12.764/2012 como pessoas...</p>
                     <div class="text-center">
-                        <a href="{{ route('dados-criancas') }}" class="card-link">Ver Dados</a>
+                        <a href="{{ route('populacao_tea') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -309,10 +307,10 @@
                     <div class="card-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de TEA.</p>
+                    <h3 class="card-title">Violação de Direitos</h3>
+                    <p class="card-description">Entende-se por violação de direitos da pessoa com Transtorno do Espectro Autista (TEA) qualquer ação...</p>
                     <div class="text-center">
-                        <a href="#" class="card-link">Ver Indicadores</a>
+                        <a href="{{ route('violacao-de-direito-tea') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -322,10 +320,10 @@
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="card-title">Esse é um título é inlustrativo para essa Categoria</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de TEA.</p>
+                    <h3 class="card-title">Garantia de Direitos</h3>
+                    <p class="card-description">A garantia de direitos para o segmento das pessoas com Transtorno do Espectro Autista (TEA) compreende...</p>
                     <div class="text-center">
-                        <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>
+                        <a href="{{ route('garantia-de-direito-tea') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>

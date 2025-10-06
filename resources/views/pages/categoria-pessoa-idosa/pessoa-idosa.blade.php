@@ -276,8 +276,6 @@
 </style>
 
 @include('globals.title-page', [
-    'title' => 'Categoria Pessoa Idosa',
-    'description' => 'Informações sobre a categoria Pessoa Idosa',
     'image' => asset('images/idosos.ia.png')  
 ])
 
@@ -293,10 +291,10 @@
                     <div class="card-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 01</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Igualdade Racial.</p>
+                    <h3 class="card-title">População</h3>
+                    <p class="card-description">O conceito de pessoa idosa no Brasil, com base legal, é definido pelo Estatuto da Pessoa Idosa (Lei nº 10.741, de 1º de outubro de 2003)...</p>
                     <div class="text-center">
-                        <a href="{{ route('pessoas-idosas-dados') }}" class="card-link">Ver Dados</a>
+                        <a href="{{ route('populacao_idosa') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -306,10 +304,10 @@
                     <div class="card-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 02</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Igualdade Racial.</p>
+                    <h3 class="card-title">Violações de Direitos</h3>
+                    <p class="card-description">A violação de direitos das pessoas idosas refere-se a qualquer ação ou omissão que atente contra os direitos fundamentais assegurados...</p>
                     <div class="text-center">
-                        <a href="#" class="card-link">Ver Indicadores</a>
+                        <a href="{{ route('violacao-de-direito-idoso') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -319,10 +317,10 @@
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 03</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Igualdade Racial.</p>
+                    <h3 class="card-title">Garantia de Direitos</h3>
+                    <p class="card-description">A garantia de direitos para pessoas idosas abrange as políticas públicas, serviços e iniciativas que promovem a proteção...<p>
                     <div class="text-center">
-                        <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>
+                        <a href="{{ route('garantia-de-direito-idoso') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
