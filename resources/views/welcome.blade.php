@@ -197,7 +197,7 @@
                                                 <img src="{{ URL::asset('images/icone-index/crianca.png') }}" class="index-img-icon" alt="Icone Criança">
                                             </div>
                                             <div class="btn-right-transp">
-                                                <p>Criança</p>
+                                                <p>Criança e Adolescentes</p>
                                             </div>
                                         </div>
                                     </a>
