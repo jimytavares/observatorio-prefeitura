@@ -276,9 +276,7 @@
 </style>
 
 @include('globals.title-page', [
-    'title' => 'Categoria Juventude',
-    'description' => 'Informações sobre a categoria Juventude',
-    'image' => asset('images/jovens.jpeg')  
+    'image' => asset('images/juventude.ia.png')  
 ])
 
 <!-- Cards Section -->
@@ -293,10 +291,10 @@
                     <div class="card-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 01</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Juventude.</p>
+                    <h3 class="card-title">População</h3>
+                    <p class="card-description">A população jovem compreende pessoas na faixa etária entre 15 e 29 anos, fase da vida marcada por intensas transformações sociais, econômicas e culturais, além da inserção em processos...</p>
                     <div class="text-center">
-                        <a href="{{ route('dados-criancas') }}" class="card-link">Ver Dados</a>
+                        <a href="{{ route('populacao_juventude') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -306,10 +304,10 @@
                     <div class="card-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 02</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Juventude.</p>
+                    <h3 class="card-title">Violação de direitos</h3>
+                    <p class="card-description">As violações de direitos que atingem os jovens estão relacionadas a diferentes dimensões de sua vida e comprometem seu desenvolvimento pleno e sua inserção social...</p>
                     <div class="text-center">
-                        <a href="#" class="card-link">Ver Indicadores</a>
+                         <a href="{{ route('violacao-de-direito-juventude') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -319,10 +317,10 @@
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 03</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de Juventude.</p>
+                    <h3 class="card-title">Garantia de direitos</h3>
+                    <p class="card-description">A garantia de direitos da população jovem envolve a implementação de políticas públicas voltadas à promoção da educação, da empregabilidade, da saúde...</p>
                     <div class="text-center">
-                        <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>
+                        <a href="{{ route('garantia-de-direito-juventude') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>

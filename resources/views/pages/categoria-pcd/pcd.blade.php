@@ -276,9 +276,7 @@
 </style>
 
 @include('globals.title-page', [
-    'title' => 'Categoria PCD',
-    'description' => 'Informações sobre a categoria PCD',
-    'image' => asset('images/pessoas-deficiencias.jpeg')  
+    'image' => asset('images/pcd.ia.png')  
 ])
 
 <!-- Cards Section -->
@@ -293,10 +291,10 @@
                     <div class="card-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 01</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de pessoas com deficiência.</p>
+                    <h3 class="card-title">População</h3>
+                    <p class="card-description">O conceito de pessoa com deficiência abrange aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual...</p>
                     <div class="text-center">
-                        <a href="{{ route('pcd-dados') }}" class="card-link">Ver Dados</a>
+                        <a href="{{ route('populacao_pcd') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -306,10 +304,10 @@
                     <div class="card-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 02</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de pessoas com deficiência.</p>
+                    <h3 class="card-title">Violação de Direitos</h3>
+                    <p class="card-description">Violação de direitos das pessoas com deficiência refere-se a qualquer ação ou omissão que atente contra os direitos humanos assegurados a este grupo...</p>
                     <div class="text-center">
-                        <a href="#" class="card-link">Ver Indicadores</a>
+                        <a href="{{ route('violacao-de-direito-pcd') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
@@ -319,10 +317,10 @@
                     <div class="card-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="card-title">Sub-Categoria 03</h3>
-                    <p class="card-description">Esse é um texto introdutivo para explicar sobre a Categoria de pessoas com deficiência.</p>
+                    <h3 class="card-title">Garantia de Direitos</h3>
+                    <p class="card-description">A garantia de direitos para pessoas com deficiência envolve medidas que promovam a acessibilidade, a inclusão plena e a igualdade de oportunidades...</p>
                     <div class="text-center">
-                        <a href="{{ route('painel-dados-criancas-adolescentes') }}" class="card-link">Acessar Painel</a>
+                        <a href="{{ route('garantia-de-direito-pcd') }}" class="card-link">Ver Dados</a>
                     </div>
                 </div>
             </div>
