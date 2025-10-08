@@ -292,7 +292,7 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <h3 class="card-title">População</h3>
-                    <p class="card-description">A população jovem compreende pessoas na faixa etária entre 15 e 29 anos, fase da vida marcada por intensas transformações sociais, econômicas e culturais, além da inserção em processos...</p>
+                    <p class="card-description">A população jovem compreende pessoas na faixa etária entre 15 e 29 anos, fase da vida marcada por intensas transformações sociais, econômicas...</p>
                     <div class="text-center">
                         <a href="{{ route('populacao_juventude') }}" class="card-link">Ver Dados</a>
                     </div>
@@ -305,7 +305,7 @@
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3 class="card-title">Violação de direitos</h3>
-                    <p class="card-description">As violações de direitos que atingem os jovens estão relacionadas a diferentes dimensões de sua vida e comprometem seu desenvolvimento pleno e sua inserção social...</p>
+                    <p class="card-description">As violações de direitos que atingem os jovens estão relacionadas a diferentes dimensões de sua vida e comprometem seu desenvolvimento pleno e sua inserção...</p>
                     <div class="text-center">
                          <a href="{{ route('violacao-de-direito-juventude') }}" class="card-link">Ver Dados</a>
                     </div>
@@ -318,7 +318,7 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3 class="card-title">Garantia de direitos</h3>
-                    <p class="card-description">A garantia de direitos da população jovem envolve a implementação de políticas públicas voltadas à promoção da educação, da empregabilidade, da saúde...</p>
+                    <p class="card-description">A garantia de direitos da população jovem envolve a implementação de políticas públicas voltadas à promoção da educação, da empregabilidade...</p>
                     <div class="text-center">
                         <a href="{{ route('garantia-de-direito-juventude') }}" class="card-link">Ver Dados</a>
                     </div>

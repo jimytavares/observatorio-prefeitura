@@ -849,13 +849,13 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="image-showcase">
-                    <img src="{{ asset('images/ia-img-subcategorias/criancas-adolescentes-violacoes.jpeg') }}" alt="População em situação de rua" class="img-fluid">
+                    <img src="{{ asset('images/jovem-violacao.jpg') }}" alt="População em situação de rua" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6 mt-4">
                 <div class="info-card text-justify">
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
-                    <p>As violações de direitos que atingem os jovens estão relacionadas a diferentes dimensões de sua vida e comprometem seu desenvolvimento pleno e sua inserção social. Entre as mais recorrentes, estão a evasão e o abandono escolar, a dificuldade de acesso ao ensino superior e técnico de qualidade, o desemprego e a precarização do trabalho, que impactam diretamente suas perspectivas de futuro. </p><br> <p>Soma-se a isso a violência urbana, que vitimiza de forma desproporcional, a juventude, sobretudo a juventude exposta a homicídios, encarceramento e abordagens policiais discriminatórias. </p><br> <p>Além disso, muitos jovens enfrentam barreiras no acesso à saúde integral, incluindo saúde mental, sexual e reprodutiva, e sofrem com discriminação de gênero, orientação sexual, raça, deficiência ou condição social. Essas situações de violação reduzem as oportunidades de autonomia e participação cidadã, afetando a dignidade e a qualidade de vida da juventude.</p>
+                    <p>As violações de direitos que atingem os jovens estão relacionadas a diferentes dimensões de sua vida e comprometem seu desenvolvimento pleno e sua inserção social. Entre as mais recorrentes, estão a evasão e o abandono escolar, a dificuldade de acesso ao ensino superior e técnico de qualidade, o desemprego e a precarização do trabalho, que impactam diretamente suas perspectivas de futuro. </p><p>Soma-se a isso a violência urbana, que vitimiza de forma desproporcional, a juventude, sobretudo a juventude exposta a homicídios, encarceramento e abordagens policiais discriminatórias. </p><p> Além disso, muitos jovens enfrentam barreiras no acesso à saúde integral, incluindo saúde mental, sexual e reprodutiva, e sofrem com discriminação de gênero, orientação sexual, raça, deficiência ou condição social. Essas situações de violação reduzem as oportunidades de autonomia e participação cidadã, afetando a dignidade e a qualidade de vida da juventude.</p>
                 </div>
             </div>
         </div>

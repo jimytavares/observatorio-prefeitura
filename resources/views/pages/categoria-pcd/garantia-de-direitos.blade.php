@@ -847,12 +847,13 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="image-showcase">
-                    <img src="{{ asset('images/ia-img-subcategorias/criancas-adolescentes-direitos.jpeg') }}" alt="População em situação de rua" class="img-fluid">
+                    <img src="{{ asset('images/garantia-pcd.png') }}" alt="Pessoas com Deficiência" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6 mt-4">
                 <div class="info-card text-justify" style="height: 382px;">
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
+                    <br>
                     <p>A garantia de direitos para pessoas com deficiência envolve medidas que promovam a acessibilidade, a inclusão plena e a igualdade de oportunidades, assegurando o respeito à sua dignidade e autonomia, e eliminando barreiras que impeçam sua participação social.</p>
                 </div>
             </div>
