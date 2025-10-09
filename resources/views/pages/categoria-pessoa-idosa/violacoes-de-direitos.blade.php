@@ -866,391 +866,77 @@
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
         
-        <!-- ## Chart01: violencia domestica -->
+        <!-- chart02: Violência Doméstica -->
         <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-map-marked-alt text-info"></i>
-                            Violência Doméstica - Crianças/Adolescentes
-                        </h3>
-                        <div class="row mt-3">
-                            <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-striped" style="background:#fff;">
-                                        <thead style="background:#f8f9fa;">
-                                            <tr>
-                                                <th colspan="3" class="text-center"><b>Cor/Raça</b></th>
-                                                <th colspan="2" class="text-center"><b>Sexo</b></th>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center">Branco</th>
-                                                <th class="text-center">Preto/Pardo</th>
-                                                <th class="text-center">Outra</th>
-                                                <th class="text-center">Feminino</th>
-                                                <th class="text-center">Masculino</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-center">846</td>
-                                                <td class="text-center">1355</td>
-                                                <td class="text-center">133</td>
-                                                <td class="text-center">1032</td>
-                                                <td class="text-center">1246</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center">726</td>
-                                                <td class="text-center">900</td>
-                                                <td class="text-center">49</td>
-                                                <td class="text-center">828</td>
-                                                <td class="text-center">817</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center">765</td>
-                                                <td class="text-center">981</td>
-                                                <td class="text-center">104</td>
-                                                <td class="text-center">1127</td>
-                                                <td class="text-center">699</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="chart-container">
-                        <div id="apexchart-violencia-domestica"></div>
-                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'pie',
-                                    height: 320
-                                },
-                                series: [
-                                    846+726+765, // Branco
-                                    1355+900+981, // Preto/Pardo
-                                    133+49+104   // Outra
-                                ],
-                                labels: ['Branco', 'Preto/Pardo', 'Outra'],
-                                colors: ['#0040ff', '#ff0000', '#ff9900'],
-                                legend: {
-                                    position: 'bottom',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: true,
-                                    formatter: function (val, opts) {
-                                        return opts.w.config.labels[opts.seriesIndex] + ': ' + opts.w.globals.series[opts.seriesIndex];
-                                    },
-                                    style: {
-                                        fontSize: '15px',
-                                        fontWeight: 'bold'
-                                    }
-                                },
-                                title: {
-                                    text: 'Casos por Cor/Raça (Total)',
-                                    align: 'center',
-                                    style: { fontSize: '16px' }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-violencia-domestica"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ## Char02: Análise dos Dados de Violência Sexual -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            Análise dos Dados de Violência Sexual
-                        </h3>
-                        <p>
-                            O gráfico ao lado apresenta os casos de violência sexual contra crianças e adolescentes, segmentados por cor/raça e sexo. Observa-se que, nas três linhas de dados analisadas, a maior parte dos casos envolve vítimas do sexo feminino, com números significativamente superiores aos do sexo masculino em todas as situações.<br><br>
-                            Em relação à cor/raça, os grupos "Branco" e "Preto/Pardo" concentram a maioria dos registros, sendo que o grupo "Preto/Pardo" apresenta números próximos ou superiores ao grupo "Branco" em algumas linhas, evidenciando a vulnerabilidade desses segmentos. O grupo "Outra" apresenta números menores, mas ainda relevantes para o contexto.<br><br>
-                            Esses dados reforçam a importância de políticas públicas específicas para a proteção de meninas e para o enfrentamento das desigualdades raciais, além de evidenciar a necessidade de ações integradas de prevenção e combate à violência sexual na infância e adolescência.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="chart-container">
-                        <h4 class="chart-title">Violência Sexual - Crianças/Adolescentes</h4>
-                        <div id="apexchart-violencia-sexual"></div>
-                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [18, 54, 65]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [17, 39, 86]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [8, 0, 20]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [33, 76, 139]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [5, 17, 22]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa/Grupo' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Casos' }
-                                },
-                                colors: ['#0040ff', '#ff0000', '#ff9900', '#e83e8c', '#ffc107'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '55%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: false
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                },
-                                title: {
-                                    text: 'Casos de Violência Sexual por Cor/Raça e Sexo',
-                                    align: 'center',
-                                    style: { fontSize: '16px' }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-violencia-sexual"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ## Chart03: Assédio / Importunação Sexual -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="chart-container">
-                        <h4 class="chart-title">Assédio / Importunação Sexual - Crianças/Adolescentes</h4>
-                        <div id="apexchart-assedio-sexual"></div>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [4, 8, 10]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [5, 3, 10]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [2, 0, 3]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [10, 10, 19]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [0, 1, 2]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa Etária' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Número de Casos' }
-                                },
-                                colors: ['#6c757d', '#8b4513', '#ffc107', '#e83e8c', '#007bff'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '65%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: false
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-assedio-sexual"), options);
-                            chart.render();
-                        });
-                        </script>
+                        <h3 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Violência Doméstica contra Pessoas Idosas
+                        </h3>
+                        <div id="violenciaDomesticaChart"></div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-exclamation-triangle text-warning"></i>
-                            Assédio / Importunação Sexual - Crianças/Adolescentes
-                        </h3>
-                        <p style="width:90%; margin-left:20px;">Os dados apresentados no gráfico mostram casos de assédio e importunação sexual contra crianças e adolescentes. O total de <strong>42</strong> casos registrados evidencia uma realidade preocupante que requer atenção especial das políticas públicas de proteção.</p>
-                        <p style="width:90%; margin-left:20px;">A análise por gênero revela uma predominância alarmante de vítimas do sexo feminino (<strong>39 casos</strong> - 92,9%) contra apenas <strong>3 casos</strong> masculinos (7,1%). Por raça/cor, observamos <strong>22</strong> casos entre pessoas brancas, <strong>18</strong> entre pretas/pardas e <strong>5</strong> em outras categorias. A faixa de 12-17 anos concentra o maior número de casos (23), seguida por 0-6 anos (11) e 7-11 anos (11).</p>
-                        <div class="">
-                            <span class="badge badge-info">Total: 42 casos</span>
-                            <span class="badge badge-warning">Feminino: 92,9%</span>
-                        </div>
+                    <div class="">
+                        <h4><i class="fas fa-shield-alt"></i> Análise da Violência Doméstica</h4>
+                        <p>Os dados revelam um total de <strong>1.411 casos de violência doméstica</strong> registrados contra pessoas idosas, evidenciando uma grave violação de direitos desta população vulnerável.</p>
+                        
+                        <p>A distribuição por raça/cor demonstra disparidades significativas:</p>
+                        
+                        <ul class="custom-list">
+                            <li><strong>Pessoas brancas:</strong> 410 casos (29,1%)</li>
+                            <li><strong>Pessoas pretas/pardas:</strong> 472 casos (33,5%)</li>
+                            <li><strong>Outras etnias:</strong> 22 casos (1,6%)</li>
+                        </ul>
+                        
+                        <p>Por gênero, observa-se que <strong>593 casos (42,0%) envolvem mulheres</strong> e <strong>314 casos (22,2%) envolvem homens</strong>, demonstrando maior vulnerabilidade das mulheres idosas.</p>
+                        
+                        <p class="text-danger"><strong>Alerta:</strong> A predominância de casos envolvendo pessoas pretas/pardas indica a necessidade de políticas específicas de proteção para esta população.</p>
+                        
+                        <span class="badge badge-warning">
+                            <i class="fas fa-exclamation-triangle"></i> Situação Crítica
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ## Chart04: Discriminação -->
+        <!-- chart03: Violência Sexual -->
         <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-balance-scale text-danger"></i>
-                            Discriminação - Crianças/Adolescentes
-                        </h3>
-                        <p style="width:90%; margin-left:20px;">Os dados sobre discriminação (etarismo, capacitismo, racial, homofobia, etc.) contra crianças e adolescentes mostram um total de <strong>7</strong> casos registrados. Embora seja um número relativamente baixo, cada caso representa uma violação grave dos direitos fundamentais.</p>
-                        <p style="width:90%; margin-left:20px;">A distribuição por faixa etária mostra <strong>1 caso</strong> na faixa de 7-11 anos e <strong>4 casos</strong> na faixa de 12-17 anos. Por gênero, há <strong>1 caso</strong> feminino e <strong>2 casos</strong> masculinos registrados. É importante destacar que muitos casos de discriminação podem não ser reportados, sugerindo uma possível subnotificação.</p>
-                        <div class="">
-                            <span class="badge badge-info">Total: 7 casos</span>
-                            <span class="badge badge-warning">Subnotificação: Possível</span>
-                        </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-user-shield"></i> Análise da Violência Sexual</h4>
+                        <p>Os registros de violência sexual contra pessoas idosas totalizam <strong>apenas 4 casos</strong> no período analisado, um número que pode indicar subnotificação significativa desta grave violação de direitos.</p>
+                        
+                        <p>A distribuição por raça/cor dos casos registrados:</p>
+                        
+                        <ul class="custom-list">
+                            <li><strong>Pessoas brancas:</strong> 2 casos (50,0%)</li>
+                            <li><strong>Pessoas pretas/pardas:</strong> 0 casos registrados</li>
+                            <li><strong>Outras etnias:</strong> 0 casos registrados</li>
+                        </ul>
+                        
+                        <p>Por gênero, todos os casos registrados <strong>envolvem homens (2 casos)</strong>, com nenhum caso registrado envolvendo mulheres idosas, o que contrasta com padrões esperados e pode indicar problemas na coleta de dados.</p>
+                        
+                        <p class="text-danger"><strong>Subnotificação crítica:</strong> O baixo número de registros é inconsistente com estudos nacionais e pode refletir barreiras na denúncia ou no registro destes crimes.</p>
+                        
+                        <span class="badge badge-info">
+                            <i class="fas fa-info-circle"></i> Dados Limitados
+                        </span>
                     </div>
                 </div>
-                <div class="col-lg-6 order-lg-1">
+                <div class="col-lg-6">
                     <div class="chart-container">
-                        <h4 class="chart-title">Discriminação - Crianças/Adolescentes</h4>
-                        <div id="apexchart-discriminacao"></div>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [0, 1, 0]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [0, 2, 2]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [0, 0, 2]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [0, 1, 0]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [0, 2, 0]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa Etária' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Número de Casos' },
-                                    max: 5
-                                },
-                                colors: ['#6c757d', '#8b4513', '#ffc107', '#e83e8c', '#007bff'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '65%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: true,
-                                    formatter: function (val) {
-                                        return val;
-                                    }
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-discriminacao"), options);
-                            chart.render();
-                        });
-                        </script>
+                        <h3 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Violência Sexual contra Pessoas Idosas
+                        </h3>
+                        <div id="violenciaSexualChart"></div>
                     </div>
                 </div>
             </div>
         </div>
-
-        
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
@@ -1310,5 +996,402 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+
+<script>
+// Gráfico População Idosa IBGE
+document.addEventListener('DOMContentLoaded', function () {
+    var populacaoIdosaOptions = {
+        series: [{
+            name: 'População',
+            data: [128145, 77229, 50916]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#17669b'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Total (>60 anos)', 'Mulheres', 'Homens'],
+            labels: {
+                style: {
+                    fontSize: '12px',
+                    fontWeight: '600',
+                    colors: '#333'
+                }
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Pessoas',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Distribuição da População Idosa em Natal',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#17669b'
+            }
+        },
+        subtitle: {
+            text: 'Dados IBGE - Pessoas com 60 anos ou mais',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Total (>60 anos)', 'Mulheres', 'Homens'];
+                    const category = categories[opts.dataPointIndex];
+                    let percentage = '';
+                    
+                    if (category === 'Mulheres') {
+                        percentage = ' (60,3%)';
+                    } else if (category === 'Homens') {
+                        percentage = ' (39,7%)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' pessoas' + percentage;
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        },
+        legend: {
+            show: false
+        }
+    };
+
+    var populacaoIdosaChart = new ApexCharts(document.querySelector("#populacaoIdosaChart"), populacaoIdosaOptions);
+    populacaoIdosaChart.render();
+
+    // Gráfico Violência Doméstica
+    var violenciaDomesticaOptions = {
+        series: [{
+            name: 'Casos',
+            data: [410, 472, 22, 593, 314]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#dc3545'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Casos',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Violência Doméstica por Demografia',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#dc3545'
+            }
+        },
+        subtitle: {
+            text: 'Total de 1.411 casos registrados',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 1411;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' casos' + categoryInfo + ' (' + percentage + '%)';
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        },
+        legend: {
+            show: false
+        }
+    };
+
+    var violenciaDomesticaChart = new ApexCharts(document.querySelector("#violenciaDomesticaChart"), violenciaDomesticaOptions);
+    violenciaDomesticaChart.render();
+
+    // Gráfico Violência Sexual
+    var violenciaSexualOptions = {
+        series: [{
+            name: 'Casos',
+            data: [2, 0, 0, 0, 2]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#6f42c1'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val === 0 ? '0' : val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Casos',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            },
+            max: 5
+        },
+        title: {
+            text: 'Violência Sexual por Demografia',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#6f42c1'
+            }
+        },
+        subtitle: {
+            text: 'Total de 4 casos registrados - Possível subnotificação',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#dc3545',
+                fontWeight: '600'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 4;
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    if (val === 0) {
+                        return 'Nenhum caso registrado' + categoryInfo;
+                    }
+                    
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    return val.toLocaleString('pt-BR') + ' casos' + categoryInfo + ' (' + percentage + '%)';
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        },
+        legend: {
+            show: false
+        },
+        annotations: {
+            yaxis: [{
+                y: 2.5,
+                borderColor: '#dc3545',
+                label: {
+                    borderColor: '#dc3545',
+                    style: {
+                        color: '#fff',
+                        background: '#dc3545',
+                        fontSize: '10px'
+                    },
+                    text: 'Possível subnotificação'
+                }
+            }]
+        }
+    };
+
+    var violenciaSexualChart = new ApexCharts(document.querySelector("#violenciaSexualChart"), violenciaSexualOptions);
+    violenciaSexualChart.render();
+});
+</script>
 
 @endsection

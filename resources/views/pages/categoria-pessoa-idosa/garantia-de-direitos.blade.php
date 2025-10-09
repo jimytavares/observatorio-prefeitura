@@ -866,94 +866,38 @@
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
 
-        <!-- ## : Análise dos Dados de Violência Sexual -->
+        <!-- ## Chart01: Cartões para Pessoas Idosas -->
         <div class="content-block">
             <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            Análise dos Dados de Violência Sexual
-                        </h3>
-                        <p>
-                            O gráfico ao lado apresenta os casos de violência sexual contra crianças e adolescentes, segmentados por cor/raça e sexo. Observa-se que, nas três linhas de dados analisadas, a maior parte dos casos envolve vítimas do sexo feminino, com números significativamente superiores aos do sexo masculino em todas as situações.<br><br>
-                            Em relação à cor/raça, os grupos "Branco" e "Preto/Pardo" concentram a maioria dos registros, sendo que o grupo "Preto/Pardo" apresenta números próximos ou superiores ao grupo "Branco" em algumas linhas, evidenciando a vulnerabilidade desses segmentos. O grupo "Outra" apresenta números menores, mas ainda relevantes para o contexto.<br><br>
-                            Esses dados reforçam a importância de políticas públicas específicas para a proteção de meninas e para o enfrentamento das desigualdades raciais, além de evidenciar a necessidade de ações integradas de prevenção e combate à violência sexual na infância e adolescência.
-                        </p>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Cartões Expedidos para Pessoas Idosas
+                        </h4>
+                        <div id="cartoesIdososChart"></div>
                     </div>
                 </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="chart-container">
-                        <h4 class="chart-title">Violência Sexual - Crianças/Adolescentes</h4>
-                        <div id="apexchart-violencia-sexual"></div>
-                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [18, 54, 65]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [17, 39, 86]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [8, 0, 20]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [33, 76, 139]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [5, 17, 22]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa/Grupo' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Casos' }
-                                },
-                                colors: ['#0040ff', '#ff0000', '#ff9900', '#e83e8c', '#ffc107'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '55%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: false
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                },
-                                title: {
-                                    text: 'Casos de Violência Sexual por Cor/Raça e Sexo',
-                                    align: 'center',
-                                    style: { fontSize: '16px' }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-violencia-sexual"), options);
-                            chart.render();
-                        });
-                        </script>
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-credit-card"></i> Análise dos Cartões de Benefícios</h4>
+                        <p>Os dados revelam a distribuição de cartões específicos para pessoas idosas, demonstrando o acesso a benefícios essenciais que garantem mobilidade urbana e direitos de cidadania.</p>
+                        
+                        <p>O sistema registrou um total de <strong>71.449 cartões expedidos</strong> para pessoas idosas, distribuídos entre:</p>
+                        
+                        <ul class="custom-list">
+                            <li><strong>Cartões de estacionamento:</strong> 1.950 cartões (2,7%)</li>
+                            <li><strong>Cartões de gratuidade:</strong> 69.499 cartões (97,3%)</li>
+                        </ul>
+                        
+                        <p>A <strong>predominância dos cartões de gratuidade</strong> (97,3%) evidencia a importância do transporte público gratuito como política de inclusão social para a população idosa, garantindo mobilidade urbana e acesso a serviços essenciais.</p>
+                        
+                        <p>Os <strong>cartões de estacionamento</strong> (2,7%), embora em menor número, representam um direito importante para idosos que possuem veículos, facilitando o acesso a estabelecimentos e serviços públicos.</p>
+                        
+                        <p>Esta distribuição reflete tanto a <strong>política pública de gratuidade no transporte</strong> quanto a democratização do acesso a benefícios para a terceira idade em Natal.</p>
+                        
+                        <span class="badge badge-info">
+                            <i class="fas fa-bus"></i> Mobilidade Garantida
+                        </span>
                     </div>
                 </div>
             </div>
@@ -1017,5 +961,155 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gráfico Cartões para Pessoas Idosas
+    var cartoesIdososOptions = {
+        series: [1950, 69499],
+        chart: {
+            type: 'pie',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#ff6b35', '#17669b'],
+        labels: ['Cartões de Estacionamento', 'Cartões de Gratuidade'],
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val, opts) {
+                const value = opts.w.globals.series[opts.seriesIndex];
+                return value.toLocaleString('pt-BR') + '\n(' + val.toFixed(1) + '%)';
+            },
+            dropShadow: {
+                enabled: true,
+                top: 2,
+                left: 2,
+                blur: 3,
+                opacity: 0.8
+            }
+        },
+        title: {
+            text: 'Distribuição de Cartões para Pessoas Idosas',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#333'
+            }
+        },
+        subtitle: {
+            text: 'Total: 71.449 cartões expedidos',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const total = 71449;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    const label = opts.w.globals.labels[opts.seriesIndex];
+                    
+                    let benefitInfo = '';
+                    if (label === 'Cartões de Estacionamento') {
+                        benefitInfo = '<br><span style="color: #666;">Facilita acesso a estabelecimentos</span>';
+                    } else {
+                        benefitInfo = '<br><span style="color: #666;">Transporte público gratuito</span>';
+                    }
+                    
+                    return '<strong>' + val.toLocaleString('pt-BR') + ' cartões</strong><br>' +
+                           '<span style="color: #666;">Representa ' + percentage + '% do total</span>' +
+                           benefitInfo;
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        legend: {
+            position: 'bottom',
+            horizontalAlign: 'center',
+            floating: false,
+            fontSize: '14px',
+            fontWeight: 600,
+            markers: {
+                width: 16,
+                height: 16,
+                radius: 8
+            },
+            itemMargin: {
+                horizontal: 15,
+                vertical: 8
+            },
+            formatter: function(seriesName, opts) {
+                const value = opts.w.globals.series[opts.seriesIndex];
+                return seriesName + ': ' + value.toLocaleString('pt-BR');
+            }
+        },
+        plotOptions: {
+            pie: {
+                startAngle: -90,
+                endAngle: 270,
+                expandOnClick: true,
+                offsetX: 0,
+                offsetY: 0,
+                customScale: 0.9,
+                dataLabels: {
+                    offset: 0,
+                    minAngleToShowLabel: 10
+                },
+                donut: {
+                    size: '0%'
+                }
+            }
+        },
+        stroke: {
+            show: true,
+            width: 3,
+            colors: ['#fff']
+        },
+        responsive: [{
+            breakpoint: 768,
+            options: {
+                chart: {
+                    height: 350
+                },
+                legend: {
+                    position: 'bottom',
+                    fontSize: '12px'
+                },
+                dataLabels: {
+                    style: {
+                        fontSize: '12px'
+                    }
+                }
+            }
+        }]
+    };
+
+    var cartoesIdososChart = new ApexCharts(document.querySelector("#cartoesIdososChart"), cartoesIdososOptions);
+    cartoesIdososChart.render();
+});
+</script>
 
 @endsection

@@ -5,7 +5,6 @@
 @section('content')
 
 <style>
-    
     .hero-section {
         background: linear-gradient(135deg, rgba(23, 102, 155, 0.9), rgba(1, 137, 211, 0.9)), 
                     url('{{ asset("images/banner-natal.png") }}') center/cover;
@@ -849,13 +848,13 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="image-showcase">
-                    <img src="{{ asset('images/ia-img-subcategorias/criancas-adolescentes-violacoes.jpeg') }}" alt="População em situação de rua" class="img-fluid">
+                    <img src="{{ asset('images/ia-img-subcategorias/criancas-adolescentes-direitos.jpeg') }}" alt="População em situação de rua" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6 mt-4">
-                <div class="info-card text-justify" >
+                <div class="info-card text-justify" style="height: 382px;">
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
-                    <p>Entende-se por violação de direitos da pessoa com Transtorno do Espectro Autista (TEA) qualquer ação ou omissão que impeça o exercício de seus direitos fundamentais, comprometendo sua dignidade, autonomia e inclusão social. Isso inclui, mas não se limita a barreiras no acesso ao diagnóstico e às terapias especializadas, ausência de recursos e adaptações na educação, discriminação em espaços públicos e privados, violência física ou psicológica, estigmatização e exclusão social, dificultando seu pleno desenvolvimento e participação na sociedade em igualdade de condições com as demais pessoas.</p>
+                    <p>A garantia de direitos para o segmento das pessoas com Transtorno do Espectro Autista (TEA) compreende as políticas públicas, serviços e iniciativas que promovem a proteção, a inclusão social efetiva e o desenvolvimento pleno da pessoa autista em todas as etapas da vida.</p>
                 </div>
             </div>
         </div>
@@ -866,392 +865,49 @@
 <section class="content-section" style="margin-top: -90px;">
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
-        
-        <!-- ## Chart01: violencia domestica -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-map-marked-alt text-info"></i>
-                            Violência Doméstica - Crianças/Adolescentes
-                        </h3>
-                        <div class="row mt-3">
-                            <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-striped" style="background:#fff;">
-                                        <thead style="background:#f8f9fa;">
-                                            <tr>
-                                                <th colspan="3" class="text-center"><b>Cor/Raça</b></th>
-                                                <th colspan="2" class="text-center"><b>Sexo</b></th>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center">Branco</th>
-                                                <th class="text-center">Preto/Pardo</th>
-                                                <th class="text-center">Outra</th>
-                                                <th class="text-center">Feminino</th>
-                                                <th class="text-center">Masculino</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-center">846</td>
-                                                <td class="text-center">1355</td>
-                                                <td class="text-center">133</td>
-                                                <td class="text-center">1032</td>
-                                                <td class="text-center">1246</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center">726</td>
-                                                <td class="text-center">900</td>
-                                                <td class="text-center">49</td>
-                                                <td class="text-center">828</td>
-                                                <td class="text-center">817</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center">765</td>
-                                                <td class="text-center">981</td>
-                                                <td class="text-center">104</td>
-                                                <td class="text-center">1127</td>
-                                                <td class="text-center">699</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="chart-container">
-                        <div id="apexchart-violencia-domestica"></div>
-                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'pie',
-                                    height: 320
-                                },
-                                series: [
-                                    846+726+765, // Branco
-                                    1355+900+981, // Preto/Pardo
-                                    133+49+104   // Outra
-                                ],
-                                labels: ['Branco', 'Preto/Pardo', 'Outra'],
-                                colors: ['#0040ff', '#ff0000', '#ff9900'],
-                                legend: {
-                                    position: 'bottom',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: true,
-                                    formatter: function (val, opts) {
-                                        return opts.w.config.labels[opts.seriesIndex] + ': ' + opts.w.globals.series[opts.seriesIndex];
-                                    },
-                                    style: {
-                                        fontSize: '15px',
-                                        fontWeight: 'bold'
-                                    }
-                                },
-                                title: {
-                                    text: 'Casos por Cor/Raça (Total)',
-                                    align: 'center',
-                                    style: { fontSize: '16px' }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-violencia-domestica"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- ## Char02: Análise dos Dados de Violência Sexual -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            Análise dos Dados de Violência Sexual
-                        </h3>
-                        <p>
-                            O gráfico ao lado apresenta os casos de violência sexual contra crianças e adolescentes, segmentados por cor/raça e sexo. Observa-se que, nas três linhas de dados analisadas, a maior parte dos casos envolve vítimas do sexo feminino, com números significativamente superiores aos do sexo masculino em todas as situações.<br><br>
-                            Em relação à cor/raça, os grupos "Branco" e "Preto/Pardo" concentram a maioria dos registros, sendo que o grupo "Preto/Pardo" apresenta números próximos ou superiores ao grupo "Branco" em algumas linhas, evidenciando a vulnerabilidade desses segmentos. O grupo "Outra" apresenta números menores, mas ainda relevantes para o contexto.<br><br>
-                            Esses dados reforçam a importância de políticas públicas específicas para a proteção de meninas e para o enfrentamento das desigualdades raciais, além de evidenciar a necessidade de ações integradas de prevenção e combate à violência sexual na infância e adolescência.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="chart-container">
-                        <h4 class="chart-title">Violência Sexual - Crianças/Adolescentes</h4>
-                        <div id="apexchart-violencia-sexual"></div>
-                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [18, 54, 65]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [17, 39, 86]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [8, 0, 20]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [33, 76, 139]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [5, 17, 22]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa/Grupo' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Casos' }
-                                },
-                                colors: ['#0040ff', '#ff0000', '#ff9900', '#e83e8c', '#ffc107'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '55%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: false
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                },
-                                title: {
-                                    text: 'Casos de Violência Sexual por Cor/Raça e Sexo',
-                                    align: 'center',
-                                    style: { fontSize: '16px' }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-violencia-sexual"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ## Chart03: Assédio / Importunação Sexual -->
+        <!-- ## Chart01: CIPTEAs Expedidas por Faixa Etária -->
         <div class="content-block">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6">
                     <div class="chart-container">
-                        <h4 class="chart-title">Assédio / Importunação Sexual - Crianças/Adolescentes</h4>
-                        <div id="apexchart-assedio-sexual"></div>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [4, 8, 10]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [5, 3, 10]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [2, 0, 3]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [10, 10, 19]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [0, 1, 2]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa Etária' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Número de Casos' }
-                                },
-                                colors: ['#6c757d', '#8b4513', '#ffc107', '#e83e8c', '#007bff'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '65%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: false
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-assedio-sexual"), options);
-                            chart.render();
-                        });
-                        </script>
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> CIPTEAs Expedidas por Faixa Etária
+                        </h4>
+                        <div id="cipteaChart"></div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-exclamation-triangle text-warning"></i>
-                            Assédio / Importunação Sexual - Crianças/Adolescentes
-                        </h3>
-                        <p style="width:90%; margin-left:20px;">Os dados apresentados no gráfico mostram casos de assédio e importunação sexual contra crianças e adolescentes. O total de <strong>42</strong> casos registrados evidencia uma realidade preocupante que requer atenção especial das políticas públicas de proteção.</p>
-                        <p style="width:90%; margin-left:20px;">A análise por gênero revela uma predominância alarmante de vítimas do sexo feminino (<strong>39 casos</strong> - 92,9%) contra apenas <strong>3 casos</strong> masculinos (7,1%). Por raça/cor, observamos <strong>22</strong> casos entre pessoas brancas, <strong>18</strong> entre pretas/pardas e <strong>5</strong> em outras categorias. A faixa de 12-17 anos concentra o maior número de casos (23), seguida por 0-6 anos (11) e 7-11 anos (11).</p>
-                        <div class="">
-                            <span class="badge badge-info">Total: 42 casos</span>
-                            <span class="badge badge-warning">Feminino: 92,9%</span>
-                        </div>
+                    <div class="">
+                        <h4><i class="fas fa-id-card"></i> Análise das CIPTEAs Expedidas</h4>
+                        <p>A <strong>Carteira de Identificação da Pessoa com Transtorno do Espectro Autista (CIPTEA)</strong> é um documento oficial que garante o acesso prioritário a serviços públicos e privados, representando um marco na garantia de direitos.</p>
+                        
+                        <p>O total de <strong>1.999 CIPTEAs expedidas</strong> demonstra uma demanda significativa e crescente por este documento de identificação em Natal.</p>
+                        
+                        <p><strong>Distribuição por faixa etária:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>5-8 anos:</strong> 539 carteiras (27,0%) - maior concentração</li>
+                            <li><strong>0-4 anos:</strong> 267 carteiras (13,4%)</li>
+                            <li><strong>9-12 anos:</strong> 236 carteiras (11,8%)</li>
+                            <li><strong>21-29 anos:</strong> 170 carteiras (8,5%)</li>
+                            <li><strong>30-40 anos:</strong> 157 carteiras (7,9%)</li>
+                            <li><strong>13-16 anos:</strong> 119 carteiras (6,0%)</li>
+                            <li><strong>17-20 anos:</strong> 112 carteiras (5,6%)</li>
+                            <li><strong>41-58 anos:</strong> 80 carteiras (4,0%)</li>
+                            <li><strong>56+ anos:</strong> 1 carteira (0,1%)</li>
+                        </ul>
+                        
+                        <p>A <strong>concentração na faixa de 5-8 anos</strong> (27%) indica o momento típico de diagnóstico e busca por serviços especializados, coincidindo com a idade escolar inicial.</p>
+                        
+                        <p>O significativo número de carteiras para <strong>crianças de 0-12 anos (1.042 carteiras - 52,1%)</strong> evidencia a importância do diagnóstico precoce e intervenção especializada.</p>
+                        
+                        <span class="badge badge-info">
+                            <i class="fas fa-child"></i> Foco na Primeira Infância
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- ## Chart04: Discriminação -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-balance-scale text-danger"></i>
-                            Discriminação - Crianças/Adolescentes
-                        </h3>
-                        <p style="width:90%; margin-left:20px;">Os dados sobre discriminação (etarismo, capacitismo, racial, homofobia, etc.) contra crianças e adolescentes mostram um total de <strong>7</strong> casos registrados. Embora seja um número relativamente baixo, cada caso representa uma violação grave dos direitos fundamentais.</p>
-                        <p style="width:90%; margin-left:20px;">A distribuição por faixa etária mostra <strong>1 caso</strong> na faixa de 7-11 anos e <strong>4 casos</strong> na faixa de 12-17 anos. Por gênero, há <strong>1 caso</strong> feminino e <strong>2 casos</strong> masculinos registrados. É importante destacar que muitos casos de discriminação podem não ser reportados, sugerindo uma possível subnotificação.</p>
-                        <div class="">
-                            <span class="badge badge-info">Total: 7 casos</span>
-                            <span class="badge badge-warning">Subnotificação: Possível</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="chart-container">
-                        <h4 class="chart-title">Discriminação - Crianças/Adolescentes</h4>
-                        <div id="apexchart-discriminacao"></div>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [0, 1, 0]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [0, 2, 2]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [0, 0, 2]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [0, 1, 0]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [0, 2, 0]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa Etária' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Número de Casos' },
-                                    max: 5
-                                },
-                                colors: ['#6c757d', '#8b4513', '#ffc107', '#e83e8c', '#007bff'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '65%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: true,
-                                    formatter: function (val) {
-                                        return val;
-                                    }
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-discriminacao"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
@@ -1311,5 +967,148 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gráfico CIPTEA por Faixa Etária
+    var cipteaOptions = {
+        series: [267, 539, 236, 119, 112, 170, 157, 80, 1],
+        chart: {
+            type: 'pie',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8', '#F7DC6F', '#BDC3C7'],
+        labels: ['0-4 anos', '5-8 anos', '9-12 anos', '13-16 anos', '17-20 anos', '21-29 anos', '30-40 anos', '41-58 anos', '56+ anos'],
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '12px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val, opts) {
+                const value = opts.w.globals.series[opts.seriesIndex];
+                return value + '\n(' + val.toFixed(1) + '%)';
+            },
+            dropShadow: {
+                enabled: true,
+                top: 2,
+                left: 2,
+                blur: 3,
+                opacity: 0.8
+            }
+        },
+        title: {
+            text: 'Distribuição de CIPTEAs por Faixa Etária',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#333'
+            }
+        },
+        subtitle: {
+            text: 'Total: 1.999 carteiras expedidas',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const total = 1999;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    const label = opts.w.globals.labels[opts.seriesIndex];
+                    
+                    return '<strong>' + val.toLocaleString('pt-BR') + ' CIPTEAs</strong><br>' +
+                           '<span style="color: #666;">Faixa etária: ' + label + '</span><br>' +
+                           '<span style="color: #666;">Representa ' + percentage + '% do total</span>';
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        legend: {
+            position: 'bottom',
+            horizontalAlign: 'center',
+            floating: false,
+            fontSize: '12px',
+            fontWeight: 600,
+            markers: {
+                width: 12,
+                height: 12,
+                radius: 6
+            },
+            itemMargin: {
+                horizontal: 8,
+                vertical: 4
+            },
+            formatter: function(seriesName, opts) {
+                const value = opts.w.globals.series[opts.seriesIndex];
+                return seriesName + ': ' + value;
+            }
+        },
+        plotOptions: {
+            pie: {
+                startAngle: -90,
+                endAngle: 270,
+                expandOnClick: true,
+                offsetX: 0,
+                offsetY: 0,
+                customScale: 0.9,
+                dataLabels: {
+                    offset: 0,
+                    minAngleToShowLabel: 5
+                },
+                donut: {
+                    size: '0%'
+                }
+            }
+        },
+        stroke: {
+            show: true,
+            width: 2,
+            colors: ['#fff']
+        },
+        responsive: [{
+            breakpoint: 768,
+            options: {
+                chart: {
+                    height: 350
+                },
+                legend: {
+                    position: 'bottom',
+                    fontSize: '10px'
+                },
+                dataLabels: {
+                    style: {
+                        fontSize: '10px'
+                    }
+                }
+            }
+        }]
+    };
+
+    var cipteaChart = new ApexCharts(document.querySelector("#cipteaChart"), cipteaOptions);
+    cipteaChart.render();
+});
+</script>
 
 @endsection

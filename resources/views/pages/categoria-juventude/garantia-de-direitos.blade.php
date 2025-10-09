@@ -224,7 +224,7 @@
         color: #6c757d;
         line-height: 1.6;
         margin-bottom: 0;
-        font-size:21px;
+        font-size:18px;
         color:black;
     }
 
@@ -848,7 +848,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="image-showcase">
-                    <img src="{{ asset('images/ia-img-subcategorias/criancas-adolescentes-direitos.jpeg') }}" alt="População em situação de rua" class="img-fluid">
+                    <img src="{{ asset('images/jovens.jpeg') }}" alt="População em situação de rua" class="img-fluid mt-4">
                 </div>
             </div>
             <div class="col-md-6 mt-4">

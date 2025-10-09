@@ -225,7 +225,7 @@
         color: #6c757d;
         line-height: 1.6;
         margin-bottom: 0;
-        font-size:21px;
+        font-size:18px;
         color:black;
     }
 
@@ -847,12 +847,7 @@
     <div class="container">
         
         <div class="row">
-            <div class="col-md-6">
-                <div class="image-showcase">
-                    <img src="{{ asset('images/ia-img-subcategorias/criancas-adolescentes-violacoes.jpeg') }}" alt="População em situação de rua" class="img-fluid">
-                </div>
-            </div>
-            <div class="col-md-6 mt-4">
+            <div class="col-md-12 mt-4">
                 <div class="info-card text-justify">
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
                     <p>As violações de direitos que atingem os jovens estão relacionadas a diferentes dimensões de sua vida e comprometem seu desenvolvimento pleno e sua inserção social. Entre as mais recorrentes, estão a evasão e o abandono escolar, a dificuldade de acesso ao ensino superior e técnico de qualidade, o desemprego e a precarização do trabalho, que impactam diretamente suas perspectivas de futuro. </p><br> <p>Soma-se a isso a violência urbana, que vitimiza de forma desproporcional, a juventude, sobretudo a juventude exposta a homicídios, encarceramento e abordagens policiais discriminatórias. </p><br> <p>Além disso, muitos jovens enfrentam barreiras no acesso à saúde integral, incluindo saúde mental, sexual e reprodutiva, e sofrem com discriminação de gênero, orientação sexual, raça, deficiência ou condição social. Essas situações de violação reduzem as oportunidades de autonomia e participação cidadã, afetando a dignidade e a qualidade de vida da juventude.</p>
@@ -867,7 +862,235 @@
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
         
-      
+        <!-- ## Chart01: Violência Doméstica -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Violência Doméstica por Demografia
+                        </h4>
+                        <div id="violenciaDomesticaChart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-home"></i> Análise da Violência Doméstica</h4>
+                        <p>Os dados revelam um total alarmante de <strong>1.951 casos de violência doméstica</strong> envolvendo jovens de 15 a 29 anos em Natal, demonstrando a gravidade desta problemática que afeta significativamente a juventude.</p>
+                        
+                        <p><strong>Distribuição por raça/cor:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>Pessoas brancas:</strong> 609 casos (31,2%)</li>
+                            <li><strong>Pessoas pretas/pardas:</strong> 752 casos (38,5%)</li>
+                            <li><strong>Outras etnias:</strong> 138 casos (7,1%)</li>
+                        </ul>
+                        
+                        <p><strong>Distribuição por gênero:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>Mulheres jovens:</strong> 821 casos (42,1%)</li>
+                            <li><strong>Homens jovens:</strong> 631 casos (32,4%)</li>
+                        </ul>
+                        
+                        <p>Os dados evidenciam que <strong>mulheres jovens pretas/pardas</strong> são desproporcionalmente afetadas, destacando a interseccionalidade entre gênero e raça nas violações de direitos.</p>
+                        
+                        <span class="badge badge-warning">
+                            <i class="fas fa-exclamation-triangle"></i> Situação Crítica
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ## Chart02: Violência Patrimonial -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-coins"></i> Análise da Violência Patrimonial</h4>
+                        <p>A violência patrimonial contra jovens apresenta <strong>88 casos registrados</strong>, representando uma forma específica de violação que compromete a autonomia econômica e a dignidade da juventude.</p>
+                        
+                        <p><strong>Características dos casos:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>Pessoas brancas:</strong> 12 casos (13,6%)</li>
+                            <li><strong>Pessoas pretas/pardas:</strong> 25 casos (28,4%)</li>
+                            <li><strong>Outras etnias:</strong> 7 casos (8,0%)</li>
+                            <li><strong>Mulheres jovens:</strong> 16 casos (18,2%)</li>
+                            <li><strong>Homens jovens:</strong> 28 casos (31,8%)</li>
+                        </ul>
+                        
+                        <p>Diferentemente de outros tipos de violência, a <strong>violência patrimonial afeta mais homens jovens</strong>, possivelmente relacionada a questões de responsabilidade financeira e expectativas sociais sobre o papel masculino como provedor.</p>
+                        
+                        <p>A <strong>população preta/parda representa 28,4%</strong> dos casos, evidenciando vulnerabilidades socioeconômicas específicas.</p>
+                        
+                        <span class="badge badge-info">
+                            <i class="fas fa-balance-scale"></i> Padrão Distinto
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Violência Patrimonial por Demografia
+                        </h4>
+                        <div id="violenciaPatrimonialChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ## Chart03: Violência Sexual -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Violência Sexual por Demografia
+                        </h4>
+                        <div id="violenciaSexualChart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-user-shield"></i> Análise da Violência Sexual</h4>
+                        <p>A violência sexual contra jovens registra <strong>174 casos</strong>, representando uma grave violação de direitos que causa traumas profundos e impactos duradouros na vida das vítimas.</p>
+                        
+                        <p><strong>Perfil das vítimas por raça/cor:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>Pessoas brancas:</strong> 42 casos (24,1%)</li>
+                            <li><strong>Pessoas pretas/pardas:</strong> 43 casos (24,7%)</li>
+                            <li><strong>Outras etnias:</strong> 2 casos (1,1%)</li>
+                        </ul>
+                        
+                        <p><strong>Distribuição por gênero:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>Mulheres jovens:</strong> 70 casos (40,2%)</li>
+                            <li><strong>Homens jovens:</strong> 17 casos (9,8%)</li>
+                        </ul>
+                        
+                        <p>Os dados confirmam que <strong>mulheres jovens são desproporcionalmente afetadas</strong>, representando 80,5% dos casos quando considerado apenas o recorte de gênero informado.</p>
+                        
+                        <p>A distribuição racial equilibrada sugere que a violência sexual transcende barreiras étnicas, afetando toda a juventude feminina.</p>
+                        
+                        <span class="badge badge-warning">
+                            <i class="fas fa-female"></i> Impacto Desproporcional
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ## Chart04: Assédio / Importunação Sexual -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-ban"></i> Análise do Assédio Sexual</h4>
+                        <p>O assédio e importunação sexual apresenta <strong>20 casos registrados</strong>, embora este número provavelmente represente apenas uma fração dos casos reais devido à subnotificação característica deste tipo de violência.</p>
+                        
+                        <p><strong>Distribuição demográfica:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>Pessoas brancas:</strong> 7 casos (35,0%)</li>
+                            <li><strong>Pessoas pretas/pardas:</strong> 3 casos (15,0%)</li>
+                            <li><strong>Outras etnias:</strong> 0 casos</li>
+                            <li><strong>Mulheres jovens:</strong> 8 casos (40,0%)</li>
+                            <li><strong>Homens jovens:</strong> 2 casos (10,0%)</li>
+                        </ul>
+                        
+                        <p>Como esperado, <strong>mulheres jovens são as principais vítimas</strong> (80% dos casos com gênero identificado), refletindo padrões sociais de objetificação e violência de gênero.</p>
+                        
+                        <p>A <strong>subnotificação é um desafio significativo</strong>, pois muitas vítimas não denunciam devido ao estigma, medo de retaliação ou normalização da violência.</p>
+                        
+                        <span class="badge badge-warning">
+                            <i class="fas fa-eye-slash"></i> Subnotificação
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Assédio Sexual por Demografia
+                        </h4>
+                        <div id="assedioSexualChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ## Chart05: Discriminação -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Discriminação por Demografia
+                        </h4>
+                        <div id="discriminacaoChart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-users-slash"></i> Análise da Discriminação</h4>
+                        <p>Os casos de discriminação (etarismo, capacitismo, racial, LGBTfobia, etc.) somam <strong>30 registros</strong>, evidenciando as múltiplas formas de preconceito que afetam a juventude natalense.</p>
+                        
+                        <p><strong>Perfil das vítimas:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>Pessoas brancas:</strong> 2 casos (6,7%)</li>
+                            <li><strong>Pessoas pretas/pardas:</strong> 9 casos (30,0%)</li>
+                            <li><strong>Outras etnias:</strong> 4 casos (13,3%)</li>
+                            <li><strong>Mulheres jovens:</strong> 2 casos (6,7%)</li>
+                            <li><strong>Homens jovens:</strong> 13 casos (43,3%)</li>
+                        </ul>
+                        
+                        <p>Interessantemente, <strong>homens jovens pretos/pardos</strong> aparecem como o grupo mais afetado pela discriminação, possivelmente relacionado ao racismo estrutural e estereótipos negativos sobre jovens negros.</p>
+                        
+                        <p>A <strong>população preta/parda representa 30%</strong> dos casos, três vezes mais que pessoas brancas, evidenciando o impacto do racismo na juventude.</p>
+                        
+                        <span class="badge badge-info">
+                            <i class="fas fa-fist-raised"></i> Luta Antirracista
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ## Chart06: Denúncias Recebidas -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-phone-alt"></i> Análise das Denúncias Recebidas</h4>
+                        <p>O sistema registrou um total expressivo de <strong>532 denúncias</strong> relacionadas a violações de direitos da juventude, demonstrando tanto a prevalência dos problemas quanto a confiança no sistema de denúncias.</p>
+                        
+                        <p><strong>Distribuição por raça/cor:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>Pessoas brancas:</strong> 98 denúncias (18,4%)</li>
+                            <li><strong>Pessoas pretas/pardas:</strong> 127 denúncias (23,9%)</li>
+                            <li><strong>Outras etnias:</strong> 64 denúncias (12,0%)</li>
+                        </ul>
+                        
+                        <p><strong>Distribuição por gênero:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>Mulheres jovens:</strong> 145 denúncias (27,3%)</li>
+                            <li><strong>Homens jovens:</strong> 98 denúncias (18,4%)</li>
+                        </ul>
+                        
+                        <p>As <strong>mulheres jovens são mais ativas</strong> na realização de denúncias, representando 59,7% quando considerado apenas o recorte de gênero, possivelmente devido à maior exposição a violências.</p>
+                        
+                        <span class="badge badge-info">
+                            <i class="fas fa-bullhorn"></i> Voz Ativa
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Denúncias Recebidas por Demografia
+                        </h4>
+                        <div id="denunciasRecebidasChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
@@ -927,5 +1150,675 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gráfico 1: Violência Doméstica
+    var violenciaDomesticaOptions = {
+        series: [{
+            name: 'Casos',
+            data: [609, 752, 138, 821, 631]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#dc3545'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Casos',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Violência Doméstica - Total: 1.951 casos',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#dc3545'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 1951;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' casos' + categoryInfo + ' (' + percentage + '%)';
+                }
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        }
+    };
+
+    var violenciaDomesticaChart = new ApexCharts(document.querySelector("#violenciaDomesticaChart"), violenciaDomesticaOptions);
+    violenciaDomesticaChart.render();
+
+    // Gráfico 2: Violência Patrimonial
+    var violenciaPatrimonialOptions = {
+        series: [{
+            name: 'Casos',
+            data: [12, 25, 7, 16, 28]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#fd7e14'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Casos',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Violência Patrimonial - Total: 88 casos',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#fd7e14'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 88;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' casos' + categoryInfo + ' (' + percentage + '%)';
+                }
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        }
+    };
+
+    var violenciaPatrimonialChart = new ApexCharts(document.querySelector("#violenciaPatrimonialChart"), violenciaPatrimonialOptions);
+    violenciaPatrimonialChart.render();
+
+    // Gráfico 3: Violência Sexual
+    var violenciaSexualOptions = {
+        series: [{
+            name: 'Casos',
+            data: [42, 43, 2, 70, 17]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#6f42c1'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Casos',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Violência Sexual - Total: 174 casos',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#6f42c1'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 174;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' casos' + categoryInfo + ' (' + percentage + '%)';
+                }
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        }
+    };
+
+    var violenciaSexualChart = new ApexCharts(document.querySelector("#violenciaSexualChart"), violenciaSexualOptions);
+    violenciaSexualChart.render();
+
+    // Gráfico 4: Assédio Sexual
+    var assedioSexualOptions = {
+        series: [{
+            name: 'Casos',
+            data: [7, 3, 0, 8, 2]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#e83e8c'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Casos',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Assédio/Importunação Sexual - Total: 20 casos',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#e83e8c'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 20;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' casos' + categoryInfo + ' (' + percentage + '%)';
+                }
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        }
+    };
+
+    var assedioSexualChart = new ApexCharts(document.querySelector("#assedioSexualChart"), assedioSexualOptions);
+    assedioSexualChart.render();
+
+    // Gráfico 5: Discriminação
+    var discriminacaoOptions = {
+        series: [{
+            name: 'Casos',
+            data: [2, 9, 4, 2, 13]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#20c997'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Casos',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Discriminação - Total: 30 casos',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#20c997'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 30;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' casos' + categoryInfo + ' (' + percentage + '%)';
+                }
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        }
+    };
+
+    var discriminacaoChart = new ApexCharts(document.querySelector("#discriminacaoChart"), discriminacaoOptions);
+    discriminacaoChart.render();
+
+    // Gráfico 6: Denúncias Recebidas
+    var denunciasRecebidasOptions = {
+        series: [{
+            name: 'Denúncias',
+            data: [98, 127, 64, 145, 98]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#17a2b8'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Denúncias',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Denúncias Recebidas - Total: 532 denúncias',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#17a2b8'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 532;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' denúncias' + categoryInfo + ' (' + percentage + '%)';
+                }
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        }
+    };
+
+    var denunciasRecebidasChart = new ApexCharts(document.querySelector("#denunciasRecebidasChart"), denunciasRecebidasOptions);
+    denunciasRecebidasChart.render();
+});
+</script>
 
 @endsection

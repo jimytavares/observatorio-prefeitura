@@ -5,6 +5,7 @@
 @section('content')
 
 <style>
+    
     .hero-section {
         background: linear-gradient(135deg, rgba(23, 102, 155, 0.9), rgba(1, 137, 211, 0.9)), 
                     url('{{ asset("images/banner-natal.png") }}') center/cover;
@@ -224,7 +225,7 @@
         color: #6c757d;
         line-height: 1.6;
         margin-bottom: 0;
-        font-size:21px;
+        font-size:18px;
         color:black;
     }
 
@@ -848,13 +849,13 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="image-showcase">
-                    <img src="{{ asset('images/ia-img-subcategorias/criancas-adolescentes-direitos.jpeg') }}" alt="População em situação de rua" class="img-fluid">
+                    <img src="{{ asset('images/ia-img-subcategorias/criancas-adolescentes-violacoes.jpeg') }}" alt="População em situação de rua" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6 mt-4">
-                <div class="info-card text-justify" style="height: 382px;">
+                <div class="info-card text-justify" >
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
-                    <p>A garantia de direitos para o segmento das pessoas com Transtorno do Espectro Autista (TEA) compreende as políticas públicas, serviços e iniciativas que promovem a proteção, a inclusão social efetiva e o desenvolvimento pleno da pessoa autista em todas as etapas da vida.</p>
+                    <p>Entende-se por violação de direitos da pessoa com Transtorno do Espectro Autista (TEA) qualquer ação ou omissão que impeça o exercício de seus direitos fundamentais, comprometendo sua dignidade, autonomia e inclusão social. Isso inclui, mas não se limita a barreiras no acesso ao diagnóstico e às terapias especializadas, ausência de recursos e adaptações na educação, discriminação em espaços públicos e privados, violência física ou psicológica, estigmatização e exclusão social, dificultando seu pleno desenvolvimento e participação na sociedade em igualdade de condições com as demais pessoas.</p>
                 </div>
             </div>
         </div>
@@ -865,99 +866,9 @@
 <section class="content-section" style="margin-top: -90px;">
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
-
-        <!-- ## : Análise dos Dados de Violência Sexual -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            Análise dos Dados de Violência Sexual
-                        </h3>
-                        <p>
-                            O gráfico ao lado apresenta os casos de violência sexual contra crianças e adolescentes, segmentados por cor/raça e sexo. Observa-se que, nas três linhas de dados analisadas, a maior parte dos casos envolve vítimas do sexo feminino, com números significativamente superiores aos do sexo masculino em todas as situações.<br><br>
-                            Em relação à cor/raça, os grupos "Branco" e "Preto/Pardo" concentram a maioria dos registros, sendo que o grupo "Preto/Pardo" apresenta números próximos ou superiores ao grupo "Branco" em algumas linhas, evidenciando a vulnerabilidade desses segmentos. O grupo "Outra" apresenta números menores, mas ainda relevantes para o contexto.<br><br>
-                            Esses dados reforçam a importância de políticas públicas específicas para a proteção de meninas e para o enfrentamento das desigualdades raciais, além de evidenciar a necessidade de ações integradas de prevenção e combate à violência sexual na infância e adolescência.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="chart-container">
-                        <h4 class="chart-title">Violência Sexual - Crianças/Adolescentes</h4>
-                        <div id="apexchart-violencia-sexual"></div>
-                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [18, 54, 65]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [17, 39, 86]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [8, 0, 20]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [33, 76, 139]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [5, 17, 22]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa/Grupo' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Casos' }
-                                },
-                                colors: ['#0040ff', '#ff0000', '#ff9900', '#e83e8c', '#ffc107'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '55%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: false
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                },
-                                title: {
-                                    text: 'Casos de Violência Sexual por Cor/Raça e Sexo',
-                                    align: 'center',
-                                    style: { fontSize: '16px' }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-violencia-sexual"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
+        
+        
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
