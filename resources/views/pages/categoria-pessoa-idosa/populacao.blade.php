@@ -868,12 +868,40 @@
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
         
+        <!-- chart01: População Idosa IBGE -->
+        <div class="content-block">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> População de Pessoas Idosas (IBGE)
+                        </h3>
+                        <div id="populacaoIdosaChart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-users"></i> Análise Demográfica</h4>
+                        <p>De acordo com os dados do IBGE, a população idosa em Natal totaliza <strong>128.145 pessoas com mais de 60 anos</strong>, representando uma parcela significativa da população municipal.</p>
+                        
+                        <p>A distribuição por gênero revela um perfil característico do envelhecimento populacional:</p>
+                        
+                        <ul class="custom-list">
+                            <li><strong>Mulheres idosas:</strong> 77.229 pessoas (60,3%)</li>
+                            <li><strong>Homens idosos:</strong> 50.916 pessoas (39,7%)</li>
+                        </ul>
+                        
+                        <p>Esta predominância feminina reflete a maior expectativa de vida das mulheres, um fenômeno observado globalmente. O envelhecimento populacional representa um desafio importante para as políticas públicas, exigindo atenção especial em áreas como saúde, previdência social e acessibilidade urbana.</p>
+                        
+                        <span class="badge badge-info">
+                            <i class="fas fa-info-circle"></i> Dados IBGE 2022
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         
-       
-
-      
-
-
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
             <div class="text-center mb-4">
@@ -932,6 +960,151 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gráfico População Idosa por Gênero (IBGE)
+    var populacaoIdosaOptions = {
+        series: [77229, 50916],
+        chart: {
+            type: 'pie',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#e91e63', '#2196f3'],
+        labels: ['Mulheres', 'Homens'],
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val, opts) {
+                const value = opts.w.globals.series[opts.seriesIndex];
+                return value.toLocaleString('pt-BR') + '\n(' + val.toFixed(1) + '%)';
+            },
+            dropShadow: {
+                enabled: true,
+                top: 2,
+                left: 2,
+                blur: 3,
+                opacity: 0.8
+            }
+        },
+        title: {
+            text: 'População Idosa de Natal por Gênero',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#333'
+            }
+        },
+        subtitle: {
+            text: 'Total: 128.145 pessoas com 60+ anos (IBGE 2022)',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const total = 128145;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    const label = opts.w.globals.labels[opts.seriesIndex];
+                    
+                    return '<strong>' + val.toLocaleString('pt-BR') + ' ' + label.toLowerCase() + '</strong><br>' +
+                           '<span style="color: #666;">Representa ' + percentage + '% da população idosa</span><br>' +
+                           '<span style="color: #666;">Idade: 60 anos ou mais</span>';
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        legend: {
+            position: 'bottom',
+            horizontalAlign: 'center',
+            floating: false,
+            fontSize: '14px',
+            fontWeight: 600,
+            markers: {
+                width: 16,
+                height: 16,
+                radius: 8
+            },
+            itemMargin: {
+                horizontal: 15,
+                vertical: 8
+            },
+            formatter: function(seriesName, opts) {
+                const value = opts.w.globals.series[opts.seriesIndex];
+                return seriesName + ': ' + value.toLocaleString('pt-BR');
+            }
+        },
+        plotOptions: {
+            pie: {
+                startAngle: -90,
+                endAngle: 270,
+                expandOnClick: true,
+                offsetX: 0,
+                offsetY: 0,
+                customScale: 0.9,
+                dataLabels: {
+                    offset: 0,
+                    minAngleToShowLabel: 10
+                },
+                donut: {
+                    size: '0%'
+                }
+            }
+        },
+        stroke: {
+            show: true,
+            width: 3,
+            colors: ['#fff']
+        },
+        responsive: [{
+            breakpoint: 768,
+            options: {
+                chart: {
+                    height: 350
+                },
+                legend: {
+                    position: 'bottom',
+                    fontSize: '12px'
+                },
+                dataLabels: {
+                    style: {
+                        fontSize: '12px'
+                    }
+                }
+            }
+        }]
+    };
+
+    var populacaoIdosaChart = new ApexCharts(document.querySelector("#populacaoIdosaChart"), populacaoIdosaOptions);
+    populacaoIdosaChart.render();
+});
+</script>
+
+
 
 @endsection
 

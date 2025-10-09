@@ -849,7 +849,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="image-showcase">
-                    <img src="{{ asset('images/lgbt-violacao.jpg') }}" alt="População em situação de rua" class="img-fluid">
+                    <img src="{{ asset('images/lgbt2.jpeg') }}" style="width: 624px;" alt="População em situação de rua" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6 mt-4">

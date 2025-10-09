@@ -26,7 +26,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" media="all" >
     <link rel="stylesheet" href="{{ asset('assets/css/globals.css') }}" type="text/css" media="all" >
-    <link rel="stylesheet" href="{{ asset('assets/css/responsividade.css') }}" >
+    <link rel="stylesheet" href="{{ asset('assets/css/responsividade.css') }}" type="text/css" media="all" >
       
     <!-- Core CSS -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/css/rtl/core.css') }}" >

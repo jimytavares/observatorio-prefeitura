@@ -864,98 +864,50 @@
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
 
-        <!-- ## : Análise dos Dados de Violência Sexual -->
+       
+        <!-- chart 01: Serviços de Proteção -->
         <div class="content-block">
             <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            Análise dos Dados de Violência Sexual
-                        </h3>
-                        <p>
-                            O gráfico ao lado apresenta os casos de violência sexual contra crianças e adolescentes, segmentados por cor/raça e sexo. Observa-se que, nas três linhas de dados analisadas, a maior parte dos casos envolve vítimas do sexo feminino, com números significativamente superiores aos do sexo masculino em todas as situações.<br><br>
-                            Em relação à cor/raça, os grupos "Branco" e "Preto/Pardo" concentram a maioria dos registros, sendo que o grupo "Preto/Pardo" apresenta números próximos ou superiores ao grupo "Branco" em algumas linhas, evidenciando a vulnerabilidade desses segmentos. O grupo "Outra" apresenta números menores, mas ainda relevantes para o contexto.<br><br>
-                            Esses dados reforçam a importância de políticas públicas específicas para a proteção de meninas e para o enfrentamento das desigualdades raciais, além de evidenciar a necessidade de ações integradas de prevenção e combate à violência sexual na infância e adolescência.
-                        </p>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Serviços de Proteção a Crianças e Adolescentes
+                        </h4>
+                        <div id="servicosProtecaoChart"></div>
                     </div>
                 </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="chart-container">
-                        <h4 class="chart-title">Violência Sexual - Crianças/Adolescentes</h4>
-                        <div id="apexchart-violencia-sexual"></div>
-                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [18, 54, 65]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [17, 39, 86]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [8, 0, 20]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [33, 76, 139]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [5, 17, 22]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa/Grupo' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Casos' }
-                                },
-                                colors: ['#0040ff', '#ff0000', '#ff9900', '#e83e8c', '#ffc107'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '55%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: false
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                },
-                                title: {
-                                    text: 'Casos de Violência Sexual por Cor/Raça e Sexo',
-                                    align: 'center',
-                                    style: { fontSize: '16px' }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-violencia-sexual"), options);
-                            chart.render();
-                        });
-                        </script>
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-shield-alt"></i> Análise dos Serviços de Proteção</h4>
+                        <p>O sistema de proteção a crianças e adolescentes em Natal conta com <strong>diversas unidades especializadas</strong> distribuídas entre serviços de privação de liberdade e semiliberdade, atendendo diferentes necessidades do sistema socioeducativo.</p>
+                        
+                        <p><strong>Unidades de Privação de Liberdade:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>CASE Pitimbu:</strong> 38 adolescentes</li>
+                            <li><strong>CASE Caicó:</strong> 3 adolescentes</li>
+                            <li><strong>CASE Mossoró:</strong> 11 adolescentes</li>
+                            <li><strong>CASEF Padre João Maria:</strong> 1 adolescente</li>
+                        </ul>
+                        
+                        <p><strong>Unidades de Semiliberdade:</strong></p>
+                        <ul class="custom-list">
+                            <li><strong>CASEMI Nazaré:</strong> Unidade ativa</li>
+                            <li><strong>CASEMI Santa Catarina:</strong> 1 adolescente</li>
+                            <li><strong>CASEMI Santa Delmira:</strong> Período 07/09</li>
+                        </ul>
+                        
+                        <p class="text-info"><strong>Sistema Integrado:</strong> As unidades trabalham de forma coordenada para garantir a ressocialização e proteção integral dos adolescentes.</p>
+                        
+                        <span class="badge badge-info">
+                            <i class="fas fa-users"></i> Sistema Socioeducativo Ativo
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- chart 03 -->
+
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
@@ -1015,5 +967,149 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+
+<script>
+// Gráfico Serviços de Proteção
+document.addEventListener('DOMContentLoaded', function () {
+    var servicosProtecaoOptions = {
+        series: [{
+            name: 'Adolescentes Atendidos',
+            data: [38, 3, 11, 1, 1]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#17669b'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['CASE Pitimbu', 'CASE Caicó', 'CASE Mossoró', 'CASEF P. João Maria', 'CASEMI S. Catarina'],
+            labels: {
+                style: {
+                    fontSize: '10px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -45
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Adolescentes',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Distribuição por Unidades de Atendimento',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#17669b'
+            }
+        },
+        subtitle: {
+            text: 'Sistema Socioeducativo - Total de 54 adolescentes',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['CASE Pitimbu', 'CASE Caicó', 'CASE Mossoró', 'CASEF Padre João Maria', 'CASEMI Santa Catarina'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 54;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let tipo = '';
+                    if (category.includes('CASE') || category.includes('CASEF')) {
+                        tipo = ' (Privação de Liberdade)';
+                    } else if (category.includes('CASEMI')) {
+                        tipo = ' (Semiliberdade)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' adolescentes' + tipo + ' (' + percentage + '%)';
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        },
+        legend: {
+            show: false
+        },
+        annotations: {
+            yaxis: [{
+                y: 20,
+                borderColor: '#17669b',
+                label: {
+                    borderColor: '#17669b',
+                    style: {
+                        color: '#fff',
+                        background: '#17669b',
+                        fontSize: '10px'
+                    },
+                    text: 'Capacidade média das unidades'
+                }
+            }]
+        }
+    };
+
+    var servicosProtecaoChart = new ApexCharts(document.querySelector("#servicosProtecaoChart"), servicosProtecaoOptions);
+    servicosProtecaoChart.render();
+});
+</script>
 
 @endsection

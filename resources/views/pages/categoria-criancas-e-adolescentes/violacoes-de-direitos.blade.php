@@ -1250,6 +1250,113 @@
         </div>
 
         
+        <!-- ## Chart04: Violência Patrimonial -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Violência Patrimonial - Crianças/Adolescentes
+                        </h4>
+                        <div id="violenciaPatrimonialChart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-coins"></i> Análise da Violência Patrimonial</h4>
+                        <p>Os dados revelam um total de <strong>128 casos de violência patrimonial</strong> registrados contra crianças e adolescentes nos períodos analisados, representando uma forma grave de exploração desta população vulnerável.</p>
+                        
+                        <p>A distribuição por raça/cor dos casos:</p>
+                        
+                        <ul class="custom-list">
+                            <li><strong>Pessoas brancas:</strong> 22 casos (17,2%)</li>
+                            <li><strong>Pessoas pretas/pardas:</strong> 40 casos (31,3%)</li>
+                            <li><strong>Outras etnias:</strong> 3 casos (2,3%)</li>
+                        </ul>
+                        
+                        <p>Por gênero, observa-se que <strong>23 casos (18,0%) envolvem meninas</strong> e <strong>42 casos (32,8%) envolvem meninos</strong>, indicando maior vulnerabilidade dos meninos neste tipo de violência.</p>
+                        
+                        <p class="text-danger"><strong>Alerta:</strong> Este tipo de violência frequentemente envolve exploração do trabalho infantil, roubo de benefícios e apropriação indébita de recursos destinados às crianças.</p>
+                        
+                        <span class="badge badge-warning">
+                            <i class="fas fa-exclamation-triangle"></i> Proteção Necessária
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ## Chart05: Trabalho Infantil -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-child"></i> Análise do Trabalho Infantil</h4>
+                        <p>Os registros mostram <strong>82 casos de trabalho infantil</strong> identificados, uma violação grave dos direitos fundamentais de crianças e adolescentes que compromete seu desenvolvimento e educação.</p>
+                        
+                        <p>A distribuição por raça/cor revela:</p>
+                        
+                        <ul class="custom-list">
+                            <li><strong>Pessoas brancas:</strong> 12 casos (14,6%)</li>
+                            <li><strong>Pessoas pretas/pardas:</strong> 27 casos (32,9%)</li>
+                            <li><strong>Outras etnias:</strong> 13 casos (15,9%)</li>
+                        </ul>
+                        
+                        <p>Por gênero, há uma distribuição mais equilibrada: <strong>15 casos (18,3%) envolvem meninas</strong> e <strong>25 casos (30,5%) envolvem meninos</strong>, com predominância masculina.</p>
+                        
+                        <p class="text-danger"><strong>Impacto Social:</strong> O trabalho infantil priva crianças e adolescentes de sua infância, educação e desenvolvimento pleno, perpetuando ciclos de pobreza.</p>
+                        
+                        <span class="badge badge-danger">
+                            <i class="fas fa-ban"></i> Prática Proibida
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Trabalho Infantil - Crianças/Adolescentes
+                        </h4>
+                        <div id="trabalhoInfantilChart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ## Chart06: Denúncias Recebidas -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Denúncias Recebidas - Crianças/Adolescentes
+                        </h4>
+                        <div id="denunciasRecebidasChart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-phone-alt"></i> Análise das Denúncias Recebidas</h4>
+                        <p>O sistema registrou um total impressionante de <strong>1.564 denúncias</strong> relacionadas a violações de direitos de crianças e adolescentes, demonstrando a importância dos canais de denúncia.</p>
+                        
+                        <p>A distribuição por raça/cor das denúncias:</p>
+                        
+                        <ul class="custom-list">
+                            <li><strong>Pessoas brancas:</strong> 451 denúncias (28,8%)</li>
+                            <li><strong>Pessoas pretas/pardas:</strong> 591 denúncias (37,8%)</li>
+                            <li><strong>Outras etnias:</strong> 70 denúncias (4,5%)</li>
+                        </ul>
+                        
+                        <p>Por gênero, observa-se que <strong>558 denúncias (35,7%) envolvem meninas</strong> e <strong>525 denúncias (33,6%) envolvem meninos</strong>, com distribuição relativamente equilibrada.</p>
+                        
+                        <p class="text-success"><strong>Aspecto positivo:</strong> O alto volume de denúncias indica que os canais estão funcionando e que há confiança no sistema de proteção infantil.</p>
+                        
+                        <span class="badge badge-success">
+                            <i class="fas fa-check-circle"></i> Sistema Ativo
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
@@ -1309,5 +1416,384 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gráfico Violência Patrimonial
+    var violenciaPatrimonialOptions = {
+        series: [{
+            name: 'Casos',
+            data: [22, 40, 3, 23, 42]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#dc3545'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Casos',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Violência Patrimonial por Demografia',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#dc3545'
+            }
+        },
+        subtitle: {
+            text: 'Total de 128 casos registrados',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 128;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' casos' + categoryInfo + ' (' + percentage + '%)';
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        },
+        legend: {
+            show: false
+        }
+    };
+
+    var violenciaPatrimonialChart = new ApexCharts(document.querySelector("#violenciaPatrimonialChart"), violenciaPatrimonialOptions);
+    violenciaPatrimonialChart.render();
+
+    // Gráfico Trabalho Infantil
+    var trabalhoInfantilOptions = {
+        series: [{
+            name: 'Casos',
+            data: [12, 27, 13, 15, 25]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#fd7e14'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Casos',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Trabalho Infantil por Demografia',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#fd7e14'
+            }
+        },
+        subtitle: {
+            text: 'Total de 82 casos identificados',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 82;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' casos' + categoryInfo + ' (' + percentage + '%)';
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        },
+        legend: {
+            show: false
+        }
+    };
+
+    var trabalhoInfantilChart = new ApexCharts(document.querySelector("#trabalhoInfantilChart"), trabalhoInfantilOptions);
+    trabalhoInfantilChart.render();
+
+    // Gráfico Denúncias Recebidas
+    var denunciasRecebidasOptions = {
+        series: [{
+            name: 'Denúncias',
+            data: [451, 591, 70, 558, 525]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#28a745'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Denúncias',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Denúncias Recebidas por Demografia',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#28a745'
+            }
+        },
+        subtitle: {
+            text: 'Total de 1.564 denúncias registradas',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 1564;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' denúncias' + categoryInfo + ' (' + percentage + '%)';
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        },
+        legend: {
+            show: false
+        }
+    };
+
+    var denunciasRecebidasChart = new ApexCharts(document.querySelector("#denunciasRecebidasChart"), denunciasRecebidasOptions);
+    denunciasRecebidasChart.render();
+});
+</script>
 
 @endsection

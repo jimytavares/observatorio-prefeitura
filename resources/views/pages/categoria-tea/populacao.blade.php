@@ -836,7 +836,7 @@
 
 <!-- background title -->
 @include('globals.title-page', [
-    'image' => asset('images/lgbt.ia.png')  
+    'image' => asset('images/autistas.ia.png')  
 ])
 
 <!-- Breadcrumb -->
@@ -849,14 +849,14 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="image-showcase">
-                    <img src="{{ asset('images/lgbt2.jpeg') }}" style="width: 624px;" alt="População em situação de rua" class="img-fluid">
+                    <img src="{{ asset('images/ia-img-subcategorias/criancas-adolescentes01.jpeg') }}" alt="População em situação de rua" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6 mt-4">
                 <div class="info-card text-justify" style="height: 382px;">
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
-                    <p>Pessoas LGBTQIA+ são aquelas que se identificam como lésbicas, gays, bissexuais, transexuais, travestis, queer, intersexo, assexuais, ou com outras identidades de gênero e orientações sexuais.</p> <br> 
-                    <p> O conceito abrange a diversidade humana além da heteronormatividade e cisnormatividade. Não há dados específicos de 2025 do IBGE sobre a população LGBTQIAPN+ no Município de Natal, uma vez que o Censo Demográfico não coleta essa informação diretamente.</p>
+                    <p>No Brasil, pessoas com Transtorno do Espectro Autista (TEA) são reconhecidas pela Lei nº 12.764/2012 como pessoas com deficiência para todos os efeitos legais.</p> <br>
+                    <p>De acordo com dados do último Censo Demográfico (IBGE, 2022), dos 751.300 habitantes de Natal/RN,  1,4% (aproximadamente 10.518 pessoas) afirmaram possuir o diagnóstico de TEA.</p>
                 </div>
             </div>
         </div>
@@ -868,7 +868,8 @@
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
         
-    
+        
+
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">

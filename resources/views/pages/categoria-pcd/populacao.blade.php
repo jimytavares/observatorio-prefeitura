@@ -871,22 +871,9 @@
         <div class="content-block">
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-users text-primary"></i>
-                            Informação detalhada sobre o grafico de população por Faixa Etária (IBGE)
-                        </h3>
-                        <p style="width:90%; margin-left:20px;">Os dados do IBGE apresentados no gráfico acima mostram a distribuição da população de crianças e adolescentes em três faixas etárias: 0 a 6 anos, 7 a 11 anos e 12 a 17 anos. Observa-se que a faixa de 0 a 6 anos possui uma população total de <strong>60.919</strong> crianças, sendo <strong>29.766</strong> do sexo feminino e <strong>31.153</strong> do sexo masculino. Na faixa de 7 a 11 anos, são <strong>47.106</strong> crianças, com <strong>22.946</strong> meninas e <strong>24.160</strong> meninos. Já entre 12 e 17 anos, a população é de <strong>57.057</strong> adolescentes, sendo <strong>28.155</strong> do sexo feminino e <strong>28.902</strong> do sexo masculino.</p>
-                        <div class="">
-                            <span class="badge badge-info">Dados oficiais: 281.472</span>
-                            <span class="badge badge-warning">Estimativa real: +400.000</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
                     <div class="chart-container">
-                        <h4 class="chart-title">População por Faixa Etária (IBGE)</h4>
-                        <div id="apexchart-populacao-faixa-etaria"></div>
+                        <h4 class="chart-title">População de Pessoas com Deficiência por Faixa Etária (IBGE)</h4>
+                        <div id="apexchart-pcd-faixa-etaria"></div>
                         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
                         <script>
                         document.addEventListener('DOMContentLoaded', function () {
@@ -898,19 +885,19 @@
                                 series: [
                                     {
                                         name: 'População',
-                                        data: [60919, 47106, 57057]
+                                        data: [1610, 2034, 30685, 28320]
                                     },
                                     {
                                         name: 'Feminino',
-                                        data: [29766, 22946, 28155]
+                                        data: [573, 823, 17797, 18298]
                                     },
                                     {
                                         name: 'Masculino',
-                                        data: [31153, 24160, 28902]
+                                        data: [1037, 1211, 12888, 10022]
                                     }
                                 ],
                                 xaxis: {
-                                    categories: ['0-6 anos', '7-11 anos', '12-17 anos'],
+                                    categories: ['0-12 anos', '13-19 anos', '20-59 anos', '> 60 anos'],
                                     title: { text: 'Faixa Etária' }
                                 },
                                 yaxis: {
@@ -939,85 +926,7 @@
                                     }
                                 }
                             };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-populacao-faixa-etaria"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ## Chart02: Situação de rua -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6">
-                    <div class="chart-container">
-                        <h4 class="chart-title">Situação de Rua - Crianças/Adolescentes</h4>
-                        <div id="apexchart-situacao-rua"></div>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [0, 3, 0]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [6, 1, 5]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [0, 4, 0]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [2, 4, 4]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [4, 4, 1]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa Etária' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Número de Casos' }
-                                },
-                                colors: ['#6c757d', '#8b4513', '#ffc107', '#e83e8c', '#007bff'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '65%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: true,
-                                    formatter: function (val) {
-                                        return val;
-                                    }
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-situacao-rua"), options);
+                            var chart = new ApexCharts(document.querySelector("#apexchart-pcd-faixa-etaria"), options);
                             chart.render();
                         });
                         </script>
@@ -1026,330 +935,20 @@
                 <div class="col-lg-6">
                     <div class="content-text">
                         <h3 class="content-title">
-                            <i class="fas fa-home text-danger"></i>
-                            Situação de Rua - Crianças e Adolescentes
+                            <i class="fas fa-users text-primary"></i>
+                            Análise da População de Pessoas com Deficiência por Faixa Etária (IBGE)
                         </h3>
-                        <p style="width:90%; margin-left:20px;">Os dados apresentados no gráfico mostram casos de crianças e adolescentes em situação de rua, distribuídos por faixa etária e características demográficas. O total de <strong>29</strong> casos registrados evidencia uma realidade preocupante que requer atenção especial das políticas públicas.</p>
-                        <p style="width:90%; margin-left:20px;">Na análise por raça/cor, observamos que <strong>12</strong> casos envolvem crianças/adolescentes pretos/pardos, <strong>3</strong> casos de crianças brancas e <strong>4</strong> de outras categorias. Por gênero, há <strong>10</strong> casos do sexo feminino e <strong>9</strong> do sexo masculino. A faixa de 7-11 anos concentra o maior número de casos (8), seguida por 12-17 anos (5) e 0-6 anos (6).</p>
+                        <p style="width:90%; margin-left:20px;">Segundo o IBGE, Natal possui <strong>66.649 pessoas com deficiência</strong> distribuídas em diferentes faixas etárias. O maior grupo está entre 20 e 59 anos (<strong>30.685 pessoas</strong>), seguido por idosos acima de 60 anos (<strong>28.320 pessoas</strong>). Entre crianças (0-12 anos) e adolescentes (13-19 anos), os números são menores, com <strong>1.610</strong> e <strong>2.034</strong> respectivamente. Observa-se predominância feminina em todas as faixas, especialmente entre idosos, onde <strong>18.298</strong> são mulheres e <strong>10.022</strong> homens.</p>
                         <div class="">
-                            <span class="badge badge-info">Total: 29 casos</span>
-                            <span class="badge badge-warning">Preto/Pardo: 41,4%</span>
+                            <span class="badge badge-info">Fonte: IBGE 2022</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ## Chart03: Gravidez Precoce -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-baby text-warning"></i>
-                            Gravidez Precoce - Crianças/Adolescentes
-                        </h3>
-                        <p style="width:90%; margin-left:20px;">Os dados apresentados no gráfico mostram uma situação alarmante: felizmente, não há registros de gravidez precoce nas faixas etárias analisadas (0-6 anos, 7-11 anos e 12-17 anos) para o período estudado. Todos os valores apresentados são <strong>zero</strong> em todas as categorias demográficas.</p>
-                        <p style="width:90%; margin-left:20px;">Esta ausência de casos pode indicar tanto uma realidade positiva quanto possíveis subnotificações. É importante manter a vigilância e os programas de educação sexual e reprodutiva, especialmente para adolescentes, como medida preventiva. A prevenção da gravidez precoce é fundamental para garantir o desenvolvimento saudável e as oportunidades educacionais de crianças e adolescentes.</p>
-                        <div class="">
-                            <span class="badge badge-info">Total: 0 casos</span>
-                            <span class="badge badge-warning">Prevenção: Essencial</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="chart-container">
-                        <h4 class="chart-title">Gravidez Precoce - Crianças/Adolescentes</h4>
-                        <div id="apexchart-gravidez-precoce"></div>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [0, 0, 0]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [0, 0, 0]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [0, 0, 0]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [0, 0, 0]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [0, 0, 0]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa Etária' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Número de Casos' },
-                                    max: 5
-                                },
-                                colors: ['#6c757d', '#8b4513', '#ffc107', '#e83e8c', '#007bff'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '65%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: true,
-                                    formatter: function (val) {
-                                        return val;
-                                    }
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                },
-                                annotations: {
-                                    yaxis: [{
-                                        y: 0,
-                                        borderColor: '#00E396',
-                                        label: {
-                                            borderColor: '#00E396',
-                                            style: {
-                                                color: '#fff',
-                                                background: '#00E396',
-                                            },
-                                            text: 'Nenhum caso registrado - Situação positiva'
-                                        }
-                                    }]
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-gravidez-precoce"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- ## : violencia domestica -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-map-marked-alt text-info"></i>
-                            Violência Doméstica - Crianças/Adolescentes
-                        </h3>
-                        <div class="row mt-3">
-                            <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-striped" style="background:#fff;">
-                                        <thead style="background:#f8f9fa;">
-                                            <tr>
-                                                <th colspan="3" class="text-center"><b>Cor/Raça</b></th>
-                                                <th colspan="2" class="text-center"><b>Sexo</b></th>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center">Branco</th>
-                                                <th class="text-center">Preto/Pardo</th>
-                                                <th class="text-center">Outra</th>
-                                                <th class="text-center">Feminino</th>
-                                                <th class="text-center">Masculino</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-center">846</td>
-                                                <td class="text-center">1355</td>
-                                                <td class="text-center">133</td>
-                                                <td class="text-center">1032</td>
-                                                <td class="text-center">1246</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center">726</td>
-                                                <td class="text-center">900</td>
-                                                <td class="text-center">49</td>
-                                                <td class="text-center">828</td>
-                                                <td class="text-center">817</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-center">765</td>
-                                                <td class="text-center">981</td>
-                                                <td class="text-center">104</td>
-                                                <td class="text-center">1127</td>
-                                                <td class="text-center">699</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="chart-container">
-                        <div id="apexchart-violencia-domestica"></div>
-                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'pie',
-                                    height: 320
-                                },
-                                series: [
-                                    846+726+765, // Branco
-                                    1355+900+981, // Preto/Pardo
-                                    133+49+104   // Outra
-                                ],
-                                labels: ['Branco', 'Preto/Pardo', 'Outra'],
-                                colors: ['#0040ff', '#ff0000', '#ff9900'],
-                                legend: {
-                                    position: 'bottom',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: true,
-                                    formatter: function (val, opts) {
-                                        return opts.w.config.labels[opts.seriesIndex] + ': ' + opts.w.globals.series[opts.seriesIndex];
-                                    },
-                                    style: {
-                                        fontSize: '15px',
-                                        fontWeight: 'bold'
-                                    }
-                                },
-                                title: {
-                                    text: 'Casos por Cor/Raça (Total)',
-                                    align: 'center',
-                                    style: { fontSize: '16px' }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-violencia-domestica"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ## : Análise dos Dados de Violência Sexual -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            Análise dos Dados de Violência Sexual
-                        </h3>
-                        <p>
-                            O gráfico ao lado apresenta os casos de violência sexual contra crianças e adolescentes, segmentados por cor/raça e sexo. Observa-se que, nas três linhas de dados analisadas, a maior parte dos casos envolve vítimas do sexo feminino, com números significativamente superiores aos do sexo masculino em todas as situações.<br><br>
-                            Em relação à cor/raça, os grupos "Branco" e "Preto/Pardo" concentram a maioria dos registros, sendo que o grupo "Preto/Pardo" apresenta números próximos ou superiores ao grupo "Branco" em algumas linhas, evidenciando a vulnerabilidade desses segmentos. O grupo "Outra" apresenta números menores, mas ainda relevantes para o contexto.<br><br>
-                            Esses dados reforçam a importância de políticas públicas específicas para a proteção de meninas e para o enfrentamento das desigualdades raciais, além de evidenciar a necessidade de ações integradas de prevenção e combate à violência sexual na infância e adolescência.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="chart-container">
-                        <h4 class="chart-title">Violência Sexual - Crianças/Adolescentes</h4>
-                        <div id="apexchart-violencia-sexual"></div>
-                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [18, 54, 65]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [17, 39, 86]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [8, 0, 20]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [33, 76, 139]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [5, 17, 22]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa/Grupo' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Casos' }
-                                },
-                                colors: ['#0040ff', '#ff0000', '#ff9900', '#e83e8c', '#ffc107'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '55%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: false
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                },
-                                title: {
-                                    text: 'Casos de Violência Sexual por Cor/Raça e Sexo',
-                                    align: 'center',
-                                    style: { fontSize: '16px' }
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-violencia-sexual"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <!-- chart 02 -->
+        
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">

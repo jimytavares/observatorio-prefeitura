@@ -849,7 +849,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="image-showcase">
-                    <img src="{{ asset('images/juventude-populacao.png') }}" alt="População em situação de rua" class="img-fluid">
+                    <img src="{{ asset('images/jovens.jpeg') }}" alt="População em situação de rua" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6 mt-4">
@@ -867,9 +867,42 @@
 <section class="content-section" style="margin-top: -90px;">
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
+        <!-- ## Chart01: População Jovem por Gênero (IBGE) -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-pie"></i> População Jovem por Gênero (IBGE)
+                        </h4>
+                        <div id="populacaoJovemChart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-users"></i> Análise Demográfica da Juventude</h4>
+                        <p>De acordo com os dados do <strong>IBGE (Censo 2022)</strong>, Natal possui uma população jovem de <strong>166.043 pessoas</strong> na faixa etária de 15 a 29 anos, representando aproximadamente <strong>22% da população total</strong> do município.</p>
+                        
+                        <p><strong>Distribuição por gênero:</strong></p>
+                        
+                        <ul class="custom-list">
+                            <li><strong>Mulheres jovens:</strong> 83.703 pessoas (50,4%)</li>
+                            <li><strong>Homens jovens:</strong> 82.340 pessoas (49,6%)</li>
+                        </ul>
+                        
+                        <p>A distribuição por gênero revela um <strong>equilíbrio demográfico</strong> com uma leve predominância feminina de apenas <strong>0,8 pontos percentuais</strong>, demonstrando uma composição equilibrada da juventude natalense.</p>
+                        
+                        <p>Este segmento populacional representa uma <strong>força motriz importante</strong> para o desenvolvimento econômico e social da cidade, concentrando pessoas em idade produtiva e em processo de formação educacional e profissional.</p>
+                        
+                        <span class="badge badge-info">
+                            <i class="fas fa-balance-scale"></i> Distribuição Equilibrada
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         
-
-
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
@@ -929,6 +962,149 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gráfico População Jovem por Gênero (IBGE)
+    var populacaoJovemOptions = {
+        series: [83703, 82340],
+        chart: {
+            type: 'pie',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#e91e63', '#2196f3'],
+        labels: ['Mulheres', 'Homens'],
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val, opts) {
+                const value = opts.w.globals.series[opts.seriesIndex];
+                return value.toLocaleString('pt-BR') + '\n(' + val.toFixed(1) + '%)';
+            },
+            dropShadow: {
+                enabled: true,
+                top: 2,
+                left: 2,
+                blur: 3,
+                opacity: 0.8
+            }
+        },
+        title: {
+            text: 'População Jovem de Natal (15-29 anos)',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#333'
+            }
+        },
+        subtitle: {
+            text: 'Total: 166.043 jovens (Censo IBGE 2022)',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const total = 166043;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    const label = opts.w.globals.labels[opts.seriesIndex];
+                    
+                    return '<strong>' + val.toLocaleString('pt-BR') + ' ' + label.toLowerCase() + '</strong><br>' +
+                           '<span style="color: #666;">Representa ' + percentage + '% da população jovem</span><br>' +
+                           '<span style="color: #666;">Faixa etária: 15 a 29 anos</span>';
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        legend: {
+            position: 'bottom',
+            horizontalAlign: 'center',
+            floating: false,
+            fontSize: '14px',
+            fontWeight: 600,
+            markers: {
+                width: 16,
+                height: 16,
+                radius: 8
+            },
+            itemMargin: {
+                horizontal: 15,
+                vertical: 8
+            },
+            formatter: function(seriesName, opts) {
+                const value = opts.w.globals.series[opts.seriesIndex];
+                return seriesName + ': ' + value.toLocaleString('pt-BR');
+            }
+        },
+        plotOptions: {
+            pie: {
+                startAngle: -90,
+                endAngle: 270,
+                expandOnClick: true,
+                offsetX: 0,
+                offsetY: 0,
+                customScale: 0.9,
+                dataLabels: {
+                    offset: 0,
+                    minAngleToShowLabel: 10
+                },
+                donut: {
+                    size: '0%'
+                }
+            }
+        },
+        stroke: {
+            show: true,
+            width: 3,
+            colors: ['#fff']
+        },
+        responsive: [{
+            breakpoint: 768,
+            options: {
+                chart: {
+                    height: 350
+                },
+                legend: {
+                    position: 'bottom',
+                    fontSize: '12px'
+                },
+                dataLabels: {
+                    style: {
+                        fontSize: '12px'
+                    }
+                }
+            }
+        }]
+    };
+
+    var populacaoJovemChart = new ApexCharts(document.querySelector("#populacaoJovemChart"), populacaoJovemOptions);
+    populacaoJovemChart.render();
+});
+</script>
 
 @endsection
 
