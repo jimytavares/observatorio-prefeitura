@@ -855,8 +855,7 @@
             <div class="col-md-6 mt-4">
                 <div class="info-card text-justify" style="height: 382px;">
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
-                    <p>Pessoas LGBTQIA+ são aquelas que se identificam como lésbicas, gays, bissexuais, transexuais, travestis, queer, intersexo, assexuais, ou com outras identidades de gênero e orientações sexuais.</p> <br> 
-                    <p> O conceito abrange a diversidade humana além da heteronormatividade e cisnormatividade. Não há dados específicos de 2025 do IBGE sobre a população LGBTQIAPN+ no Município de Natal, uma vez que o Censo Demográfico não coleta essa informação diretamente.</p>
+                    <p>As mulheres representam a maioria da população do Município de Natal. De acordo com o Censo Demográfico 2022 (IBGE), o município possui 751.300 habitantes, dos quais 401.965 são mulheres, correspondendo a 53% da população total. Esse contingente está distribuído em diferentes faixas etárias, perfis socioeconômicos e condições de vida, revelando a diversidade de experiências e realidades que compõem o universo feminino na cidade.</p>
                 </div>
             </div>
         </div>

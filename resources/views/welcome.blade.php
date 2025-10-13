@@ -92,18 +92,20 @@
     }
     
     .info-card {
-        background-color:white;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
         border-radius: 20px;
         padding: 2.5rem 2rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease;
         border: 1px solid rgba(23, 102, 155, 0.1);
         position: relative;
         overflow: hidden;
-        width:83%;
-        height:350px;
-        margin-left:10px;
+        width: 83%;
+        height: 350px;
+        margin-left: 10px;
     }
+
     
     .info-card:hover {
         transform: translateY(-5px);
@@ -145,7 +147,7 @@
     
     .card-description {
         color: #1a1a1aff;
-        font-size: 0.95rem;
+        font-size: 1.0rem;
         line-height: 1.6;
         text-align: center;
         margin-bottom: 2rem;
@@ -213,7 +215,7 @@
                                                 <img src="{{ URL::asset('images/icone-index/lgbt.png') }}" class="index-img-icon" alt="Icone Criança">
                                             </div>
                                             <div class="btn-right-transp">
-                                                <p>LGBT</p>
+                                                <p>Pessoas LGBTQIA+</p>
                                             </div>
                                         </div>
                                     </a>
@@ -240,13 +242,13 @@
 
                             <div class="col-6" style="background-color: ; ">
                                 <div class="col-buttons-transp right-card">
-                                    <a href="{{ route('igualdade_racial') }}" style="text-decoration:none;">
+                                    <a href="{{ route('povos-e-comunidades-tradicionais') }}" style="text-decoration:none;">
                                         <div class="row btn-all-transp">
                                             <div class="btn-left-transp">
                                                 <img src="{{ URL::asset('images/icone-index/igualdade.png') }}" class="index-img-icon" alt="Icone Igualdade Racial">
                                             </div>
                                             <div class="btn-right-transp">
-                                                <p>Igualdade Racial</p>
+                                                <p style="margin-top:3px">Povos e Comunidades Tradicionais</p>
                                             </div>
                                         </div>
                                     </a>
@@ -273,13 +275,13 @@
 
                             <div class="col-6" style="background-color: ; ">
                                 <div class="col-buttons-transp right-card">
-                                    <a href="{{ route('violacao_de_direitos') }}" style="text-decoration:none;">
+                                    <a href="{{ route('mulher') }}" style="text-decoration:none;">
                                         <div class="row btn-all-transp">
                                             <div class="btn-left-transp">
                                                 <img src="{{ URL::asset('images/icone-index/violacao.png') }}" class="index-img-icon" alt="Icone Violação de Direitos">
                                             </div>
                                             <div class="btn-right-transp">
-                                                <p>Violação de Direitos</p>
+                                                <p>Mulher</p>
                                             </div>
                                         </div>
                                     </a>

@@ -225,7 +225,7 @@
         color: #6c757d;
         line-height: 1.6;
         margin-bottom: 0;
-        font-size:18px;
+        font-size:21px;
         color:black;
     }
 
@@ -853,10 +853,9 @@
                 </div>
             </div>
             <div class="col-md-6 mt-4">
-                <div class="info-card text-justify" style="height: 382px;">
+                <div class="info-card text-justify" >
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
-                    <p>Pessoas LGBTQIA+ são aquelas que se identificam como lésbicas, gays, bissexuais, transexuais, travestis, queer, intersexo, assexuais, ou com outras identidades de gênero e orientações sexuais.</p> <br> 
-                    <p> O conceito abrange a diversidade humana além da heteronormatividade e cisnormatividade. Não há dados específicos de 2025 do IBGE sobre a população LGBTQIAPN+ no Município de Natal, uma vez que o Censo Demográfico não coleta essa informação diretamente.</p>
+                    <p>As violações de direitos das mulheres configuram-se em ações ou omissões que comprometem a dignidade, a autonomia, a igualdade e a plena participação deste grupo na sociedade. Em Natal, assim como em outras cidades brasileiras, destacam-se como formas recorrentes de violação, a violência doméstica e familiar — que pode se manifestar de forma física, psicológica, sexual, moral ou patrimonial —, o feminicídio e suas tentativas, o assédio e a importunação sexual em espaços públicos e privados, além das desigualdades no mercado de trabalho. Também se observa a negação ou a dificuldade de acesso à saúde integral, especialmente no que se refere à saúde sexual e reprodutiva, bem como a sub-representação feminina em espaços de poder e decisão.</p>
                 </div>
             </div>
         </div>
@@ -869,6 +868,7 @@
         <h2 class="section-title">Dados e Análises Completos</h2>
         
     
+        
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
@@ -930,5 +930,3 @@
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
 
 @endsection
-
-

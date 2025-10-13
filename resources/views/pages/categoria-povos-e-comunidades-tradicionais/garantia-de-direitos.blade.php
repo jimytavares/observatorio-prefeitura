@@ -5,7 +5,6 @@
 @section('content')
 
 <style>
-    
     .hero-section {
         background: linear-gradient(135deg, rgba(23, 102, 155, 0.9), rgba(1, 137, 211, 0.9)), 
                     url('{{ asset("images/banner-natal.png") }}') center/cover;
@@ -225,7 +224,7 @@
         color: #6c757d;
         line-height: 1.6;
         margin-bottom: 0;
-        font-size:18px;
+        font-size:21px;
         color:black;
     }
 
@@ -853,10 +852,10 @@
                 </div>
             </div>
             <div class="col-md-6 mt-4">
-                <div class="info-card text-justify" style="height: 382px;">
+                <div class="info-card text-justify" >
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
-                    <p>Pessoas LGBTQIA+ são aquelas que se identificam como lésbicas, gays, bissexuais, transexuais, travestis, queer, intersexo, assexuais, ou com outras identidades de gênero e orientações sexuais.</p> <br> 
-                    <p> O conceito abrange a diversidade humana além da heteronormatividade e cisnormatividade. Não há dados específicos de 2025 do IBGE sobre a população LGBTQIAPN+ no Município de Natal, uma vez que o Censo Demográfico não coleta essa informação diretamente.</p>
+                    <p>A garantia de direitos da população indígena envolve a implementação de políticas públicas específicas e diferenciadas, que reconheçam e respeitem suas identidades étnicas, culturais e sociais. Isso inclui a promoção da saúde indígena com atenção diferenciada, a oferta de educação escolar indígena bilíngue e intercultural, o combate ao preconceito e à discriminação, bem como o fortalecimento da participação indígena na formulação e fiscalização das políticas públicas. Em contextos urbanos como o de Natal, é essencial garantir o acesso da população indígena a serviços públicos de qualidade, respeitando suas especificidades culturais, religiosas e territoriais, além de assegurar espaços de escuta e protagonismo social.
+</p>
                 </div>
             </div>
         </div>
@@ -867,8 +866,45 @@
 <section class="content-section" style="margin-top: -90px;">
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
-        
-    
+
+        <!-- ## Chart01: Acompanhamento LGBT -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">
+                            <i class="fas fa-chart-bar"></i> Acompanhamento e Serviços LGBT
+                        </h4>
+                        <div id="acompanhamentoLGBTChart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4><i class="fas fa-users"></i> Análise dos Serviços LGBT</h4>
+                        <p>Os dados revelam um conjunto abrangente de serviços e programas direcionados à população LGBT, demonstrando o compromisso com a garantia de direitos e inclusão social.</p>
+                        
+                        <p><strong>Destaques dos serviços:</strong></p>
+                        
+                        <ul class="custom-list">
+                            <li><strong>Centro LGBT:</strong> 103 pessoas acompanhadas</li>
+                            <li><strong>Cadastro Único:</strong> 82 pessoas inseridas</li>
+                            <li><strong>Cesta Básica:</strong> 72 beneficiários</li>
+                            <li><strong>Auxílio Social:</strong> 13 beneficiários</li>
+                            <li><strong>Bolsa Família:</strong> 39 pessoas inseridas</li>
+                            <li><strong>Ambulatório TT:</strong> 650 pessoas cadastradas</li>
+                            <li><strong>Processo Transexualizador:</strong> 200 pessoas atendidas</li>
+                        </ul>
+                        
+                        <p>O <strong>Ambulatório TT (Transexualizador) com 650 pessoas</strong> representa o maior volume de atendimento, seguido pelo <strong>processo transexualizador com 200 pessoas</strong>, evidenciando a demanda específica por cuidados de saúde da população trans.</p>
+                        
+                        <span class="badge badge-info">
+                            <i class="fas fa-heart"></i> Cuidado Integral
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
@@ -929,6 +965,508 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Gráfico 1: Acompanhamento e Serviços LGBT
+    var acompanhamentoLGBTOptions = {
+        series: [{
+            name: 'Pessoas Atendidas',
+            data: [103, 82, 72, 13, 39, 650, 200]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#6f42c1'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '12px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Centro LGBT', 'Cadastro Único', 'Cesta Básica', 'Auxílio Social', 'Bolsa Família', 'Ambulatório TT', 'Processo Trans'],
+            labels: {
+                style: {
+                    fontSize: '10px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -45
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Pessoas',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Serviços e Programas LGBT',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#6f42c1'
+            }
+        },
+        subtitle: {
+            text: 'Total de atendimentos por tipo de serviço',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Centro LGBT', 'Cadastro Único', 'Cesta Básica', 'Auxílio Social', 'Bolsa Família', 'Ambulatório TT', 'Processo Trans'];
+                    const category = categories[opts.dataPointIndex];
+                    
+                    return val.toLocaleString('pt-BR') + ' pessoas atendidas em ' + category;
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        },
+        legend: {
+            show: false
+        }
+    };
+
+    var acompanhamentoLGBTChart = new ApexCharts(document.querySelector("#acompanhamentoLGBTChart"), acompanhamentoLGBTOptions);
+    acompanhamentoLGBTChart.render();
+
+    // Gráfico 2: Violações por Faixa Etária
+    var violacoesFaixaEtariaOptions = {
+        series: [
+            {
+                name: 'Violência Patrimonial',
+                data: [22, 16, 28]
+            },
+            {
+                name: 'Trabalho Infantil',
+                data: [15, 8, 9]
+            },
+            {
+                name: 'Denúncias Recebidas',
+                data: [298, 321, 154]
+            }
+        ],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#dc3545', '#fd7e14', '#28a745'],
+        plotOptions: {
+            bar: {
+                borderRadius: 6,
+                columnWidth: '70%',
+                dataLabels: {
+                    position: 'top'
+                }
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '11px',
+                fontWeight: 'bold',
+                colors: ['#333']
+            },
+            formatter: function (val) {
+                return val;
+            },
+            offsetY: -20
+        },
+        xaxis: {
+            categories: ['Criança/Adolescente', 'Adolescente', 'Total Outras Faixas'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                }
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Casos',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Violações por Faixa Etária',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#333'
+            }
+        },
+        subtitle: {
+            text: 'Distribuição de violações por tipo e idade',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR') + ' casos';
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        legend: {
+            position: 'top',
+            horizontalAlign: 'center',
+            floating: false,
+            fontSize: '12px',
+            fontWeight: 600,
+            markers: {
+                width: 12,
+                height: 12,
+                radius: 6
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        }
+    };
+
+    var violacoesFaixaEtariaChart = new ApexCharts(document.querySelector("#violacoesFaixaEtariaChart"), violacoesFaixaEtariaOptions);
+    violacoesFaixaEtariaChart.render();
+
+    // Gráfico 3: Atendimento por Unidades
+    var atendimentoUnidadesOptions = {
+        series: [{
+            name: 'Adolescentes Atendidos',
+            data: [38, 3, 11, 1, 1, 8]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#17a2b8'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val;
+            }
+        },
+        xaxis: {
+            categories: ['CASE PITIMBU', 'CASE CAICÓ', 'CASE MOSSORÓ', 'CASEF P. JOÃO', 'CASEMI NAZARÉ', 'CASEMI S. DELMIRA'],
+            labels: {
+                style: {
+                    fontSize: '10px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -45
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Adolescentes',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val;
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Atendimento por Unidades Especializadas',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#17a2b8'
+            }
+        },
+        subtitle: {
+            text: 'Distribuição de adolescentes por unidade de atendimento',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['CASE PITIMBU', 'CASE CAICÓ', 'CASE MOSSORÓ', 'CASEF P. JOÃO', 'CASEMI NAZARÉ', 'CASEMI S. DELMIRA'];
+                    const category = categories[opts.dataPointIndex];
+                    
+                    let typeInfo = '';
+                    if (category.includes('CASE')) {
+                        typeInfo = ' (Privação de Liberdade)';
+                    } else if (category.includes('CASEF')) {
+                        typeInfo = ' (Internação)';
+                    } else if (category.includes('CASEMI')) {
+                        typeInfo = ' (Semiliberdade)';
+                    }
+                    
+                    return val + ' adolescentes em ' + category + typeInfo;
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        },
+        legend: {
+            show: false
+        }
+    };
+
+    var atendimentoUnidadesChart = new ApexCharts(document.querySelector("#atendimentoUnidadesChart"), atendimentoUnidadesOptions);
+    atendimentoUnidadesChart.render();
+
+    // Gráfico Denúncias Recebidas (mantido do código anterior)
+    var denunciasRecebidasOptions = {
+        series: [{
+            name: 'Denúncias',
+            data: [451, 591, 70, 558, 525]
+        }],
+        chart: {
+            type: 'bar',
+            height: 400,
+            fontFamily: 'Arial, sans-serif',
+            toolbar: {
+                show: true,
+                tools: {
+                    download: true,
+                    selection: false,
+                    zoom: false,
+                    zoomin: false,
+                    zoomout: false,
+                    pan: false,
+                    reset: false
+                }
+            }
+        },
+        colors: ['#28a745'],
+        plotOptions: {
+            bar: {
+                borderRadius: 8,
+                columnWidth: '60%',
+                distributed: true
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                fontSize: '14px',
+                fontWeight: 'bold',
+                colors: ['#fff']
+            },
+            formatter: function (val) {
+                return val.toLocaleString('pt-BR');
+            }
+        },
+        xaxis: {
+            categories: ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'],
+            labels: {
+                style: {
+                    fontSize: '11px',
+                    fontWeight: '600',
+                    colors: '#333'
+                },
+                rotate: -15
+            }
+        },
+        yaxis: {
+            title: {
+                text: 'Número de Denúncias',
+                style: {
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    color: '#333'
+                }
+            },
+            labels: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR');
+                },
+                style: {
+                    fontSize: '12px',
+                    colors: '#333'
+                }
+            }
+        },
+        title: {
+            text: 'Denúncias Recebidas por Demografia',
+            align: 'center',
+            style: {
+                fontSize: '16px',
+                fontWeight: '700',
+                color: '#28a745'
+            }
+        },
+        subtitle: {
+            text: 'Total de 1.564 denúncias registradas',
+            align: 'center',
+            style: {
+                fontSize: '12px',
+                color: '#666'
+            }
+        },
+        tooltip: {
+            theme: 'light',
+            y: {
+                formatter: function (val, opts) {
+                    const categories = ['Branco', 'Preto/Pardo', 'Outra', 'Feminino', 'Masculino'];
+                    const category = categories[opts.dataPointIndex];
+                    const total = 1564;
+                    const percentage = ((val / total) * 100).toFixed(1);
+                    
+                    let categoryInfo = '';
+                    if (category === 'Branco' || category === 'Preto/Pardo' || category === 'Outra') {
+                        categoryInfo = ' (Raça/Cor)';
+                    } else {
+                        categoryInfo = ' (Gênero)';
+                    }
+                    
+                    return val.toLocaleString('pt-BR') + ' denúncias' + categoryInfo + ' (' + percentage + '%)';
+                }
+            },
+            style: {
+                fontSize: '12px'
+            }
+        },
+        grid: {
+            show: true,
+            borderColor: '#e0e0e0',
+            strokeDashArray: 3
+        },
+        legend: {
+            show: false
+        }
+    };
+
+    var denunciasRecebidasChart = new ApexCharts(document.querySelector("#denunciasRecebidasChart"), denunciasRecebidasOptions);
+    denunciasRecebidasChart.render();
+});
+</script>
+
 @endsection
-
-

@@ -101,33 +101,31 @@ Route::get('/categoria/LGBT/garantia/', [ProfilleController::class, 'garantia_di
 
 /*
 |--------------------------------------------------------------------------
-| Igualdade Racial [Categoria]
+| Povos e Comunidades Tradicionais [Categoria]
 |--------------------------------------------------------------------------
 */
 
-Route::get('/categoria/igualdade-racial/', [ProfilleController::class, 'igualdade_racial'])->name('igualdade_racial');
+Route::get('/categoria/povos-e-comunidades-tradicionais/', [ProfilleController::class, 'povos_comunidades_tradicionais'])->name('povos-e-comunidades-tradicionais');
 
+Route::get('/categoria/povos-e-comunidades-tradicionais/populacao/', [ProfilleController::class, 'populacao_povos_comunidades_tradicionais'])->name('populacao_povos_comunidades_tradicionais');
 
-Route::get('/categoria/igualdade-racial/populacao/', [ProfilleController::class, 'populacao_igualdade_racial'])->name('populacao_igualdade_racial');
+Route::get('/categoria/povos-e-comunidades-tradicionais/violacoes/', [ProfilleController::class, 'violacao_direitos_povos_comunidades_tradicionais'])->name('violacao-de-direito-povos-comunidades-tradicionais');
 
-Route::get('/categoria/igualdade-racial/violacoes/', [ProfilleController::class, 'violacao_direitos_igualdade_racial'])->name('violacao-de-direito-igualdade-racial');
-
-Route::get('/categoria/igualdade-racial/garantia/', [ProfilleController::class, 'garantia_direito_igualdade_racial'])->name('garantia-de-direito-igualdade-racial');
+Route::get('/categoria/povos-e-comunidades-tradicionais/garantia/', [ProfilleController::class, 'garantia_direito_povos_comunidades_tradicionais'])->name('garantia-de-direito-povos-comunidades-tradicionais');
 
 
 /*
 |--------------------------------------------------------------------------
-| Violação de Direitos [Categoria]
+| Mulher [Categoria]
 |--------------------------------------------------------------------------
 */
-Route::get('/categoria/violacao-de-direitos/', [ProfilleController::class, 'violacao_de_direitos'])->name('violacao_de_direitos');
+Route::get('/categoria/mulher/', [ProfilleController::class, 'mulher'])->name('mulher');
 
+Route::get('/categoria/mulher/populacao/', [ProfilleController::class, 'populacao_mulher'])->name('populacao_mulher');
 
-Route::get('/categoria/violacao-de-direitos/populacao/', [ProfilleController::class, 'populacao_violacao_de_direitos'])->name('populacao_violacao_de_direitos');
+Route::get('/categoria/mulher/violacoes/', [ProfilleController::class, 'violacao_direitos_mulher'])->name('violacao-de-direito-mulher');
 
-Route::get('/categoria/violacao-de-direitos/violacoes/', [ProfilleController::class, 'violacao_direitos_violacao_de_direitos'])->name('violacao-de-direito-violacao-de-direitos');
-
-Route::get('/categoria/violacao-de-direitos/garantia/', [ProfilleController::class, 'garantia_direito_violacao_de_direitos'])->name('garantia-de-direito-violacao-de-direitos');
+Route::get('/categoria/mulher/garantia/', [ProfilleController::class, 'garantia_direito_mulher'])->name('garantia-de-direito-mulher');
 
 
 /*

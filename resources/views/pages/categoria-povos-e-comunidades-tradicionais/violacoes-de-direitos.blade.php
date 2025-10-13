@@ -225,7 +225,7 @@
         color: #6c757d;
         line-height: 1.6;
         margin-bottom: 0;
-        font-size:18px;
+        font-size:21px;
         color:black;
     }
 
@@ -853,10 +853,10 @@
                 </div>
             </div>
             <div class="col-md-6 mt-4">
-                <div class="info-card text-justify" style="height: 382px;">
+                <div class="info-card text-justify" >
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
-                    <p>Pessoas LGBTQIA+ são aquelas que se identificam como lésbicas, gays, bissexuais, transexuais, travestis, queer, intersexo, assexuais, ou com outras identidades de gênero e orientações sexuais.</p> <br> 
-                    <p> O conceito abrange a diversidade humana além da heteronormatividade e cisnormatividade. Não há dados específicos de 2025 do IBGE sobre a população LGBTQIAPN+ no Município de Natal, uma vez que o Censo Demográfico não coleta essa informação diretamente.</p>
+                    <p>A violação de direitos da população indígena ocorre quando há ações ou omissões que ameaçam ou desrespeitam os direitos coletivos e individuais garantidos constitucionalmente, como o direito à identidade étnica e cultural, à saúde diferenciada, à educação intercultural, à terra tradicionalmente ocupada e à autodeterminação dos povos. Entre as principais violações enfrentadas por indígenas em contextos urbanos, como Natal, destacam-se: a invisibilidade nas políticas públicas, o preconceito étnico-racial, a negação de acesso adequado a serviços de saúde e educação, além da desvalorização de suas culturas e modos de vida. Essas violações afetam diretamente sua dignidade, pertencimento e qualidade de vida.
+</p>
                 </div>
             </div>
         </div>
@@ -869,6 +869,7 @@
         <h2 class="section-title">Dados e Análises Completos</h2>
         
     
+        
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
@@ -930,5 +931,3 @@
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
 
 @endsection
-
-

@@ -855,8 +855,7 @@
             <div class="col-md-6 mt-4">
                 <div class="info-card text-justify" style="height: 382px;">
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
-                    <p>Pessoas LGBTQIA+ são aquelas que se identificam como lésbicas, gays, bissexuais, transexuais, travestis, queer, intersexo, assexuais, ou com outras identidades de gênero e orientações sexuais.</p> <br> 
-                    <p> O conceito abrange a diversidade humana além da heteronormatividade e cisnormatividade. Não há dados específicos de 2025 do IBGE sobre a população LGBTQIAPN+ no Município de Natal, uma vez que o Censo Demográfico não coleta essa informação diretamente.</p>
+                    <p>A população indígena no Brasil é reconhecida pela sua diversidade étnica, linguística e cultural. Segundo o Censo Demográfico de 2022 (IBGE), foram identificadas 305 etnias e 274 línguas indígenas em todo o território nacional. No Município de Natal, a população autodeclarada indígena é de 1.798 pessoas, representando cerca de 0,24% da população da cidade, sendo a maioria do sexo feminino.</p>
                 </div>
             </div>
         </div>

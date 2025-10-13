@@ -187,7 +187,7 @@
     .chart-title {
         color: #17669b;
         font-size: 1.5rem;
-        font-weight: 700;
+        font-weight: 400;
         margin-bottom: 20px;
     }
     
@@ -216,7 +216,7 @@
     
     .info-card h4 {
         color: #17669b;
-        font-weight: 700;
+        font-weight: 400;
         margin-bottom: 15px;
         font-size:27px;
     }
@@ -549,7 +549,7 @@
     .content-title {
         color: #17669b;
         font-size: 2rem;
-        font-weight: 700;
+        font-weight: 400;
         margin-bottom: 1.5rem;
         display: flex;
         align-items: center;

@@ -245,76 +245,76 @@ class ProfilleController extends Controller
 
      /*
     |--------------------------------------------------------------------------
-    | Igualdade racial [Categoria]
+    | Povos e Comunidades Tradicionais [Categoria]
     |--------------------------------------------------------------------------
     */
-    public function igualdade_racial()
+    public function povos_comunidades_tradicionais()
     {
-        $title = 'Igualdade Racial';
-        $description = 'Dados sobre Igualdade Racial';
+        $title = 'Povos e Comunidades Tradicionais';
+        $description = 'Dados sobre Povos e Comunidades Tradicionais';
 
-        return view('pages.categoria-igualdade-racial.igualdade-racial', compact(['title', 'description']));
+        return view('pages.categoria-povos-e-comunidades-tradicionais.povos-e-comunidades-tradicionais', compact(['title', 'description']));
     }
 
-    public function populacao_igualdade_racial()
+    public function populacao_povos_comunidades_tradicionais()
     {
         $title = 'População';
-        $description = 'Igualdade Racial';
-        // $imagem = asset('images/igualdade-racial-populacao.jpeg'); 
-        return view('pages.categoria-igualdade-racial.populacao', compact(["title", "description"]));
+        $description = 'Povos e Comunidades Tradicionais';
+        // $imagem = asset('images/povos-e-comunidades-tradicionais-populacao.jpeg'); 
+        return view('pages.categoria-povos-e-comunidades-tradicionais.populacao', compact(['title', 'description']));
     }
 
-    public function violacao_direitos_igualdade_racial()
+    public function violacao_direitos_povos_comunidades_tradicionais()
     {
         $title = 'Violação de Direitos';
-        $description = 'Igualdade Racial';
-        // $imagem = asset('images/igualdade-racial-violacoes.jpeg'); 
-        return view('pages.categoria-igualdade-racial.violacoes-de-direitos', compact(["title", "description"]));
+        $description = 'Povos e Comunidades Tradicionais';
+        // $imagem = asset('images/povos-e-comunidades-tradicionais-violacoes.jpeg'); 
+        return view('pages.categoria-povos-e-comunidades-tradicionais.violacoes-de-direitos', compact(['title', 'description']));
     }
 
-    public function garantia_direito_igualdade_racial()
+    public function garantia_direito_povos_comunidades_tradicionais()
     {
         $title = 'Garantia de Direitos';
-        $description = 'Igualdade Racial';
-        // $imagem = asset('images/igualdade-racial-garantia.jpeg'); 
-        return view('pages.categoria-igualdade-racial.garantia-de-direitos', compact(["title", "description"]));
+        $description = 'Povos e Comunidades Tradicionais';
+        // $imagem = asset('images/povos-e-comunidades-tradicionais-garantia.jpeg'); 
+        return view('pages.categoria-povos-e-comunidades-tradicionais.garantia-de-direitos', compact(['title', 'description']));
     }
 
      /*
     |--------------------------------------------------------------------------
-    | Violação de Direitos [Categoria]
+    | Mulher [Categoria]
     |--------------------------------------------------------------------------
     */ 
-    public function violacao_de_direitos()
+    public function mulher()
     {
-        $title = 'Violação de Direitos';
-        $description = 'Dados sobre Violação de Direitos';
+        $title = 'Mulher';
+        $description = 'Dados sobre a categoria Mulher';
 
-        return view('pages.categoria-violacao-dos-direitos.violacao-de-direitos', compact(['title', 'description']));
+        return view('pages.categoria-mulher.mulher', compact(['title', 'description']));
     }
 
-    public function populacao_violacao_de_direitos()
+    public function populacao_mulher()
     {
         $title = 'População';
-        $description = 'Violação de Direitos';
-        // $imagem = asset('images/violacao-de-direitos-populacao.jpeg'); 
-        return view('pages.categoria-violacao-dos-direitos.populacao', compact(["title", "description"]));
+        $description = 'Mulher';
+        // $imagem = asset('images/mulher-populacao.jpeg'); 
+        return view('pages.categoria-mulher.populacao', compact(['title', 'description']));
     }
 
-    public function violacao_direitos_violacao_de_direitos()
+    public function violacao_direitos_mulher()
     {
         $title = 'Violação de Direitos';
-        $description = 'Violação de Direitos';
-        // $imagem = asset('images/violacao-de-direitos-violacoes.jpeg'); 
-        return view('pages.categoria-violacao-dos-direitos.violacoes-de-direitos', compact(["title", "description"]));
+        $description = 'Mulher';
+        // $imagem = asset('images/mulher-violacoes.jpeg'); 
+        return view('pages.categoria-mulher.violacoes-de-direitos', compact(['title', 'description']));
     }
 
-    public function garantia_direito_violacao_de_direitos()
+    public function garantia_direito_mulher()
     {
         $title = 'Garantia de Direitos';
-        $description = 'Violação de Direitos';
-        // $imagem = asset('images/violacao-de-direitos-garantia.jpeg'); 
-        return view('pages.categoria-violacao-dos-direitos.garantia-de-direitos', compact(["title", "description"]));
+        $description = 'Mulher';
+        // $imagem = asset('images/mulher-garantia.jpeg'); 
+        return view('pages.categoria-mulher.garantia-de-direitos', compact(['title', 'description']));
     }
 
      /*
