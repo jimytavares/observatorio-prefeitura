@@ -63,14 +63,14 @@
     .card-icon {
         width: 90px;
         height: 90px;
-        background: linear-gradient(135deg, #17669b, #0189d3);
+        background: #FDD632; 
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 2rem;
         font-size: 2.5rem;
-        color: white;
+        color: #17669b;
         box-shadow: 0 10px 25px rgba(23, 102, 155, 0.3);
         transition: all 0.3s ease;
     }

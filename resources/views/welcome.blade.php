@@ -68,7 +68,7 @@
         color: white;
         font-size: 2.5rem;
         font-weight: 700;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         letter-spacing: 3px;
         background: linear-gradient(135deg, white, white);
         -webkit-background-clip: text;
@@ -92,13 +92,13 @@
     }
     
     .info-card {
-        background-color: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
         border-radius: 20px;
         padding: 2.5rem 2rem;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease;
-        border: 1px solid rgba(23, 102, 155, 0.1);
+        border: 1px solid rgba(23, 102, 155, 0.0);
         position: relative;
         overflow: hidden;
         width: 83%;
@@ -119,23 +119,30 @@
         left: 0;
         right: 0;
         height: 4px;
-        background: linear-gradient(135deg, #17669b, #0189d3);
+        /* background: linear-gradient(135deg, #17669b, #0189d3); */
         border-radius: 20px 20px 0 0;
     }
     
-    .card-icon {
+        .card-icon {    
         width: 80px;
         height: 80px;
-        background: linear-gradient(135deg, #17669b, #0189d3);
+        background: #FDD632; 
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 1.5rem;
         font-size: 2rem;
-        color: black;
+        color: #17669b; 
         box-shadow: 0 8px 20px rgba(23, 102, 155, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .card-icon:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(23, 102, 155, 0.4);
+    }
+
     
     .card-title {
         color: black;
@@ -328,7 +335,7 @@
 
                         <div class="info-card mt-3">
                             <div class="card-icon">
-                                <i class="fas fa-eye" style="color:white;"></i>
+                                <i class="fas fa-eye"></i>
                             </div>
                             <h4 class="card-title">Observatório de Direitos Humanos</h4>
                             <p class="card-description">
