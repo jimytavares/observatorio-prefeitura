@@ -185,7 +185,7 @@
     }
     
     .chart-title {
-        color: #17669b;
+        color: BLACK;
         font-size: 1.5rem;
         font-weight: 400;
         margin-bottom: 20px;
@@ -225,7 +225,7 @@
         color: #6c757d;
         line-height: 1.6;
         margin-bottom: 0;
-        font-size:18px;
+        font-size:20px;
         color:black;
     }
 
@@ -269,7 +269,7 @@
     }
     
     .section-title {
-        color: #17669b;
+        color: BLACK;
         font-size: 2.5rem;
         font-weight: 700;
         text-align: center;
@@ -849,7 +849,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="image-showcase">
-                    <img src="{{ asset('images/lgbt2.jpeg') }}" style="width: 624px;" alt="População em situação de rua" class="img-fluid">
+                    <img src="{{ asset('images/ia-img-subcategorias/mulheres-01.jpg') }}" style="width: 580px;" alt="População em situação de rua" class="img-fluid">
                 </div>
             </div>
             <div class="col-md-6 mt-4">
@@ -867,12 +867,46 @@
     <div class="container">
         <h2 class="section-title">Dados e Análises Completos</h2>
         
-    
+        <!-- chart01: ibge -->
+        <div class="content-block">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h3 class="chart-title">
+                            <i class="fas fa-chart-pie"></i> População Feminina por Faixa Etária (IBGE)
+                        </h3>
+                        <div id="populacaoFemininaChart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <h4 style="color:black;"><i class="fas fa-female"></i> Distribuição por Faixa Etária</h4>
+                        <p>A população feminina de Natal apresenta uma distribuição etária que reflete as características demográficas contemporâneas, com concentração significativa nas faixas etárias mais jovens e adultas.</p>
+                        
+                        <p>Conforme os dados do IBGE, a distribuição das mulheres por faixa etária é:</p>
+                        
+                        <ul class="custom-list">
+                            <li><strong>18 a 29 anos:</strong> 69.108 mulheres (jovens adultas)</li>
+                            <li><strong>30 a 59 anos:</strong> 174.711 mulheres (idade produtiva)</li>
+                            <li><strong>Acima de 60 anos:</strong> 77.279 mulheres (idosas)</li>
+                        </ul>
+                        
+                        <p>A faixa etária de 30 a 59 anos concentra a maior proporção das mulheres natalenses (54,4%), representando o período de maior atividade econômica e reprodutiva. Este grupo demanda políticas específicas de saúde da mulher, inserção no mercado de trabalho e conciliação entre vida profissional e familiar.</p>
+                        
+                        <p>As mulheres idosas (24,1%) constituem um segmento em crescimento, exigindo atenção especial em políticas de envelhecimento ativo, saúde geriátrica e proteção social.</p>
+                        
+                        <span class="badge badge-info">
+                            <i class="fas fa-info-circle"></i> Dados IBGE 2022
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
             <div class="text-center mb-4">
-                <h4 class="text-primary">Download dos dados</h4>
+                <h4 class="">Download dos dados</h4>
                 <p>Faça o download dos dados e gráficos desta página clicando no gráfico de sua preferência abaixo:</p>
             </div>
             <div class="text-center">
@@ -927,6 +961,59 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var populacaoFemininaOptions = {
+        series: [69108, 174711, 77279],
+        chart: {
+            type: 'pie',
+            height: 400,
+            fontFamily: 'inherit'
+        },
+        labels: ['18 a 29 anos', '30 a 59 anos', 'Acima de 60 anos'],
+        colors: ['#ff6b9d', '#c44569', '#8b4a8a'],
+        dataLabels: {
+            enabled: true,
+            formatter: function (val, opts) {
+                return opts.w.config.series[opts.seriesIndex].toLocaleString('pt-BR');
+            }
+        },
+        plotOptions: {
+            pie: {
+                donut: {
+                    size: '0%'
+                }
+            }
+        },
+        legend: {
+            position: 'bottom',
+            fontSize: '14px'
+        },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return val.toLocaleString('pt-BR') + ' mulheres';
+                }
+            }
+        },
+        responsive: [{
+            breakpoint: 480,
+            options: {
+                chart: {
+                    height: 300
+                },
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }]
+    };
+
+    var populacaoFemininaChart = new ApexCharts(document.querySelector("#populacaoFemininaChart"), populacaoFemininaOptions);
+    populacaoFemininaChart.render();
+});
+</script>
 
 @endsection
 
