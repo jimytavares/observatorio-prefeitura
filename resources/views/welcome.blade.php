@@ -5,15 +5,6 @@
 @section('content')
 
 <style>
-    .color-title{ color:#17669b; }
-    .color-text{ color:#4d4d4d; }
-    .txt-justify{ text-align: justify; }
-    .bg-title{ background-color:#17669b; }
-    .bg-title2{ background-color:#0189d3; border:none; }
-    .bold{ font-weight: bold; }
-    .txt-center{ text-align:center; }
-    .center{ text-align:center; }
-    .text_align_center{ text-align:center; }
     
     .landing-hero2 {
       border-radius: 0 0 0.5rem 0.7rem;

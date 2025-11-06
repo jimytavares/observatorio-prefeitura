@@ -13,6 +13,11 @@
     <!-- Favicon -->
     <link rel="icon" href="{{ URL::asset('img/logos/fv-2024-site-visite.png') }}" type="image/x-icon"/>
 
+    <script src="{{ URL::asset('js/vue/axios.min.js') }}"></script>
+    <script src="{{ URL::asset('js/vue/axios-dev.js') }}"></script>
+    <script src="{{ asset('js/vue/vue.min.js') }}"></script>
+    <script src="{{ asset('js/vue/vue-dev.js') }}"></script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +29,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha384-********" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" media="all" >
     <link rel="stylesheet" href="{{ asset('assets/css/globals.css') }}" type="text/css" media="all" >
     <link rel="stylesheet" href="{{ asset('assets/css/responsividade.css') }}" type="text/css" media="all" >
       
@@ -50,44 +54,48 @@
     <link rel="stylesheet" href="{{ asset('assets/css/title-page.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/black-and-white.css') }}">
 
-    <style>
-        .back-to-top {
-          border: none;
-          position: fixed;
-          display: none;
-          right: 30px;
-          bottom: 30px;
-          z-index: 11;
-          animation: action 1s infinite alternate;
-        }
-        html, body {
-  overflow-x: hidden;
-}
-      </style>
-      
-    <script>
-        // Back to top button
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                $('.back-to-top').fadeIn('slow');
-            } else {
-                $('.back-to-top').fadeOut('slow');
-            }
-        });
-        $('.back-to-top').click(function () {
-            $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-            return false;
-        });
-      </script>
-      
+    @yield('styles')
+
   </head>
   <body style="background-color:# !important;">
 
     @include('globals.header')
 
-    @yield('content')
-   
+    <div id="base-vue">
+      @yield('content')
+    </div>
+
+
     @include('globals.footer')
+
+  <script src="{{ asset('assets/vendor/js/dropdown-hover.js') }}"></script>
+  <script src="{{ asset('assets/vendor/js/mega-dropdown.js') }}"></script>
+    
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="{{ asset('assets/vendor/libs/popper/popper.js') }}"></script>
+  <script src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>
+  <script src="{{ asset('assets/vendor/libs/node-waves/node-waves.js') }}"></script>
+
+  <!-- endbuild -->
+
+  <!-- Vendors JS -->
+  <script src="{{ asset('assets/vendor/libs/nouislider/nouislider.js') }}"></script>
+  <script src="{{ asset('assets/vendor/libs/swiper/swiper.js') }}"></script>
+
+  <!-- Main JS -->
+  <script src="{{ asset('assets/js/front-main.js') }}"></script>
+
+  <!-- Page JS -->
+  <script src="{{ asset('assets/js/front-page-landing.js') }}"></script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+  @yield('scripts')
+
     
   </body>
 </html>

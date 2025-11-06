@@ -1,4 +1,4 @@
-<a href="#" class="btn btn-lg btn-secondary back-to-top"><i class="far fa-comment" style="font-size:25px;"></i></a>
+<!-- <a href="#" class="btn btn-lg btn-secondary back-to-top"><i class="far fa-comment" style="font-size:25px;"></i></a> -->
 
 <footer style="background: linear-gradient(135deg, #282b3e, #282b3e, #1a1d2e); color: white; padding: 4rem 0 2rem; border-top: 3px solid white;">
     <div class="container">
@@ -170,30 +170,6 @@
         }
     </style>
 </footer>
-
-    <script src="{{ asset('assets/vendor/js/dropdown-hover.js') }}"></script>
-    <script src="{{ asset('assets/vendor/js/mega-dropdown.js') }}"></script>
-      
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="{{ asset('assets/vendor/libs/popper/popper.js') }}"></script>
-    <script src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>
-    <script src="{{ asset('assets/vendor/libs/node-waves/node-waves.js') }}"></script>
-
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
-    <script src="{{ asset('assets/vendor/libs/nouislider/nouislider.js') }}"></script>
-    <script src="{{ asset('assets/vendor/libs/swiper/swiper.js') }}"></script>
-
-    <!-- Main JS -->
-    <script src="{{ asset('assets/js/front-main.js') }}"></script>
-
-    <!-- Page JS -->
-    <script src="{{ asset('assets/js/front-page-landing.js') }}"></script>
-
-   <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 
 <div vw class="enabled">
     <div vw-access-button class="active"></div>
