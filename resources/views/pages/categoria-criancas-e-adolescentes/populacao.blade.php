@@ -854,7 +854,11 @@
                 <div class="info-card text-justify" style="height: 382px;">
                     <h4><i class="fas fa-info-circle"></i> Informação</h4>
                     <p>No Brasil, são consideradas crianças, pessoas de até 12 anos de idade e adolescentes, pessoas entre 12 e 18 anos completos.</p> </br>
-                    <p>De acordo com dados de 2025 do IBGE, a população de crianças e adolescentes no Município de Natal é de 185.388 pessoas, representando 23,6% da população da cidade. 51% das crianças e adolescentes em Natal é do sexo masculino e 49% do sexo feminino.</p>
+                    <p>De acordo com dados do IBGE, a população de crianças e adolescentes no Município de Natal é de 185.388 pessoas, representando 23,6% da população da cidade. 51% das crianças e adolescentes em Natal é do sexo masculino e 49% do sexo feminino.</p>
+                    <div style="background: linear-gradient(135deg, #eaf4fb, #d0e6f7); border-left: 4px solid #17669b; color: #17669b; padding: 10px 18px; border-radius: 8px; margin-top: 14px; font-size: 15px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-info-circle" style="font-size: 18px;"></i>
+                        <span><strong>Observação:</strong> Este número é uma estimativa populacional para o ano de 2025.</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -877,8 +881,7 @@
                         </h3>
                         <p style="width:90%; margin-left:20px;">Os dados do IBGE apresentados no gráfico acima mostram a distribuição da população de crianças e adolescentes em três faixas etárias: 0 a 6 anos, 7 a 11 anos e 12 a 17 anos. Observa-se que a faixa de 0 a 6 anos possui uma população total de <strong>60.919</strong> crianças, sendo <strong>29.766</strong> do sexo feminino e <strong>31.153</strong> do sexo masculino. Na faixa de 7 a 11 anos, são <strong>47.106</strong> crianças, com <strong>22.946</strong> meninas e <strong>24.160</strong> meninos. Já entre 12 e 17 anos, a população é de <strong>57.057</strong> adolescentes, sendo <strong>28.155</strong> do sexo feminino e <strong>28.902</strong> do sexo masculino.</p>
                         <div class="">
-                            <span class="badge badge-info">Dados oficiais: 281.472</span>
-                            <span class="badge badge-warning">Estimativa real: +400.000</span>
+                            <span class="badge badge-info">Fonte: IBGE</span>
                         </div>
                     </div>
                 </div>
@@ -1039,116 +1042,6 @@
             </div>
         </div>
 
-        <!-- ## Chart03: Gravidez Precoce -->
-        <div class="content-block">
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6">
-                    <div class="content-text">
-                        <h3 class="content-title">
-                            <i class="fas fa-baby text-warning"></i>
-                            Gravidez Precoce - Crianças/Adolescentes
-                        </h3>
-                        <p style="width:90%; margin-left:20px;">Os dados apresentados no gráfico mostram uma situação alarmante: felizmente, não há registros de gravidez precoce nas faixas etárias analisadas (0-6 anos, 7-11 anos e 12-17 anos) para o período estudado. Todos os valores apresentados são <strong>zero</strong> em todas as categorias demográficas.</p>
-                        <p style="width:90%; margin-left:20px;">Esta ausência de casos pode indicar tanto uma realidade positiva quanto possíveis subnotificações. É importante manter a vigilância e os programas de educação sexual e reprodutiva, especialmente para adolescentes, como medida preventiva. A prevenção da gravidez precoce é fundamental para garantir o desenvolvimento saudável e as oportunidades educacionais de crianças e adolescentes.</p>
-                        <div class="">
-                            <span class="badge badge-info">Total: 0 casos</span>
-                            <span class="badge badge-warning">Prevenção: Essencial</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="chart-container">
-                        <h4 class="chart-title">Gravidez Precoce - Crianças/Adolescentes</h4>
-                        <div id="apexchart-gravidez-precoce"></div>
-                        <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var options = {
-                                chart: {
-                                    type: 'bar',
-                                    height: 320
-                                },
-                                series: [
-                                    {
-                                        name: 'Branco',
-                                        data: [0, 0, 0]
-                                    },
-                                    {
-                                        name: 'Preto/Pardo',
-                                        data: [0, 0, 0]
-                                    },
-                                    {
-                                        name: 'Outra',
-                                        data: [0, 0, 0]
-                                    },
-                                    {
-                                        name: 'Feminino',
-                                        data: [0, 0, 0]
-                                    },
-                                    {
-                                        name: 'Masculino',
-                                        data: [0, 0, 0]
-                                    }
-                                ],
-                                xaxis: {
-                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
-                                    title: { text: 'Faixa Etária' }
-                                },
-                                yaxis: {
-                                    title: { text: 'Número de Casos' },
-                                    max: 5
-                                },
-                                colors: ['#6c757d', '#8b4513', '#ffc107', '#e83e8c', '#007bff'],
-                                plotOptions: {
-                                    bar: {
-                                        horizontal: false,
-                                        columnWidth: '65%',
-                                        endingShape: 'rounded'
-                                    }
-                                },
-                                dataLabels: {
-                                    enabled: true,
-                                    formatter: function (val) {
-                                        return val;
-                                    }
-                                },
-                                legend: {
-                                    position: 'top',
-                                    horizontalAlign: 'center'
-                                },
-                                tooltip: {
-                                    y: {
-                                        formatter: function (val) {
-                                            return val + ' casos';
-                                        }
-                                    }
-                                },
-                                annotations: {
-                                    yaxis: [{
-                                        y: 0,
-                                        borderColor: '#00E396',
-                                        label: {
-                                            borderColor: '#00E396',
-                                            style: {
-                                                color: '#fff',
-                                                background: '#00E396',
-                                            },
-                                            text: 'Nenhum caso registrado - Situação positiva'
-                                        }
-                                    }]
-                                }
-                            };
-                            var chart = new ApexCharts(document.querySelector("#apexchart-gravidez-precoce"), options);
-                            chart.render();
-                        });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        
-
         <!-- Links de Acesso Rápido -->
         <div class="quick-access-section">
             <div class="text-center mb-4">
@@ -1170,6 +1063,7 @@
                 </a>
             </div>
         </div>
+        
     </div>
 </section>
 

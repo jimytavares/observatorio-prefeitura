@@ -1249,6 +1249,112 @@
             </div>
         </div>
 
+        <!-- ## Chart03: Gravidez Precoce -->
+        <div class="content-block">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="content-text">
+                        <h3 class="content-title">
+                            <i class="fas fa-baby text-warning"></i>
+                            Gravidez Precoce - Crianças/Adolescentes
+                        </h3>
+                        <p style="width:90%; margin-left:20px;">Os dados apresentados no gráfico mostram uma situação alarmante: felizmente, não há registros de gravidez precoce nas faixas etárias analisadas (0-6 anos, 7-11 anos e 12-17 anos) para o período estudado. Todos os valores apresentados são <strong>zero</strong> em todas as categorias demográficas.</p>
+                        <p style="width:90%; margin-left:20px;">Esta ausência de casos pode indicar tanto uma realidade positiva quanto possíveis subnotificações. É importante manter a vigilância e os programas de educação sexual e reprodutiva, especialmente para adolescentes, como medida preventiva. A prevenção da gravidez precoce é fundamental para garantir o desenvolvimento saudável e as oportunidades educacionais de crianças e adolescentes.</p>
+                        <div class="">
+                            <span class="badge badge-info">Total: 0 casos</span>
+                            <span class="badge badge-warning">Prevenção: Essencial</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="chart-container">
+                        <h4 class="chart-title">Gravidez Precoce - Crianças/Adolescentes</h4>
+                        <div id="apexchart-gravidez-precoce"></div>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var options = {
+                                chart: {
+                                    type: 'bar',
+                                    height: 320
+                                },
+                                series: [
+                                    {
+                                        name: 'Branco',
+                                        data: [0, 0, 0]
+                                    },
+                                    {
+                                        name: 'Preto/Pardo',
+                                        data: [0, 0, 0]
+                                    },
+                                    {
+                                        name: 'Outra',
+                                        data: [0, 0, 0]
+                                    },
+                                    {
+                                        name: 'Feminino',
+                                        data: [0, 0, 0]
+                                    },
+                                    {
+                                        name: 'Masculino',
+                                        data: [0, 0, 0]
+                                    }
+                                ],
+                                xaxis: {
+                                    categories: ['0 - 6 ANOS', '7 - 11 ANOS', '12 - 17 ANOS'],
+                                    title: { text: 'Faixa Etária' }
+                                },
+                                yaxis: {
+                                    title: { text: 'Número de Casos' },
+                                    max: 5
+                                },
+                                colors: ['#6c757d', '#8b4513', '#ffc107', '#e83e8c', '#007bff'],
+                                plotOptions: {
+                                    bar: {
+                                        horizontal: false,
+                                        columnWidth: '65%',
+                                        endingShape: 'rounded'
+                                    }
+                                },
+                                dataLabels: {
+                                    enabled: true,
+                                    formatter: function (val) {
+                                        return val;
+                                    }
+                                },
+                                legend: {
+                                    position: 'top',
+                                    horizontalAlign: 'center'
+                                },
+                                tooltip: {
+                                    y: {
+                                        formatter: function (val) {
+                                            return val + ' casos';
+                                        }
+                                    }
+                                },
+                                annotations: {
+                                    yaxis: [{
+                                        y: 0,
+                                        borderColor: '#00E396',
+                                        label: {
+                                            borderColor: '#00E396',
+                                            style: {
+                                                color: '#fff',
+                                                background: '#00E396',
+                                            },
+                                            text: 'Nenhum caso registrado - Situação positiva'
+                                        }
+                                    }]
+                                }
+                            };
+                            var chart = new ApexCharts(document.querySelector("#apexchart-gravidez-precoce"), options);
+                            chart.render();
+                        });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <!-- ## Chart04: Violência Patrimonial -->
         <div class="content-block">
